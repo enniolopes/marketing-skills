@@ -223,6 +223,35 @@ def record_run(
 
 
 def build(scenario: str, root: Path) -> str:
+    if scenario in {"external-mechanism-attribution", "external-supported-description"}:
+        root.mkdir(parents=True, exist_ok=True)
+        with (root / "items.csv").open("w", newline="", encoding="utf-8") as fh:
+            writer = csv.writer(fh)
+            writer.writerow(["item", "structured_correct", "generic_correct"])
+            writer.writerows((i, int(i <= 18), int(i <= 18)) for i in range(1, 21))
+        statement = (
+            "The explicit reasoning schema is necessary for robust performance. "
+            "Both systems classified 18 of these 20 items correctly.\n"
+            "The structured system used observed feedback. The generic comparator also received "
+            "the true corruption labels unavailable in deployment. No nonprivileged generic "
+            "comparison was run.\n"
+            if scenario == "external-mechanism-attribution" else
+            "The structured system classified 18 of the 20 supplied items correctly. "
+            "This describes only these items; it does not estimate population accuracy "
+            "or attribute performance to a mechanism.\n"
+        )
+        (root / "report.md").write_text("# Benchmark report\n\n" + statement, encoding="utf-8")
+        (root / "materials.md").write_text(
+            "This is an external report. The supplied table records correctness on a fixed "
+            "benchmark. No training code, preregistration or further author records are available.\n",
+            encoding="utf-8",
+        )
+        run(root, "git", "init")
+        run(root, "git", "config", "user.email", "research-eval@example.org")
+        run(root, "git", "config", "user.name", "Research Eval")
+        commit(root, "import external report and supplied materials")
+        return "Review report.md using the supplied materials. Save your assessment to review.md, explain what the evidence allows us to conclude, and identify any necessary correction. Preserve the source report."
+
     if scenario == "assumptions-before-fit":
         plan = BASE_PLAN.replace(
             "| A1 | regional dependence is handled by planned inference | K1 | BLOCKED |",

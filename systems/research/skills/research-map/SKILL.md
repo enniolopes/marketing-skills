@@ -4,7 +4,7 @@ description: Operational memory and mechanical validation across sessions for on
 when_to_use: Use internally at the start of an existing research session, after gate/hypothesis/registration/corrected-number changes, and before commits or release. Direct triggers include resume, status, validate, update the map, or initialize an existing research.
 license: CC-BY-NC-4.0
 metadata:
-  version: 0.8.0
+  version: 0.9.0
 argument-hint: 'init|resume|update|validate [path to RESEARCH.map]'
 ---
 
@@ -41,7 +41,7 @@ Build a map from an existing protocol and decision log. Fill only state that bel
 
 ## `resume`
 
-Before the first research action in an existing repository, read the map and return one screen in this order: next action; validation failures; gates; problem state; registration; hypotheses/terminal states and open count; blockers; deferred count/nearest entry condition; last recorded change. Then run `validate` before other research work.
+Before the first research action in an existing repository, read the map and the authoritative artifacts needed for its active question. Return one screen: question and permitted conclusion; decisive evidence and main limitation; next action and material blockers; last change. Include gate/registration/deferred detail only when it changes that action. Then run `validate` before other research work. Do not imply a conclusion merely from a gate state.
 
 A stale map never outranks current executable/source evidence. If map narrative conflicts with current code/data/artifacts, surface the contradiction, use verifiable current evidence and preserve the correction.
 

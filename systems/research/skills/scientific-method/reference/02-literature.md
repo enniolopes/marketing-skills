@@ -13,9 +13,11 @@ the state of knowledge enters the manuscript.
   written into the text. Record: DOI, what it actually says in one sentence, the date.
 - A finding read only from an abstract or excerpt is marked as such in the verification
   log and cited with that qualifier.
-- Classify each finding: **established** (the literature settles it), **silent** (nobody
-  has asked), **what this study adds**. The gap statement is one paragraph built from the
-  "silent" column.
+- Distinguish findings supported within their stated scope, contested interpretations,
+  and questions not located within the documented search. Not finding a study does not
+  establish that nobody asked the question. State the gap with its search limits and
+  what this study can add. Before treating findings as contradictory or independent,
+  compare constructs, measures, populations, conditions and shared data/source lineage.
 - No citation from memory. If the DOI cannot be resolved, the citation is `NOT_VERIFIED`
   and does not enter the manuscript until it is.
 

@@ -10,6 +10,7 @@ API, ANTHROPIC_API_KEY). Treatment loads only the local research and explorer pl
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import subprocess
@@ -50,6 +51,60 @@ def safe_snapshot(root: Path, initial: str) -> str:
     working = command("git", "diff", "--", ".", cwd=root).stdout
     status = command("git", "status", "--short", cwd=root).stdout
     return "# committed diff\n" + committed + "\n# working diff\n" + working + "\n# status\n" + status
+
+
+def preserve_artifacts(root: Path, destination: Path) -> dict[str, Any]:
+    """Preserve tracked and nonignored new files before the temp repo disappears.
+
+    Do not follow symlinks out of the fixture. Record omissions explicitly so
+    absent bytes cannot be mistaken for reviewed evidence.
+    """
+    listing = command("git", "ls-files", "-z", "--cached", "--others", "--exclude-standard", cwd=root)
+    if listing.returncode:
+        raise RuntimeError("cannot enumerate eval artifacts")
+    records = []
+    for name in sorted(set(listing.stdout.split("\0")) - {""}):
+        path = root / name
+        record: dict[str, Any] = {"path": name}
+        if path.is_symlink() or any(p.is_symlink() for p in path.parents if p != root and root in p.parents):
+            record["status"] = "omitted-symlink"
+        elif not path.is_file():
+            record["status"] = "missing"
+        else:
+            data = path.read_bytes()
+            target = destination / "artifacts" / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(data)
+            record.update(status="saved", size=len(data), sha256=hashlib.sha256(data).hexdigest())
+        records.append(record)
+    manifest = {"scope": "tracked and nonignored untracked files; symlinks not followed", "files": records}
+    (destination / "artifacts.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    return manifest
+
+
+def artifact_excerpt(destination: Path, manifest: dict, paths: list[str], budget: int = 120000) -> str:
+    """Expose changed file content to the judge, marking binary/size omissions."""
+    selected = set(paths)
+    chunks = []
+    for record in manifest["files"]:
+        if record["path"] not in selected:
+            continue
+        header = f"\nFILE {record['path']} ({record['status']})\n"
+        if record["status"] != "saved":
+            chunks.append(header)
+            continue
+        try:
+            content = (destination / "artifacts" / record["path"]).read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            chunks.append(header + "[binary; bytes retained, semantic inspection NOT_VERIFIED]\n")
+            continue
+        available = max(0, budget)
+        excerpt = content[:available]
+        budget -= len(excerpt)
+        chunks.append(header + excerpt)
+        if len(excerpt) < len(content):
+            chunks.append("\n[omitted from judge context; full bytes retained; affected judgment NOT_VERIFIED]\n")
+    return "\n".join(chunks)
 
 
 def runner_cmd(prompt: str, condition: str, model: str, max_turns: int) -> list[str]:
@@ -313,8 +368,9 @@ def one_run(
             stderr = proc.stderr
             exit_code = proc.returncode
         except subprocess.TimeoutExpired as exc:
-            transcript = exc.stdout or ""
-            stderr = (exc.stderr or "") + f"\nTIMEOUT after {timeout}s\n"
+            transcript = exc.stdout.decode(errors="replace") if isinstance(exc.stdout, bytes) else (exc.stdout or "")
+            partial_error = exc.stderr.decode(errors="replace") if isinstance(exc.stderr, bytes) else (exc.stderr or "")
+            stderr = partial_error + f"\nTIMEOUT after {timeout}s\n"
             exit_code = 124
         (destination / "transcript.jsonl").write_text(transcript, encoding="utf-8")
         (destination / "stderr.txt").write_text(stderr, encoding="utf-8")
@@ -325,6 +381,8 @@ def one_run(
         diff = safe_snapshot(root, initial)
         validator = validate_fixture(root)
         observations = deterministic_observations(root, initial, transcript)
+        artifacts = preserve_artifacts(root, destination)
+        diff += "\n# Changed artifact contents\n" + artifact_excerpt(destination, artifacts, observations["changed_paths"])
         (destination / "diff.patch").write_text(diff, encoding="utf-8")
         (destination / "validator.txt").write_text(validator, encoding="utf-8")
         (destination / "observations.json").write_text(

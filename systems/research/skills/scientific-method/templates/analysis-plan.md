@@ -51,3 +51,8 @@ Why this estimates E1: TBD
 
 May claim: TBD
 May not claim: TBD
+
+For material construct/mechanism interpretations, record the bridge here (otherwise omit):
+- Construct and measure; evidence/conditions connecting them:
+- Rival explanation and discriminating observation:
+- What this design can distinguish; remaining uncertainty:

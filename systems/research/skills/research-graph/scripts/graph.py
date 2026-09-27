@@ -7,6 +7,7 @@ import argparse
 import json
 import re
 import sys
+from collections import deque
 from pathlib import Path
 
 CLAIM = re.compile(
@@ -131,8 +132,10 @@ def parse_runs(root: Path, nodes: dict[str, dict], edges: set[tuple[str, str, st
             add_edge(edges, test, "executed_as", run_id)
         if hypothesis:
             add_node(nodes, hypothesis, "H")
+            add_edge(edges, run_id, "tests", hypothesis)
         if estimand:
             add_node(nodes, estimand, "E")
+            add_edge(edges, run_id, "estimates", estimand)
         for input_item in data.get("inputs", []):
             if isinstance(input_item, str):
                 data_id, data_path, role = "", input_item, ""
@@ -182,11 +185,8 @@ def parse_claims(root: Path, layout: dict[str, list[str]], nodes: dict[str, dict
             add_node(nodes, result, "R")
             add_edge(edges, result, "supports", inference)
             add_edge(edges, inference, "supports", claim)
-            lineage = result_index.get(result, {})
-            if lineage.get("estimand"):
-                add_edge(edges, lineage["estimand"], "derived_from", inference)
-            if lineage.get("hypothesis"):
-                add_edge(edges, lineage["hypothesis"], "derived_from", inference)
+            # H/E are reached through the executed test, not derived from its
+            # interpretation. The latter creates a false circular warrant.
 
 
 def parse_sources(root: Path, layout: dict[str, list[str]], nodes: dict[str, dict]) -> None:
@@ -251,17 +251,45 @@ def adjacency(graph: dict, reverse: bool = False, relations: set[str] | None = N
     return out
 
 
-def walk(graph: dict, start: str, reverse: bool, relations: set[str] | None = None, max_depth: int = 8) -> list[str]:
+def dependency_graph(graph: dict) -> dict:
+    """Project relation semantics to prerequisite -> potential consequence.
+
+    A fallback is an alternative, not evidence that it was executed. Do not
+    propagate through it or through mere co-occurrence/source bibliography.
+    This is navigation over recorded artifacts, never truth propagation.
+    """
+    forward = {"supports", "challenges", "produces", "executed_as"}
+    inverse = {
+        "uses": "used_by",
+        "requires": "required_by",
+        "checked_by": "checks",
+        "generated_from": "generated",
+        "tests": "tested_by",
+        "estimates": "estimated_by",
+        "derived_from": "basis_for",
+    }
+    edges = []
+    for edge in graph.get("edges", []):
+        relation = edge["relation"]
+        if relation in forward:
+            edges.append(edge)
+        elif relation in inverse:
+            edges.append({"from": edge["to"], "relation": inverse[relation], "to": edge["from"]})
+    return {**graph, "edges": edges}
+
+
+def walk(graph: dict, start: str, reverse: bool, relations: set[str] | None = None, max_depth: int | None = None) -> list[str]:
     adj = adjacency(graph, reverse=reverse, relations=relations)
     lines: list[str] = []
     seen = {start}
-    queue = [(start, 0)]
+    queue = deque([(start, 0)])
     while queue:
-        node, depth = queue.pop(0)
-        if depth >= max_depth:
+        node, depth = queue.popleft()
+        if max_depth is not None and depth >= max_depth:
             continue
         for relation, other in adj.get(node, []):
-            lines.append(f"{'  ' * depth}{node} --{relation}--> {other}")
+            connector = f"<--{relation}--" if reverse else f"--{relation}-->"
+            lines.append(f"{'  ' * depth}{node} {connector} {other}")
             if other not in seen:
                 seen.add(other)
                 queue.append((other, depth + 1))
@@ -297,9 +325,11 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     if args.command in {"trace", "why"}:
-        lines = walk(graph, node, reverse=True)
+        lines = walk(dependency_graph(graph), node, reverse=True)
     elif args.command == "changed":
-        lines = walk(graph, node, reverse=False)
+        lines = walk(dependency_graph(graph), node, reverse=False)
+        print("Potential consequences only; inspect each inference and surviving support. "
+              "Current recorded relations may omit dependencies; verify historical run plans separately.")
     else:
         incoming = walk(graph, node, reverse=True, relations={"supports", "challenges"}, max_depth=2)
         outgoing = walk(graph, node, reverse=False, relations={"supports", "challenges"}, max_depth=2)

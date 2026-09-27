@@ -23,6 +23,35 @@ def git(root: Path, *args: str) -> str:
 
 
 class EvalHarnessTests(unittest.TestCase):
+    def test_external_fixtures_have_checkable_counts_without_native_history(self) -> None:
+        import csv
+        for scenario in ["external-mechanism-attribution", "external-supported-description"]:
+            with self.subTest(scenario=scenario), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                prompt = RUN.fixtures.build(scenario, root)
+                with (root / "items.csv").open() as fh:
+                    rows = list(csv.DictReader(fh))
+                self.assertEqual(len(rows), 20)
+                self.assertEqual(sum(int(r["structured_correct"]) for r in rows), 18)
+                self.assertFalse((root / "RESEARCH.map").exists())
+                self.assertIn("review.md", prompt)
+
+    def test_untracked_evidence_survives_fixture_cleanup_without_following_symlinks(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp, tempfile.TemporaryDirectory() as out:
+            root, destination = Path(tmp), Path(out)
+            git(root, "init")
+            (root / "review.md").write_text("Evidence: revised result.\n", encoding="utf-8")
+            (root / "binary.dat").write_bytes(b"\xff\x00")
+            (root / "outside").symlink_to(destination, target_is_directory=True)
+            manifest = RUN.preserve_artifacts(root, destination)
+            self.assertEqual((destination / "artifacts/review.md").read_text(), "Evidence: revised result.\n")
+            self.assertEqual((destination / "artifacts/binary.dat").read_bytes(), b"\xff\x00")
+            records = {r["path"]: r for r in manifest["files"]}
+            self.assertEqual(records["outside"]["status"], "omitted-symlink")
+            excerpt = RUN.artifact_excerpt(destination, manifest, ["review.md"], budget=8)
+            self.assertIn("Evidence", excerpt)
+            self.assertIn("omitted from judge context", excerpt)
+
     def test_prose_mention_is_not_tool_use(self) -> None:
         transcript = "\n".join(
             [

@@ -3,7 +3,7 @@ name: research-graph
 description: Build and query the derived epistemic graph of a research repository. Reconstructs hypothesis, estimand, test, data exposure, run, result, inference, claim and source lineage from authoritative artifacts; the graph is a disposable index, never a second source of truth. Use internally for claim preflight, adversarial review, trace/argument views, and questions such as why a result exists or what it changed.
 license: CC-BY-NC-4.0
 metadata:
-  version: 0.8.0
+  version: 0.9.0
 argument-hint: '<build | trace NODE | argument CLAIM | why NODE | changed NODE> [RESEARCH.map]'
 ---
 
@@ -36,7 +36,9 @@ python3 "${CLAUDE_SKILL_DIR}/scripts/graph.py" why T1 RESEARCH.map
 python3 "${CLAUDE_SKILL_DIR}/scripts/graph.py" changed RUN-001 RESEARCH.map
 ```
 
-`trace` returns the claim's path toward executed evidence and plan. `argument` shows support/challenge neighbors. `why` walks predecessors; `changed` walks consequences. Views are navigation aids, not evidence.
+`trace` returns the claim's path toward executed evidence and plan. `argument` shows support/challenge neighbors. `why` walks prerequisites; `changed` follows relation direction semantically (a dataset is used by a run; an assumption is required by a test) to report potential consequences. Fallback alternatives are not executed dependencies. Queries traverse all reachable recorded dependencies with cycle protection.
+
+The projection reads the current plan and run metadata; it does not reconstruct each historical frozen plan. Verify that plan before a historical claim decision. A bibliography node alone does not link a source to a claim; unrecorded dependencies require source inspection. Views are navigation aids, not evidence or automatic invalidation. After changes inspect surviving support, record the disposition in authoritative artifacts and refresh affected review; never propagate falsity just because one supporting path was challenged.
 
 ## Claim annotation
 

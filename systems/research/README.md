@@ -6,7 +6,7 @@ Scope: observational quantitative research, especially administrative data.
 
 ## Quick start
 
-Run Claude Code from the root of a **Git repository** for the research project. Git history is used to prove that confirmatory commitments existed before result exposure.
+Run Claude Code from the root of a **Git repository** for the research project. Git history records commitment/run order; exposure outside that history must be disclosed separately.
 
 Install once:
 
@@ -80,6 +80,8 @@ The system handles the gates and preflights internally. If valid work can procee
 | manuscript | Scientific communication |
 
 The derived research graph is rebuildable and is not a second source of truth.
+
+Construct and mechanism claims explicitly connect measures to interpretations and examine discriminating evidence against plausible alternatives. When evidence changes, revision preserves unaffected findings and reassesses surviving support. Third-party reviews distinguish reported, reconstructed and reproduced findings without demanding native plugin artifacts. Graph queries identify candidate dependencies; they do not decide scientific validity.
 
 ## What happens at important boundaries
 

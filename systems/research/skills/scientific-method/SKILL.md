@@ -4,7 +4,7 @@ description: Orchestrate observational quantitative research as an epistemic con
 when_to_use: Use to start or continue a research, check status, review a manuscript, and before fitting a model, changing a frozen plan, citing a source, reporting a material result, writing a claim or publishing. Also use when a new hypothesis or method appears after data exposure or protocol freeze.
 license: CC-BY-NC-4.0
 metadata:
-  version: 0.8.0
+  version: 0.9.0
 argument-hint: '<start <question> | status | review [manuscript] | what you want to do>'
 ---
 
@@ -16,7 +16,7 @@ This is the public entry point. The user talks to this skill; internal skills an
 
 ## Five laws
 
-1. **Evidence outranks narrative.** What was read or executed against an identified target outranks memory, confidence and author explanation. A number not produced by executed code is not a result.
+1. **Evidence outranks narrative.** What was read or executed against an identified target outranks memory, confidence and author explanation. Own computed results require executed code; externally reported results require inspected source attribution and must not be presented as reproduced.
 2. **Commitment precedes exposure.** A choice that can be influenced by a result must be recorded and frozen before exposure to that result.
 3. **Discovery is not confirmation.** Evidence that materially generated or selected a hypothesis does not independently confirm it.
 4. **Claims require lineage.** Every material scientific claim must be traceable through an explicit inference to identified result/source evidence and the design that permits the inference.
@@ -44,10 +44,12 @@ The eight research phases below remain the lifecycle/navigation layer. Preflight
 
 - `start <question>` — start phase 1, initialize/resume memory, then proceed through the smallest next action.
 - `status` — internally resume and validate; return one-screen state and next action.
-- `review [path]` — run phase 7 on the manuscript under `documents` or the supplied path.
+- `review [path]` — run phase 7 for native work; use `reference/external-review.md` for third-party or historical work without native artifacts.
 - anything else — answer the user's normal research request, but run the applicable preflight before a consequential action.
 
 On an existing repository, invoke `research-map resume` before the first research action. The user does not need to request it. Update the map on observable state changes and validate before commits/release.
+
+For external review without a native map, use the external-review route instead of initializing a fictitious research history. Read `reference/inference-and-revision.md` when interpreting constructs/mechanisms, selecting a discriminating investigation or revising an existing conclusion. Keep its bridge in existing authoritative artifacts; a new ontology or database is not required.
 
 ## Preflights
 
@@ -85,7 +87,7 @@ Before confirmatory Phase 5 execution, create `analysis-plan.md` using `template
 
 For each confirmatory hypothesis the plan carries stable IDs for hypothesis, estimand and primary test; `Generated from:` exposure; dependence; decision rules; assumptions `A<n>`; checks `K<n>`; prospective failure actions; sensitivity/specification dimensions; and `May claim` / `May not claim` interpretation boundaries.
 
-`protocol_freeze` and `analysis_plan_freeze` are Git commits, not prose labels. Every material run writes `.research/runs/RUN-<n>.json` with those freezes, the run commit, hypothesis/estimand/test, typed data inputs and result artifacts. Temporal ancestry is evidence that a commitment preceded exposure.
+`protocol_freeze` and `analysis_plan_freeze` are Git commits, not prose labels. Every material run writes `.research/runs/RUN-<n>.json` with those freezes, the run commit, hypothesis/estimand/test, typed data inputs and result artifacts. Temporal ancestry establishes repository order, not absence of prior human/model exposure elsewhere. Record known exposure and localize unverifiable history; never erase it by freezing later.
 
 A historical analysis without trustworthy temporal provenance remains historical/`NOT_VERIFIED`; never reconstruct a freeze retrospectively as if it were observed.
 
@@ -179,6 +181,6 @@ After commit, change it only by a later block with `Supersedes: D-<k>`.
 
 ## Reporting to the user
 
-Keep system mechanics mostly invisible. Report the scientific state, material block/finding and next concrete action. Do not require the user to memorize internal commands. When a preflight blocks an action, state what evidence/decision is missing and the legitimate route forward.
+Keep system mechanics mostly invisible. Lead with the question, permitted conclusion, decisive evidence, main limitation and next useful action; link to authoritative detail instead of copying a second report into the map. Do not require the user to memorize internal commands. When a preflight blocks an action, state what evidence/decision is missing and the legitimate route forward.
 
 A research is complete when every hypothesis has a terminal state, material claims passed independent adversarial review, publication requirements passed, and the map records the final state.

@@ -69,6 +69,36 @@ Generated from: DATA1
 
 
 class ResearchGraphTests(unittest.TestCase):
+    def test_dependency_queries_follow_inputs_assumptions_and_keep_other_support(self):
+        triples = [
+            ("RUN-1", "uses", "DATA1"), ("T1", "requires", "A1"),
+            ("A1", "checked_by", "K1"), ("T1", "executed_as", "RUN-1"),
+            ("RUN-1", "produces", "R1"), ("R1", "supports", "I1"),
+            ("I1", "supports", "C1"), ("R2", "supports", "I1"),
+            ("T1", "fallback_to", "T2"), ("T2", "executed_as", "RUN-2"),
+            ("RUN-2", "produces", "R3"), ("R3", "supports", "I3"),
+            ("I3", "supports", "C3"),
+        ]
+        raw = {"edges": [{"from": a, "relation": r, "to": b} for a, r, b in triples]}
+        projected = graph.dependency_graph(raw)
+        for changed in ["DATA1", "A1", "K1"]:
+            consequences = "\n".join(graph.walk(projected, changed, reverse=False))
+            self.assertIn("C1", consequences)
+            self.assertNotIn("C3", consequences)
+            self.assertNotIn("R2", consequences)
+        trace = "\n".join(graph.walk(projected, "C1", reverse=True))
+        self.assertIn("DATA1", trace)
+        self.assertIn("K1", trace)
+        self.assertIn("R2", trace)
+        self.assertEqual(raw["edges"][0]["relation"], "uses")
+
+    def test_walk_does_not_silently_truncate_and_terminates_cycles(self):
+        edges = [{"from": f"N{i}", "relation": "supports", "to": f"N{i+1}"} for i in range(12)]
+        edges.append({"from": "N12", "relation": "supports", "to": "N0"})
+        lines = graph.walk({"edges": edges}, "N0", reverse=False)
+        self.assertEqual(len(lines), 13)
+        self.assertIn("N12", "\n".join(lines))
+
     def test_build_is_deterministic_and_contains_lineage(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -114,6 +144,10 @@ class ResearchGraphTests(unittest.TestCase):
             self.assertIn(("RUN-001", "produces", "R1"), edges)
             self.assertIn(("R1", "supports", "I1"), edges)
             self.assertIn(("I1", "supports", "C1"), edges)
+            self.assertNotIn(("H1", "derived_from", "I1"), edges)
+            trace = "\n".join(graph.walk(graph.dependency_graph(first), "C1", reverse=True))
+            for node_id in ["DATA1", "H1", "E1", "K1"]:
+                self.assertIn(node_id, trace)
 
 
 if __name__ == "__main__":

@@ -4,6 +4,8 @@ Sources located 2026-09-10, not yet read at source.
 
 **When this applies.** Before submission, and on demand after any confirmatory run.
 
+For third-party work without native artifacts, use `external-review.md` instead of reconstructing a fictitious native history. A report can be scientifically assessable without plugin-specific files.
+
 **What it requires.**
 
 - **Hand to the `research:reviewer-2` agent** with the brief exactly as its "Required

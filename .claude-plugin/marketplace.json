@@ -26,12 +26,6 @@
       "version": "3.9.0",
       "strict": false,
       "description": "Research, design, build and refine high-end marketing landing pages and homepages."
-    },
-    {
-      "name": "research",
-      "source": "./systems/research",
-      "version": "0.8.0",
-      "description": "Epistemic control for empirical research: problem-first method, prospective analysis commitments, run provenance, derived claim lineage, statistical planning and adversarial review. Install explorer alongside for full phase-1 exploration."
     }
   ]
 }

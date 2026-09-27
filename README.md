@@ -11,8 +11,6 @@ Portable capabilities for AI assistants.
 |---|---|---|
 | [**Branding Studio**](skills/branding-studio/) | Skill | Create, audit, apply, and evolve brands and identity systems. |
 | [**Landing Page**](skills/landing-page/) | Skill | Research, design, build, and refine marketing landing pages and homepages. |
-| [**Explorer**](skills/explorer/) | Skill | Explore non-obvious connections, hypotheses, alternatives, and tests. |
-| [**Research**](systems/research/) | System | Run rigorous empirical research with persistent state, prospective commitments, provenance, and independent review. |
 
 ## Claude Code
 
@@ -27,8 +25,6 @@ Install the capability you want:
 ```text
 /plugin install branding-studio@enniolopes
 /plugin install landing-page@enniolopes
-/plugin install explorer@enniolopes
-/plugin install research@enniolopes
 ```
 
 `research` uses `explorer` for structural exploration, so install both when using the research system:
@@ -38,7 +34,7 @@ Install the capability you want:
 /plugin install explorer@enniolopes
 ```
 
-Then describe the job normally. For Research, see the [Research quick start](systems/research/).
+Then describe the job normally. The Research system now lives in the [standalone research repository](https://github.com/enniolopes/research).
 
 ## ChatGPT
 

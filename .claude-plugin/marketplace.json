@@ -14,13 +14,6 @@
       "description": "Autonomous brand steward: create, apply, audit and evolve brands; direction shown before building, touchpoints seen where they live, brand book served as a touchpoint."
     },
     {
-      "name": "explorer",
-      "source": "./skills/explorer",
-      "version": "1.1.0",
-      "strict": false,
-      "description": "Structural exploration: a portfolio of non-obvious, defensible connections with bridge certificates, for understanding a problem or generating hypotheses."
-    },
-    {
       "name": "landing-page",
       "source": "./skills/landing-page",
       "version": "3.9.0",

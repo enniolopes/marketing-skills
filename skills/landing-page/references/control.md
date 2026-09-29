@@ -14,6 +14,41 @@ Treat a chosen direction as a **working hypothesis**, not a contract.
 
 Keep this control model internal. Do not narrate its taxonomy to the user or turn it into visible page structure unless that genuinely helps the work.
 
+## Compact working state
+
+For long, high-ambition, multi-context, or handoff-prone work, externalize only the state most likely to drift. Keep it ephemeral unless the project explicitly needs a durable artifact.
+
+~~~yaml
+landing_page_state:
+  mode: CREATE # CREATE | REFINE | REPAIR
+  quality_bar: high_end # standard | high_end | frontier
+  goal:
+  truth:
+    known: []
+    blocking_unknowns: []
+  intent:
+    page_job:
+    proposition:
+    primary_action:
+  active_invariants: []
+  direction:
+    governing_idea:
+    signature:
+    falsifier:
+  visual_search:
+    status: open # not_needed | open | shortlisted | committed
+    unresolved_question:
+    selected_artifact:
+  largest_material_risk:
+  largest_creative_upside:
+  next_valid_evidence:
+  done_when: []
+~~~
+
+This is a memory aid, not a form and not a chain-of-thought transcript. Populate only what materially prevents drift. A short REPAIR often needs none of it.
+
+Do not commit this state into the customer's production repository by default.
+
 ## Unequal inertia
 
 Think in five layers:
@@ -62,6 +97,8 @@ Before substantial implementation, be able to state compactly:
 Do not require a fixed form or persisted object. Do not freeze colors, fonts, layouts, libraries or effects unless they are intrinsically part of the idea.
 
 A useful direction generates decisions. A weak direction merely describes styling.
+
+For HIGH-END/FRONTIER CREATE or materially open visual REFINE, a direction that exists only as prose is not yet sufficiently tested for commitment. Use `visual-explore.md` to externalize the highest-risk visual hypothesis before substantial visual implementation. The artifact is evidence about the hypothesis, not a contract to copy.
 
 ## Exploration can be intuitive
 
@@ -141,10 +178,14 @@ The control model is failing if it causes any of these:
 
 The goal is continuity of purpose, not continuity of form.
 
-## Compact loop
+## Adaptive operating loop
 
 For material work:
 
-`GROUND → EXPLORE → COMMIT TEMPORARILY → MAKE → OBSERVE → REFINE or RE-DIVERGE`
+`OBSERVE → MODEL → CHOOSE → MAKE → OBSERVE → DIAGNOSE → UPDATE`
 
-Ground truth and intent. Explore widely enough to find a point of view. Commit long enough to build coherence. Let real output teach you what the plan could not. Then improve the current idea or deliberately replace it.
+The loop serves the artifact; it is not a phase checklist.
+
+Choose the next action by expected improvement to the final result. Resolve the largest material risk or highest-value creative uncertainty with evidence of sufficient fidelity before the current commitment makes it expensive to reverse. When two actions have comparable value, prefer the simpler/cheaper one. Do not choose a cheaper action that materially lowers the creative ceiling or increases likely rework.
+
+Ground truth and intent. Explore widely enough to find a point of view. Commit only long enough to build coherent evidence. Let real output teach what prose could not. Then improve the current idea, reopen the lowest causal layer that explains the failure, or deliberately replace the direction.

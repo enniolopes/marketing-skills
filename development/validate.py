@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Minimal repository validation for installable runtime integrity.
+"""Minimal validation for the standalone Agent Skills in this repository.
 
-One command locally and in CI:  python development/validate.py
+Run locally and in CI with:
 
-CI proves only mechanical properties: installability, stable Agent Skills metadata,
-runtime boundaries, direct SKILL references, packaging/version projections, syntax and
-unit contracts. It does not judge semantic or creative quality.
+    python development/validate.py
+
+This checks mechanical contracts only: runtime shape, metadata, references,
+marketplace projections, Python syntax, and unit tests. It does not prove
+behavioral or creative quality.
 """
 
 from __future__ import annotations
@@ -24,7 +26,6 @@ TEXT_SUFFIXES = {".md", ".json", ".py", ".txt", ".yaml", ".yml"}
 RUNTIME_FORBIDDEN_NAMES = {"README.md", "tests", "evals", "docs", "dist"}
 RUNTIME_FORBIDDEN_REFS = ("development/", "systems/")
 RUNTIME_PATH = re.compile(r"\b(?:references?|templates?|scripts)/[A-Za-z0-9_.\-/]+")
-SYSTEM_TOP = {".claude-plugin", "README.md", "skills", "agents"}
 
 
 def rel(path: Path) -> str:
@@ -76,7 +77,7 @@ def check_runtime_tree(root: Path, errors: list[str]) -> None:
                 errors.append(f"{rel(path)}: runtime depends on repository path {ref!r}")
 
 
-def check_skill(path: Path, names: dict[str, str], errors: list[str]) -> str:
+def check_skill(path: Path, names: set[str], errors: list[str]) -> str:
     skill = path / "SKILL.md"
     if not skill.is_file():
         errors.append(f"{rel(path)}: missing SKILL.md")
@@ -100,138 +101,75 @@ def check_skill(path: Path, names: dict[str, str], errors: list[str]) -> str:
         errors.append(f"{rel(skill)}: license must be {LICENSE}")
     if not SEMVER.match(version):
         errors.append(f"{rel(skill)}: metadata.version must be semver")
+    if name in names:
+        errors.append(f"{rel(path)}: duplicate runtime name {name!r}")
 
     for match in RUNTIME_PATH.findall(skill.read_text(encoding="utf-8")):
         if not (path / match.rstrip(".,;:)")).exists():
             errors.append(f"{rel(skill)}: missing direct runtime reference {match!r}")
 
-    previous = names.get(path.name)
-    if previous:
-        errors.append(f"{rel(path)}: runtime name duplicates {previous}")
-    names[path.name] = rel(path)
+    names.add(name)
     check_runtime_tree(path, errors)
     return version
 
 
-def check_agent(path: Path, names: dict[str, str], errors: list[str]) -> None:
-    fm = frontmatter(path)
-    if fm.get("name") != path.stem or not fm.get("description"):
-        errors.append(f"{rel(path)}: agent needs matching name and description")
-    previous = names.get(path.stem)
-    if previous:
-        errors.append(f"{rel(path)}: runtime name duplicates {previous}")
-    names[path.stem] = rel(path)
-    text = path.read_text(encoding="utf-8", errors="replace")
-    for ref in RUNTIME_FORBIDDEN_REFS:
-        if ref in text:
-            errors.append(f"{rel(path)}: runtime depends on repository path {ref!r}")
-
-
-def discover_runtime(errors: list[str]) -> tuple[set[str], dict[str, tuple[str, str, str]]]:
-    names: dict[str, str] = {}
-    units: set[str] = set()
-    expected_plugins: dict[str, tuple[str, str, str]] = {}
-
-    skills = REPO_ROOT / "skills"
-    if not skills.is_dir():
+def discover_skills(errors: list[str]) -> dict[str, tuple[str, str]]:
+    root = REPO_ROOT / "skills"
+    if not root.is_dir():
         errors.append("skills/: missing")
-    else:
-        for path in sorted(p for p in skills.iterdir() if p.is_dir()):
-            version = check_skill(path, names, errors)
-            units.add(path.name)
-            expected_plugins[path.name] = (f"./skills/{path.name}", "skill", version)
+        return {}
 
-    agents = REPO_ROOT / "agents"
-    if agents.is_dir():
-        for path in sorted(agents.glob("*.md")):
-            check_agent(path, names, errors)
-            units.add(path.stem)
-
-    systems = REPO_ROOT / "systems"
-    if systems.is_dir():
-        for system in sorted(p for p in systems.iterdir() if p.is_dir()):
-            units.add(system.name)
-            unexpected = [p.name for p in system.iterdir() if p.name not in SYSTEM_TOP]
-            if unexpected:
-                errors.append(f"{rel(system)}: unexpected runtime entries: {', '.join(sorted(unexpected))}")
-
-            manifest = system / ".claude-plugin" / "plugin.json"
-            data = load_json(manifest, errors) if manifest.is_file() else None
-            version = ""
-            if data is None:
-                if not manifest.is_file():
-                    errors.append(f"{rel(system)}: missing plugin.json")
-            else:
-                version = str(data.get("version", ""))
-                if data.get("name") != system.name:
-                    errors.append(f"{rel(manifest)}: name must match system directory")
-                if not SEMVER.match(version):
-                    errors.append(f"{rel(manifest)}: version must be semver")
-                if data.get("license") != LICENSE:
-                    errors.append(f"{rel(manifest)}: license must be {LICENSE}")
-                if data.get("dependencies"):
-                    errors.append(
-                        f"{rel(manifest)}: hard plugin dependencies are not shipped here — "
-                        "an unresolved dependency can make a side-loaded system disappear. "
-                        "Install delegates separately and define explicit runtime degradation instead."
-                    )
-
-            expected_plugins[system.name] = (f"./systems/{system.name}", "system", version)
-
-            nested_skills = system / "skills"
-            if nested_skills.is_dir():
-                for path in sorted(p for p in nested_skills.iterdir() if p.is_dir()):
-                    check_skill(path, names, errors)
-            nested_agents = system / "agents"
-            if nested_agents.is_dir():
-                for path in sorted(nested_agents.glob("*.md")):
-                    check_agent(path, names, errors)
-
-    return units, expected_plugins
+    names: set[str] = set()
+    expected: dict[str, tuple[str, str]] = {}
+    for path in sorted(p for p in root.iterdir() if p.is_dir()):
+        version = check_skill(path, names, errors)
+        expected[path.name] = (f"./skills/{path.name}", version)
+    return expected
 
 
-def marketplace(errors: list[str]) -> dict[str, dict]:
+def check_development_ownership(skills: set[str], errors: list[str]) -> None:
+    root = REPO_ROOT / "development"
+    if not root.is_dir():
+        errors.append("development/: missing")
+        return
+    for path in sorted(p for p in root.iterdir() if p.is_dir() and p.name != "__pycache__"):
+        if path.name not in skills:
+            errors.append(f"{rel(path)}: no corresponding skill; remove or move this development material")
+
+
+def check_marketplace(expected: dict[str, tuple[str, str]], errors: list[str]) -> None:
     path = REPO_ROOT / ".claude-plugin" / "marketplace.json"
     data = load_json(path, errors) if path.is_file() else None
     if data is None:
         if not path.is_file():
             errors.append(".claude-plugin/marketplace.json: missing")
-        return {}
-    out: dict[str, dict] = {}
-    for item in data.get("plugins", []):
-        if not isinstance(item, dict) or not item.get("name"):
-            errors.append(f"{rel(path)}: every plugin needs a name")
-            continue
-        name = item["name"]
-        if name in out:
-            errors.append(f"{rel(path)}: duplicate plugin {name!r}")
-        out[name] = item
-    return out
-
-
-def check_marketplace(
-    plugins: dict[str, dict],
-    expected: dict[str, tuple[str, str, str]],
-    errors: list[str],
-) -> None:
-    if set(plugins) != set(expected):
-        errors.append(".claude-plugin/marketplace.json: entries must match installable units")
         return
-    for name, (source, kind, version) in expected.items():
+
+    plugins = {
+        item.get("name"): item
+        for item in data.get("plugins", [])
+        if isinstance(item, dict) and item.get("name")
+    }
+    if len(plugins) != len(data.get("plugins", [])):
+        errors.append(f"{rel(path)}: every plugin needs a unique name")
+        return
+    if set(plugins) != set(expected):
+        errors.append(f"{rel(path)}: entries must match skills/")
+        return
+
+    for name, (source, version) in expected.items():
         item = plugins[name]
         if item.get("source") != source or not item.get("description"):
             errors.append(f"marketplace {name!r}: wrong source or missing description")
         if item.get("version") != version:
             errors.append(f"marketplace {name!r}: version must match canonical runtime")
-        if kind == "skill" and item.get("strict") is not False:
+        if item.get("strict") is not False:
             errors.append(f"marketplace {name!r}: standalone skill needs strict=false")
-        if kind == "system" and "strict" in item:
-            errors.append(f"marketplace {name!r}: system must not override strict")
 
 
 def compile_python(errors: list[str]) -> None:
     result = subprocess.run(
-        [sys.executable, "-m", "compileall", "-q", "skills", "systems", "development"],
+        [sys.executable, "-m", "compileall", "-q", "skills", "development"],
         cwd=REPO_ROOT,
         capture_output=True,
         text=True,
@@ -240,9 +178,9 @@ def compile_python(errors: list[str]) -> None:
         errors.append("python compile failed: " + (result.stderr or result.stdout).strip())
 
 
-def run_tests(units: set[str], errors: list[str]) -> int:
+def run_tests(skills: set[str], errors: list[str]) -> int:
     suites = 0
-    for name in sorted(units):
+    for name in sorted(skills):
         path = REPO_ROOT / "development" / name / "tests"
         if not path.is_dir():
             continue
@@ -260,17 +198,20 @@ def run_tests(units: set[str], errors: list[str]) -> int:
 
 def main() -> int:
     errors: list[str] = []
-    plugins = marketplace(errors)
-    units, expected = discover_runtime(errors)
-    check_marketplace(plugins, expected, errors)
+    expected = discover_skills(errors)
+    skills = set(expected)
+    check_development_ownership(skills, errors)
+    check_marketplace(expected, errors)
     compile_python(errors)
-    suites = run_tests(units, errors)
+    suites = run_tests(skills, errors)
+
     if errors:
         print(f"invalid ({len(errors)}):")
         for error in errors:
             print(f"- {error}")
         return 1
-    print(f"valid: {len(units)} installable units; {suites} test suite(s)")
+
+    print(f"valid: {len(skills)} skill(s); {suites} test suite(s)")
     return 0
 
 

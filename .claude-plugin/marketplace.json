@@ -9,9 +9,9 @@
     {
       "name": "branding-studio",
       "source": "./skills/branding-studio",
-      "version": "3.1.0",
+      "version": "3.2.0",
       "strict": false,
-      "description": "Autonomous brand steward: create, apply, audit and evolve brands; direction shown before building, touchpoints seen where they live, brand book served as a touchpoint."
+      "description": "Autonomous brand steward: grounded creative direction, proof before propagation, tested touchpoints, and brand books designed as branded information products."
     },
     {
       "name": "landing-page",

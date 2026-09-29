@@ -4,11 +4,13 @@ Load this reference when a CREATE or material REFINE depends on generated or edi
 
 The objective is not to fill image slots. It is to produce **relevant, product-specific, high-craft imagery that materially improves the page's communication and visual distinction in the real browser**.
 
+This reference owns **production assets that will appear in the delivered page**. Disposable moodboards, direction frames, provocations, and pre-code composition studies belong to `visual-explore.md`. A study becomes production only when the chosen direction requires that image itself as a real asset.
+
 ## Invariants
 
 1. **Relevance before spectacle.** A stunning image that could serve an unrelated product fails.
 2. **Art direction before generation.** The page's intent and governing direction determine the image; generator aesthetics do not determine the page.
-3. **FLUX first for material generative imagery.** Prefer official Black Forest Labs FLUX when generated/edited imagery materially affects page quality.
+3. **Quality contract before provider.** Prefer the strongest appropriate official FLUX path described by `environment.md`, but provider identity never substitutes for artifact quality.
 4. **Quality is invariant.** Missing capability never justifies a generic placeholder, weaker concept, or inferior medium merely to finish.
 5. **Generated is not finished.** A material image is complete only after production, inspection, refinement, persistence, integration, browser rendering and contextual QA.
 
@@ -30,20 +32,17 @@ Visible page copy stays code-native unless text intrinsically belongs inside the
 
 ## 2. Preflight the production path before committing an image-dependent direction
 
-When a promising direction materially depends on generated imagery, confirm that a production path can be obtained before treating the direction as production-ready.
+When a committed direction materially depends on generated imagery, identify the required capability before treating the direction as production-ready.
 
-Use this order:
+Use `environment.md` for the current provider/host profile. The durable rule is:
 
-1. If an **official Black Forest Labs FLUX capability** is already usable through the host, use it.
-2. Otherwise prefer the official remote FLUX MCP when the host supports remote MCP (`https://mcp.bfl.ai`), then already-configured official BFL API/tooling when the environment can execute it safely. Treat `BFL_API_KEY` as a secret; never print it, persist it in project/runtime files, or ask the user to paste it into chat.
-3. If FLUX is supported but requires a user connection/configuration action, ask for that action before changing backend.
-4. Treat FLUX as unavailable only when the current environment has no supported path to it, the required setup cannot be completed in the current session, or a reasonable attempt to use the supported path fails.
-5. Only then use another available image generator, and only if it can independently meet the same quality bar for this asset.
-6. If no available path can preserve the selected direction at the required quality, keep the direction and mark the affected visual production **blocked** rather than redesigning downward for convenience.
+1. define what the asset requires — generation/editing, reference control, typography/detail precision, resolution, compositing, or other constraints;
+2. prefer the strongest appropriate official FLUX capability available;
+3. if FLUX requires a legitimate user connection/configuration action, request that action without asking for secrets in chat;
+4. use another backend only when FLUX cannot be used in the current environment and the alternative can independently meet the same art-direction and craft bar;
+5. if no available path can preserve the selected direction, keep the direction and report visual production as blocked rather than redesigning downward for convenience.
 
-If the user explicitly requires another backend, respect that constraint and keep the same production and verification gates.
-
-Do not create repository-wide FLUX clients, adapters or credential files merely to reach the service. Use host-exposed capabilities, official MCP, already-configured API access, or official BFL execution guidance when available.
+Do not create repository-wide provider wrappers or credential files merely to reach an image service.
 
 ## 3. Direct the image from the page job
 
@@ -62,13 +61,13 @@ Before material generation, establish the smallest art-direction packet that can
 - useful references and the role each reference should influence;
 - negative constraints that prevent genericity, false product implication or visual drift.
 
-Translate those decisions into the production request required by the available FLUX surface. Prompt syntax is implementation detail; the communication and art direction are the durable decisions.
+Translate those decisions into the production request required by the available generation or editing surface. Provider-specific prompt syntax is implementation detail; the communication and art direction are the durable decisions.
 
-## 4. Diverge enough to judge the visual concept
+## 4. Produce and vary within the committed direction
 
-For a hero, key visual or new imagery grammar, do not accept the first plausible generation merely because it is polished.
+If the governing visual idea is still uncertain, return to `visual-explore.md` and re-diverge there. Production should not disguise conceptual uncertainty as same-direction image variations.
 
-Produce a small set of materially different candidates when the visual idea is still uncertain. Judge the actual artifacts against:
+For a hero, key visual, or new imagery grammar inside a committed direction, do not accept the first plausible generation merely because it is polished. Produce enough candidates/variations to judge the asset and repair material defects. Judge the actual artifacts against:
 - truth and communication job;
 - product/brand specificity;
 - compositional strength and hierarchy;

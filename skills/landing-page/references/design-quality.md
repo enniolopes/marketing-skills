@@ -4,6 +4,8 @@ Load this reference for CREATE, major REFINE, art direction, or any task where t
 
 High-end design is not a style. It is controlled intention under constraints.
 
+The objective is not merely to remove defects. **Zero known defects is a floor; it is not evidence of exceptional design.** High-end work must also search for and resolve the strongest brief-specific art direction the task can support.
+
 ## Design quality
 
 ### Specificity
@@ -84,7 +86,7 @@ Balance familiarity and novelty.
 
 Keep recognizable patterns where they lower cognitive cost. Introduce novelty where it increases identity, meaning, emotional fit, or recall.
 
-Create one **signature**: a visual/interactive/narrative expression the page can be remembered by. Examples include a product demonstration, unusual composition, typographic device, spatial metaphor, data behavior, image treatment, or interaction.
+Create one **signature**: a memorable relationship between content and expression that emerges specifically from this product. It may be a product demonstration, unusual composition, typographic relationship, spatial metaphor, data behavior, image treatment, interaction, or another earned mechanism. A flashy add-on is not a signature when removing it leaves the idea unchanged.
 
 Spend boldness in one dominant place. Supporting regions should give the signature enough contrast to matter.
 
@@ -180,6 +182,8 @@ For each active medium, decide its role, relationship to the governing idea, and
 
 Before coding, identify any material decision that could have been made for an unrelated page and make it more specific or remove it.
 
+For HIGH-END/FRONTIER CREATE or materially open visual REFINE, do not let the decisive art direction remain prose-only. Use `visual-explore.md` to externalize the highest-risk visual hypothesis before substantial visual implementation. Compare representative artifacts before reading the builder's rationale, then commit temporarily to the strongest direction.
+
 Bad: `modern, premium, dark, gradients`.
 
 Useful: `The page behaves like a forensic instrument: sparse editorial typography frames live evidence from the product, while one controlled network visualization turns complexity into visible order.`
@@ -217,7 +221,7 @@ Do not make a non-expert user choose between design jargon. Pause for concept ap
 
 When isolated contexts are available and the creative problem is genuinely open, routes may be generated independently from the same grounded brief before comparison. Do not show one route to the context generating another. The purpose is to reduce anchoring and increase structural divergence, not to multiply agents or output. This is optional; lack of isolated contexts never blocks high-quality work.
 
-When visual concept-generation or design-canvas tools are available, externalize high-value directions or hard sections before implementation. Treat concept output as art-direction evidence and target, not as a source of factual copy or production UI.
+Use `visual-explore.md` for the full externalization protocol: grounded visual worlds, structurally different direction frames, critical-section studies, macro-composition studies, divergence/variation/refinement semantics, quality-first FLUX use, artifact-first comparison, and the mockup→implementation firewall. Concept output is art-direction evidence, never factual copy or production UI.
 
 ## Visual grammar
 
@@ -336,6 +340,21 @@ When one appears, diagnose the underlying reason rather than banning the surface
 A luxury financial product may be quiet, restrained, material, and precise. A music festival may be kinetic, dense, and confrontational. A developer platform may be technical, diagrammatic, and product-led. A consumer object may be photographic and tactile.
 
 The quality bar is the same: intentionality, hierarchy, coherence, appropriate expression, distinction, craft, and real-world integrity.
+
+## Creative-ceiling test
+
+After the page is truthful, usable, and technically sound, ask a different question: **is the solution merely competent, or has it reached the strongest plausible expression of this brief?**
+
+Inspect:
+- whether the governing visual idea is perceptible without explanation;
+- what remains memorable after the page is closed;
+- which major decisions could be transplanted to an unrelated brand;
+- whether typography and imagery participate in meaning rather than style the surface;
+- whether tension, rhythm, scale, silence, density, materiality, or motion are deliberate;
+- which important region is furthest below the strongest region;
+- whether a materially stronger possibility remains compatible with the same truth and intent.
+
+Do not add novelty to answer this test. Improve only when the stronger possibility has enough perceptual value to justify another iteration.
 
 ## Quality is resolved, not merely polished
 

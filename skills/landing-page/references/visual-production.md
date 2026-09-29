@@ -61,7 +61,7 @@ Before material generation, establish the smallest art-direction packet that can
 - useful references and the role each reference should influence;
 - negative constraints that prevent genericity, false product implication or visual drift.
 
-Translate those decisions into the production request required by the available FLUX surface. Prompt syntax is implementation detail; the communication and art direction are the durable decisions.
+Translate those decisions into the production request required by the available generation or editing surface. Provider-specific prompt syntax is implementation detail; the communication and art direction are the durable decisions.
 
 ## 4. Produce and vary within the committed direction
 

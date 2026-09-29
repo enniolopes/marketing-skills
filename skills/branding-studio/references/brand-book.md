@@ -91,9 +91,9 @@ Use one folder the host already serves statically when possible:
 - print styles implementing a deliberately composed print layout;
 - contract outside the served folder unless the owner explicitly chooses to publish it.
 
-Prefer no client-side script when the experience can be delivered with semantic HTML and CSS; add runtime behavior only when a real reader job earns it. No external request may be required for the book to remain usable offline.
+The current package contract uses no client-side scripts and no external requests; solve navigation and disclosure with semantic HTML and CSS. If a future reader job genuinely requires runtime behavior, change the package contract and its checker together rather than bypassing either.
 
-`scripts/book_checks.py <folder>` decides only the existing mechanical package properties: self-containment, resolvable relative references, alt text, orphan files, print stylesheet and contract separation. It establishes nothing about transfer, expression or overall UX.
+`scripts/book_checks.py <folder>` decides only the existing mechanical package properties: no scripts or external requests, self-containment, resolvable relative references, alt text, orphan files, print stylesheet and contract separation. It establishes nothing about transfer, expression or overall UX.
 
 Before calling the book **ready**, **final** or **publishable**:
 1. relevant deterministic checks pass or carry an explicit justified exception;

@@ -134,7 +134,7 @@ Passing the floor is necessary. It is not proof of exceptional design.
 Load only the intelligence needed for the current material decision.
 
 - **references/control.md** — CREATE, major REFINE, long-running work, material new evidence, or possible pivot. Owns working state, decision inertia, causal diagnosis, REFINE vs RE-DIVERGE.
-- **references/marketing.md** — page job, proposition, narrative, proof, CTA, visitor-state structure, or conversion logic is created or materially changed.
+- **references/marketing.md** — page job, offer/proposition, narrative, proof, copy/UX writing, CTA, visitor-state structure, or conversion logic is created or materially changed.
 - **references/discovery.md** — weak brief, missing product/category truth, reference research, or external evidence could change a material decision.
 - **references/design-quality.md** — CREATE, major visual REFINE, HIGH-END/FRONTIER work. Core creative intelligence, not optional decoration.
 - **references/visual-explore.md** — material visual direction is open; externalize visual hypotheses before commitment.

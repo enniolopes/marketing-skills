@@ -1,61 +1,60 @@
-# skills
+# marketing-skills
 
-[![validate](https://github.com/enniolopes/skills/actions/workflows/validate.yml/badge.svg)](https://github.com/enniolopes/skills/actions/workflows/validate.yml)
+[![validate](https://github.com/enniolopes/marketing-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/enniolopes/marketing-skills/actions/workflows/validate.yml)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](LICENCE)
 
-Portable capabilities for AI assistants.
+Portable Agent Skills for brand and marketing work.
 
-## Capabilities
+## Skills
 
-| Capability | Type | Use it for |
-|---|---|---|
-| [**Branding Studio**](skills/branding-studio/) | Skill | Create, audit, apply, and evolve brands and identity systems. |
-| [**Landing Page**](skills/landing-page/) | Skill | Research, design, build, and refine marketing landing pages and homepages. |
+| Skill | What it does |
+|---|---|
+| [**Branding Studio**](skills/branding-studio/) | Creates and operates brand systems: strategy, creative direction, identity, touchpoints, brand books, audits, and evolution. |
+| [**Landing Page**](skills/landing-page/) | Researches, designs, builds, and refines high-end marketing landing pages and homepages. |
 
-## Claude Code
+## Install
 
-Add the marketplace once:
+### Claude Code
+
+Add this marketplace once:
 
 ```text
-/plugin marketplace add enniolopes/skills
+/plugin marketplace add enniolopes/marketing-skills
 ```
 
-Install the capability you want:
+Then install the skill you want:
 
 ```text
 /plugin install branding-studio@enniolopes
 /plugin install landing-page@enniolopes
 ```
 
-`research` uses `explorer` for structural exploration, so install both when using the research system:
+### ChatGPT
+
+Where Agent Skills are supported, use the skill ZIPs from [GitHub Releases](https://github.com/enniolopes/marketing-skills/releases).
+
+Workspace admins can also import this repository as a plugin marketplace:
 
 ```text
-/plugin install research@enniolopes
-/plugin install explorer@enniolopes
+https://github.com/enniolopes/marketing-skills
 ```
 
-Then describe the job normally. The Research system now lives in the [standalone research repository](https://github.com/enniolopes/research).
+### Gemini CLI
 
-## ChatGPT
-
-For standalone Skills, where Skills are available on your account, upload the skill ZIP from [GitHub Releases](https://github.com/enniolopes/skills/releases).
-
-Workspace admins can also import this repository as a plugin marketplace from **Workspace settings → Plugins → Add → Import marketplace** using:
-
-```text
-https://github.com/enniolopes/skills
-```
-
-## Gemini CLI
-
-Standalone Skills can be installed directly from this repository:
+Install a standalone skill directly from the repository:
 
 ```bash
-gemini skills install https://github.com/enniolopes/skills.git --path skills/<name>
+gemini skills install https://github.com/enniolopes/marketing-skills.git --path skills/<name>
 ```
 
-## Other Agent Skills hosts
+### Other Agent Skills hosts
 
-Install the chosen `skills/<name>/` directory using the host's normal Agent Skills flow.
+Install the chosen `skills/<name>/` directory with the host's normal Agent Skills flow.
 
-Standalone Skills are the most portable unit. `research` is a composed system and currently targets plugin hosts such as Claude Code.
+## Development
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). The repository's blocking validation is:
+
+```bash
+python development/validate.py
+```

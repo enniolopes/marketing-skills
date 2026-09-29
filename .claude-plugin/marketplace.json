@@ -1,6 +1,6 @@
 {
   "name": "enniolopes",
-  "description": "Agent skills and systems by Ennio Politi Lopes: branding, landing pages, structural exploration, scientific research.",
+  "description": "Portable Agent Skills by Ennio Politi Lopes for branding and marketing pages.",
   "owner": {
     "name": "Ennio Politi Lopes",
     "url": "https://github.com/enniolopes"
@@ -11,7 +11,7 @@
       "source": "./skills/branding-studio",
       "version": "3.2.0",
       "strict": false,
-      "description": "Autonomous brand steward: grounded creative direction, proof before propagation, tested touchpoints, and brand books designed as branded information products."
+      "description": "Autonomous brand-system steward for creating, applying, auditing, and evolving brands from strategy through identity, touchpoints, and brand books."
     },
     {
       "name": "landing-page",

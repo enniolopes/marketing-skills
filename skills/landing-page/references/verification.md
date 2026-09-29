@@ -35,6 +35,17 @@ Examples:
 
 Never claim evidence that was not collected. If no valid oracle is available, report the gap rather than upgrading judgment into proof.
 
+### Evidence confidence
+
+Use semantic confidence instead of fake precision:
+
+- **VERIFIED** — an appropriate deterministic or behavioral oracle was actually exercised;
+- **OBSERVED** — directly judged in the relevant rendered artifact/state;
+- **INFERRED** — indirectly supported but not directly verified;
+- **UNVERIFIED** — no valid evidence collected.
+
+A material claim cannot pass solely because it is INFERRED. A screenshot can OBSERVE composition but cannot VERIFY CTA behavior. Source code can support implementation intent but cannot OBSERVE hierarchy. Generator success cannot VERIFY responsive crop after integration.
+
 ## Deterministic QA
 
 Prefer tools for falsifiable properties.
@@ -141,17 +152,19 @@ Ask:
 
 When a false proxy appears, repair the **underlying quality** rather than banning the surface form or adding another decorative layer. Keep any form that the brief genuinely earns. If genericity is conceptual, revise the governing decision rather than ornamenting it.
 
-## Concept fidelity
+## Concept retention
 
-When a visual concept/reference was accepted before implementation:
+When a visual study/direction was accepted before implementation, compare **principles, not pixels**.
 
-1. capture the concept/reference and current implementation in the same QA pass;
-2. compare composition, typography, scale, crop, palette, spacing, imagery, containers, and motion intent;
-3. identify the largest material mismatches;
-4. fix them in descending perceptual impact;
+1. identify what made the selected artifact exceptional: governing idea, dominant hierarchy, scale relationship, type/image relationship, crop behavior, rhythm/density, material logic, signature, and motion implication when relevant;
+2. inspect the current browser implementation in representative states;
+3. ask which defining property was normalized away by real content, componentization, responsive adaptation, or implementation convenience;
+4. fix the largest lost principle in descending perceptual impact;
 5. re-render after each meaningful correction set.
 
-Do not silently reinterpret the accepted design into a generic component system. A reference is not permission to ship screenshot-as-UI; keep real UI, text, controls, and interactions code-native where appropriate.
+Do not silently reinterpret the accepted direction into a generic component system. Do not pixel-copy impossible mockup geometry. Real UI, text, controls, interactions, accessibility, and responsive behavior remain native to the web.
+
+If the implementation cannot preserve a defining principle without breaking truth, task integrity, or browser reality, treat the concept itself as falsified and re-diverge rather than forcing fidelity.
 
 ## Build in visual slices
 
@@ -252,6 +265,52 @@ Do not sign off while any applicable defect remains:
 
 If the environment prevents verification, state exactly what remains unverified.
 
+## Artifact-first critic for premium work
+
+When context/capability permits, make the first critical judgment without the builder's rationale. Give the critic only:
+
+- grounded brief/page intent;
+- known truth and authority constraints;
+- active invariants;
+- rendered desktop/mobile artifacts and exercised states.
+
+The artifact must carry its own meaning. Rationale may explain depth after the first pass; it may not manufacture coherence.
+
+Run two distinct passes.
+
+### Pass A — falsification
+
+Find evidence-backed failures in:
+
+- truth or unsupported implication;
+- apparent page job and argument progression;
+- primary-task integrity;
+- hierarchy/composition;
+- genericity or product swapability;
+- responsive behavior;
+- material asset/crop failures;
+- technical/accessibility defects supported by the supplied evidence.
+
+For every BLOCKER/MATERIAL finding, identify the lowest causal layer: TRUTH, INTENT, DIRECTION, EXPRESSION, or EXECUTION, and whether the correct response is REFINE or RE-DIVERGE.
+
+Do not reward rationale, novelty, complexity, or polish.
+
+### Pass B — creative ceiling
+
+Assume validity is intact and ask whether the result is merely competent or genuinely exceptional.
+
+Inspect:
+
+- whether the governing visual idea is perceptible from the artifact;
+- what remains memorable after closing the page;
+- which major decision could be transplanted to an unrelated brand;
+- whether typography and imagery participate in meaning;
+- whether scale, tension, silence, density, rhythm, materiality, depth, or motion are deliberate;
+- which important region is furthest below the strongest one;
+- what materially stronger possibility remains compatible with the same truth and intent.
+
+Identify only the few changes with enough perceptual value to justify another iteration. Zero known defects is not a creative-ceiling pass.
+
 ## Multi-lens review for premium work
 
 Use separate lenses because they expose different classes of failure.
@@ -314,6 +373,7 @@ Stop refinement when:
 1. all applicable hard gates pass;
 2. no BLOCKER/MATERIAL falsifier remains;
 3. the weakest important region is still professional and coherent with the whole;
-4. another change would be preference-level, conflict with a constraint, or risk destabilizing a stronger solved decision.
+4. HIGH-END/FRONTIER work has completed both artifact-first falsification and creative-ceiling review when capability allows;
+5. another change would be preference-level, conflict with a constraint, or risk destabilizing a stronger solved decision.
 
 This is stronger than “looks good” and more practical than pretending perfection is measurable.

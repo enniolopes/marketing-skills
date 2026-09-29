@@ -192,7 +192,7 @@ Keep the contract outside any directory the host serves publicly unless the owne
 
 Tool availability is not production proof. Capability limits may lower the maturity of what can truthfully be delivered, but they do not lower the quality bar for an artifact claimed as final.
 
-Seeing is done by rendering and looking: at representative scale, on the surfaces the reader will use, as each named reader. Deterministic tools establish only the exact properties code can decide. Source-of-truth coherence is an acceptance property, not a required production method: do not create a generation pipeline merely to keep artifacts synchronized unless recurrence, scale or drift risk earns it.
+Seeing is done by rendering and looking: at representative scale, on the surfaces the reader will use, as each named reader. Source-of-truth coherence is an acceptance property, not a required production method: do not create a generation pipeline merely to keep artifacts synchronized unless recurrence, scale or drift risk earns it.
 
 Deterministic tools establish only the exact properties code can decide:
 - `scripts/validate_structure.py spec.json` — schema/types/enums/references and other machine-checkable constraints;

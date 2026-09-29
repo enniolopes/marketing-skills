@@ -25,7 +25,7 @@ Define only principles that cause observable choices in real copy. Depending on 
 - how evidence, uncertainty and calls to action are expressed;
 - meaningful exclusions that prevent category-autocomplete language.
 
-Replace generic adjectives such as `human`, `bold`, `authentic` or `confident` with the writing decisions they actually require. If a principle would not change a sentence, it is not useful guidance.
+Replace generic adjectives such as `human`, `bold`, `authentic` or `confident` with the writing decisions they actually require. Authenticity is not a voice setting: it comes from truthful, brand-specific language and behavior. If a principle would not change a sentence, it is not useful guidance.
 
 ## 3. Modulate by audience, channel and moment
 
@@ -64,5 +64,6 @@ Ask:
 - Can expression adapt without changing the underlying truth?
 - Could another competent writer create a new, correct communication from the guidance alone?
 - Would swapping the brand name for a generic competitor leave most of the language equally valid? If so, specificity is weak.
+- If the strategy explanation disappeared, would the writing still feel deliberate and would its governing logic remain intelligible? If not, rationale is rescuing unresolved expression.
 
 Examples are decoding aids. If operators can only imitate the examples, the verbal grammar is under-resolved.

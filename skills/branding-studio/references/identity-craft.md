@@ -40,6 +40,10 @@ When a render lacks force, find which mechanism is missing before adjusting comp
 
 Treat the logo as one asset inside the system, not the explanation for the whole brand.
 
+Before a symbol, wordmark, lockup or other critical master fans out into applications, resolve the relationships whose error would multiply. Spacing, proportion, optical balance, reduction, reversal and variants are judged in the conditions that can falsify them. When a relationship remains ambiguous, render a small set of credible alternatives side by side at relevant large and small sizes, choose by comparison, and only then propagate it.
+
+Critical relationships must be intentional and reproducible. Geometric derivation from the system is useful when it improves coherence, but it is not a law: deliberate optical correction is valid when the comparison earns it. An inherited or technically valid master passes the same craft gate before reuse.
+
 Evaluate what is actually relevant:
 - relationship to the creative thesis;
 - recognizable silhouette/counterform/word shape;
@@ -101,6 +105,7 @@ Ask:
 - Which cues are doing real recognition work?
 - Are repeated devices becoming a crutch?
 - Does real content expose missing rules or overly rigid ones?
+- If the brand name were swapped for a competitor's, which consequential choices would still survive unchanged? Those are candidates for weak grounding.
 
 Fix recurring causes and re-test. Keep one-off fixes local.
 
@@ -108,7 +113,7 @@ Fix recurring causes and re-test. Keep one-off fixes local.
 
 Inspect at macro, meso and micro levels.
 
-**Macro:** strategic fit, creative thesis, overall recognizability, range, hierarchy and relationship to touchpoint job.
+**Macro:** strategic fit, creative thesis, overall recognizability, range, hierarchy, relationship to touchpoint job and whether the work carries its logic without the design presentation explaining it.
 
 **Meso:** type/image relationships, composition, rhythm, color behavior, asset hierarchy, component variation and medium-specific decisions.
 

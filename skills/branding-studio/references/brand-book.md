@@ -1,56 +1,110 @@
-# Brand book — a served touchpoint that teaches the system
+# Brand book — an information product and a branded touchpoint
 
-Use when guidelines, a brand book or an equivalent handoff is a deliverable. Build it after the identity has survived the declared touchpoints. It is written for people who did not participate in the project, so they can make correct new work and recognize drift.
+Use when guidelines, a brand book or an equivalent handoff is a deliverable. Build it after the identity has survived the declared touchpoints. It is for people who did not participate in the project, so they can understand the brand, find what they need, make correct new work and recognize drift.
 
-The brand book is a touchpoint of the brand: it is designed, rendered, looked at and refined like any other application. It is not a serialized contract and it is not written in the process's vocabulary.
+The brand book is both **interactive documentation** and **an expression of the brand**. It must teach and retrieve well while carrying the same level of craft as the identity it describes. A beautiful book that is hard to use fails; a usable generic manual that suppresses the brand also fails.
 
-## 1. Readers decide language, medium and register
+## 1. Readers and jobs decide the experience
 
-Name the actual readers before writing, from the audience and the owner's operation rather than from a template: typically a designer or agency, a supplier or printer, and the person who operates the brand day to day without design training. Add leadership or partners only when they will genuinely read it.
+Name the actual readers from the owner's operation, not from a template, and the jobs that bring each reader to the book. Typical jobs are to understand the brand, apply a rule, verify a decision, retrieve a value or download an asset.
 
-- **Language** is the audience's language (`strategy.audience.language`). Repository or host conventions govern code and commits, never a touchpoint.
-- **Medium** is one self-contained HTML document unless the owner requires another medium that can render the system. Type, color and composition must demonstrate themselves; a format that cannot render the system is never the medium. Print is a stylesheet, not a second artifact: A4 pages come from the browser, never from the agent typesetting a PDF.
-- **Register** is instruction. The reader obeys the book and puts it down; persuasion belongs to the brand's own touchpoints.
+Design for two modes:
+- **reading** — a newcomer can acquire the governing logic without consuming every production detail;
+- **lookup** — an experienced operator can reach a known rule, value or asset without rereading the narrative.
 
-## 2. Three layers with different owners
+Language is the audience's language (`strategy.audience.language`). Repository or host conventions govern code and commits, never a touchpoint.
 
-**Reference** — exact values, inventories, lockup variants, minimum sizes, contrast pairs, downloads. Derived from the contract and from the asset folder, never retyped, and never invented: a number appears only where reproduction depends on it and the contract holds it, not to make the book feel authoritative. An inventory or download grid is generated from the folder; the readable name of an asset comes from the asset itself (its title), not from a second list. Every enumeration in the book matches the folder it describes.
+The default medium is one self-contained HTML document unless the owner requires another medium that can render the system. Screen and print are different layouts of the same information product, not unrelated artifacts; each preserves the reader's job and hierarchy in its medium.
 
-**How-to** — one imperative rule per task, with the reason in a visually secondary layer and the optional variation last. Titles predict content: someone who has read nothing else knows what a section holds. Every term is defined at first use or replaced by a plain one; design jargon is glossed where it first appears; no coined term appears in a title. Element names are the ones fixed at direction (`identity-craft.md`).
+## 2. Plan the experience before scaling it
 
-**Explanation** — the causal chain `brand job → position → thesis → principles → behavior`, compact, separable from the rules. This is the only layer where the brand's voice may lead the prose, and only if the organization genuinely uses one.
+Before laying out the full book, resolve only the decisions that would become expensive after repetition:
+- **information architecture** — how the knowledge is partitioned and ordered around reader jobs;
+- **reading hierarchy** — what must be understood first and what can remain in deeper detail;
+- **wayfinding** — how a reader knows where they are and reaches another relevant region;
+- **retrieval** — how rules, exact values and downloadable assets are found;
+- **responsive roles** — how small screen, large screen and print preserve the same informational priorities without becoming one compressed layout;
+- **brand embodiment** — how grid, typography, color, image, motion if relevant and interaction behavior come from the brand grammar rather than generic documentation UI;
+- **visual material** — which images and applications are strong enough to teach the system at meaningful size.
 
-Cover only the dimensions the system actually has; no empty section exists to resemble a conventional table of contents. Process vocabulary never reaches any layer: contract, specification, schema, version of a file, evidence, unresolved, open questions, route names. Pending matters go to the delivery report, never into the book.
+Do not prescribe a chapter count, component library, grid, breakpoint, target size, reading-level count or page rhythm universally. Those are consequences of the brand, content and reader jobs.
 
-## 3. The document is a showpiece
+Wayfinding is a required function when the document's complexity needs it; its form still belongs to the brand. Do not ban navigation because generic navigation is off-brand. Build the necessary function from the system's own grammar.
 
-The design layer demonstrates the system at the level of the best work in adjacent categories: a cover with the signature at full force, type specimens at display scale, full-bleed color fields, illustration and imagery at the size they were made for, range pages that show two very different applications sharing one logic, and a failure page that explains the mechanism of a wrong use rather than banning a placement.
+This plan is working material, not canonical brand state.
 
-The book's page grammar is an application of the brand grammar, not of the medium's defaults. Grid, type scale, margins, color fields and image treatment derive from the system; a component the system does not define (a card, a shadow, a rounded container, an icon set, a centered hero block, a generic navigation bar) does not enter because the medium makes it easy. Any element that would look at home on an unrelated brand's website is a defect. The book is paced as spreads, not as a feed of equal sections: a display page earns the dense page that follows it, and a reader scrolling or turning pages feels the rhythm of the identity itself.
+## 3. Keep three content layers distinct
 
-**Admission.** No image enters the book because it exists. A render from TEST IN USE was made to expose problems; it is admitted only by a separate decision with the showpiece bar: would the strongest identity named as the bar publish this image, at this size, in its own book? The layout follows the admitted images; the book has no slot per touchpoint waiting to be filled. Fewer, larger images beat complete coverage. A touchpoint with no admitted image is taught by its rules and reported to the operator as a gap, never illustrated by a weaker image. A book is an argument that these rules produce good work, and one weak image inside it is a counter-example printed in the argument.
+**Reference** — exact values, inventories, lockup variants, minimum sizes, contrast pairs, downloads. These agree with the contract and assets, but need not be generated from them. Source-of-truth coherence is verified at acceptance; it is not a required production method. A number appears only where reproduction depends on it.
 
-Do not sacrifice clarity to self-expression, and do not deliver a generic corporate document that contradicts the identity it describes. Use `visual-artifact-production.md` to build, render and refine the actual pages, and judge them with the force mechanisms in `identity-craft.md` before judging their completeness.
+**How-to** — imperative rules that let an operator do the job. Titles predict content; terms are defined at first use or replaced by plain ones. Element names are the ones fixed by the brand system.
 
-## 4. Package shape
+**Explanation** — the compact causal chain behind the brand: brand job, position, thesis, principles and behavior. It helps a reader generalize without turning every rule into rationale.
 
-One folder the host already serves statically (for example the public directory of a site), containing:
-- the book at the folder root, self-contained: fonts embedded with their license notice, no scripts, no external requests;
-- assets in subfolders by kind (logo, illustration, pattern, imagery, applications), every file downloadable;
-- relative references only, so the folder survives download, offline use and a change of host;
-- a print stylesheet for A4;
-- a short stable route that resolves inside the folder, so relative references keep working; the redirect or rewrite is the host's mechanism.
+Cover only dimensions the system actually has. Process vocabulary never reaches the published artifact: no schema, route names, evidence ledger, open questions, prompts or internal maturity discussion. Pending matters go to the operator report.
 
-Folder and path names follow the audience's language or the host's convention. The contract lives outside the served folder unless the owner decides the strategy is public. If the host needs a README, it is a one-line pointer to the book; every rule has exactly one address.
+## 4. Prove a representative prototype before fanout
 
-`scripts/book_checks.py <folder>` decides the mechanical part of this shape: no scripts or external requests, every relative reference resolving inside the folder, every image with alt text, no file the book does not reach, a print stylesheet present, no contract inside the folder. Run it before looking; it establishes nothing about what the pages teach or how they look.
+Do not begin by reproducing the full table of contents. First make the smallest real slice capable of exposing the document's hard tensions.
 
-## 5. Verify by looking
+The prototype should contain enough real content to test, where relevant:
+- orientation and navigation;
+- a dense reference/rule region;
+- an expressive brand moment;
+- retrieval of an asset or exact value;
+- small-screen and large-screen behavior;
+- print composition.
 
-Render the book on desktop, on a phone and as print, and look at each capture as each named reader: can the supplier find the file they need, can the operator apply a rule without asking, would the designer make a materially different correct application from it? Check the contrast of every text role on every background it appears on with `color_tools.py` when the eye suspects; check that nothing from the process is visible. Every statement the book makes about an asset is a projection of that asset and is verified against it: a count against the folder, a caption or alt text against the image it sits under, a description of how a render was made against the render. When a render is replaced, every such statement is re-verified. Fix, re-render, look again.
+A full chapter is often a useful slice, but it is not a universal requirement. The slice is valid only if it can falsify the intended architecture, hierarchy, density, retrieval and media behavior.
 
-If a guideline repeatedly needs exceptions, fix the system or rewrite the rule instead of documenting more cases.
+Render it, use it as the named readers, repair the structure, then scale the proven grammar. Do not spend craft effort across a full book whose information architecture or layout logic has not survived this prototype.
+
+## 5. The document itself must carry the brand
+
+The book's interface grammar is an application of the brand grammar, not of the browser's defaults. Grid, type scale, margins, color fields, imagery and interaction behavior derive from the system where those dimensions exist.
+
+A familiar web pattern is not forbidden merely because it is familiar; it fails when its form arrives from medium autocomplete instead of a reader need and the brand's governing logic.
+
+Use visual material selectively. A render from TEST IN USE enters the book only when it is strong enough to function as evidence that the system produces good work. Layout follows admitted material; there is no slot per touchpoint waiting to be filled. Fewer strong examples beat complete weak coverage.
+
+Do not sacrifice clarity to expression. Do not sacrifice expression to generic documentation convenience.
+
+## 6. Judge an absolute floor before the weakest element
+
+A uniformly mediocre book may have no conspicuously weak component. Judge the whole product against four orthogonal properties before ranking local elements:
+
+- **Transfer** — a reader who did not participate can orient, find, understand and apply what their job requires. Evidence: perform the relevant reader tasks without the maker explaining the interface.
+- **Expression** — the document has the force, rhythm and craft expected from the creative direction and holds beside the named bar. Evidence: judge rendered views without the author's rationale.
+- **Integrity** — the book faithfully represents the current system, masters, assets and exact rules. Evidence: inspect against the sources and use deterministic checks only for properties code can actually decide.
+- **Delivery** — the artifact works in the media it claims to serve: representative screen extremes, print, keyboard/accessibility behavior when applicable, relative asset paths and offline/self-contained packaging. Evidence: execute and render those media.
+
+Start review at the largest scale: **whole experience → reader task/flow → weak region → component → detail**. Do not polish local components while the architecture itself fails.
+
+Only after the absolute floor holds, apply the package's weakest-element rule and raise or remove the weakest admitted visible element.
+
+## 7. Package and readiness
+
+Use one folder the host already serves statically when possible:
+- book at the folder root;
+- fonts and assets needed by the book inside the folder, with downloads where the reader job requires them;
+- relative references so the package survives offline use and a host change;
+- print styles implementing a deliberately composed print layout;
+- contract outside the served folder unless the owner explicitly chooses to publish it.
+
+The current package contract uses no client-side scripts and no external requests; solve navigation and disclosure with semantic HTML and CSS. If a future reader job genuinely requires runtime behavior, change the package contract and its checker together rather than bypassing either.
+
+`scripts/book_checks.py <folder>` decides only the existing mechanical package properties: no scripts or external requests, self-containment, resolvable relative references, alt text, orphan files, print stylesheet and contract separation. It establishes nothing about transfer, expression or overall UX.
+
+Before calling the book **ready**, **final** or **publishable**:
+1. relevant deterministic checks pass or carry an explicit justified exception;
+2. the book has been rendered and inspected in each claimed medium;
+3. representative reading and lookup tasks clear Transfer;
+4. rendered views clear Expression against the named bar;
+5. Integrity has been checked against the actual sources;
+6. no known visible element remains below the floor.
+
+"Later" is not a state. A real external blocker names exactly what unavailable reality or capability prevents completion. Owner acceptance can reduce scope or accept a lower maturity, but it cannot convert missing evidence into a final artifact.
 
 ## Delivery
 
-Deliver the folder: book and assets. Deliver the contract separately, as an operating file. Report pending matters in the conversation, never in the book.
+Deliver the book and the assets its readers need. Deliver the contract separately as an operating file. Report unresolved truth, authority, capability and lower-maturity gaps to the operator, never inside the book.

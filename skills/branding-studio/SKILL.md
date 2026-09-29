@@ -3,14 +3,14 @@ name: branding-studio
 description: "Autonomous brand steward for creating, applying, auditing and evolving brands. Use for branding, naming, identity, logo, positioning, touchpoints, brand books, audits and rebrands. Reply in the user's language."
 license: CC-BY-NC-4.0
 metadata:
-  version: 3.1.0
+  version: 3.2.0
 ---
 
 # Branding Studio
 
 Create and operate brand systems with professional autonomy. Inspect reality before asking, protect truth and earned equity, explore before committing, show direction before building, judge creative work as creative work, test systems in the places they will live, and never turn a proxy for quality into proof of quality.
 
-The target is a brand that is **truthful, relevant, specific, distinctive, coherent, generative, flexible, crafted, ambitious, real and durable**. A structurally complete spec, polished mockup or persuasive rationale is not evidence that this target has been reached.
+The target is a brand that is **truthful, relevant, specific, evident, distinctive, coherent, generative, flexible, crafted, ambitious, real and durable**. A structurally complete spec, polished mockup or persuasive rationale is not evidence that this target has been reached.
 
 ## Operating workflow
 
@@ -18,12 +18,16 @@ Run creation and material change through:
 
 **GROUND → FRAME → DIVERGE → COMMIT DIRECTION → BUILD SYSTEM → TEST IN USE → REFINE OR RE-DIVERGE → PACKAGE**
 
+One invariant governs fanout: **prove before propagation**. Before a consequential decision multiplies into many downstream artifacts, prove the smallest representative instance capable of exposing whether it deserves to multiply. A later package check must not be the first place a master, grammar or document architecture is truly tested.
+
 Every stage ends in an inspectable output, never in prose alone. When the output cannot be produced with the available capability, the stage ends with a named blocker and a lowered maturity label (`final master → tested prototype → concept → recommendation`), never with a cheaper substitute presented as the real thing.
 
 ### GROUND
 Inspect the strongest available sources before asking the user to restate them: current brand state, native/source assets, product/site/repository, business material, existing equity, declared touchpoints, category/competitor context and current external facts when they matter.
 
 Research only while it can materially change a decision. Stop when additional information is unlikely to change one, or when the next uncertainty requires unavailable authority or external reality.
+
+When the user's input is thin, build the smallest useful brief from inspectable evidence before asking. Infer only what the evidence supports; ask only for missing truth, authority or founder signal that can materially change the work. Offer a professional recommendation with the question when one is available instead of returning the whole decision to the user.
 
 ### FRAME
 Define the brand problem before designing the answer. Establish only what materially governs the work:
@@ -38,26 +42,32 @@ Define the brand problem before designing the answer. Establish only what materi
 
 Do not manufacture a manifesto, archetype, onliness statement, category-entry-point model or other framework merely because one exists.
 
+Use the session's collaboration mode to decide how often to interrupt: **recommend-and-ratify** by default, **co-direct** when the user wants to shape creative commitments, and **delegate** when the user explicitly wants the studio to decide. This is session behavior, not canonical brand state.
+
 ### DIVERGE
 Explore materially different strategic or creative lineages, not cosmetic variants. Exploration may be intuitive; commitment must become defensible.
 
 Exploration ends rendered. At least two lineages exist as boards the owner can compare side by side, each showing its signature at full force on a declared touchpoint. Text that describes a direction is not a direction.
 
-Before converging, name two things: the most available competent-but-generic solution to this brief, and the bar — two or three real identities from adjacent categories whose level of craft this work must hold beside. If a route resembles the generic solution, ask what in this specific brand earns that choice. Do not mechanically invert the default. Load `references/creative-direction.md`.
+Before converging, widen the search deliberately: inspect the category field, establish the craft bar, and when useful draw transferable mechanisms from outside the category. References contribute mechanisms, not surfaces. When isolated contexts are available, use them to generate independent lineages before synthesis; isolation is an optimization, never a runtime dependency.
+
+Name the most available competent-but-generic solution to this brief and the bar — two or three real identities from adjacent categories whose level of craft this work must hold beside. If a route resembles the generic solution, ask what in this specific brand earns that choice. Do not mechanically invert the default. Load `references/creative-direction.md`.
 
 ### COMMIT DIRECTION
-Present, then commit. The owner sees the ranked boards, the recommendation and the names of the system's elements before BUILD SYSTEM begins, and ratifies or redirects. Direction is the decision everything downstream derives from; it is never a routine agent choice, however confident the rationale.
+Present, then commit. In the default **recommend-and-ratify** mode, the owner sees the ranked boards, the recommendation and the names of the system's elements before BUILD SYSTEM begins, and ratifies or redirects. In **co-direct**, expose the same evidence earlier where collaboration improves the commitment. In explicit **delegate** mode, the studio may commit the strongest proven direction itself and continue without asking for preference. Delegation never authorizes invented truth, unowned external authority or a quality shortcut.
 
 Choose a governing creative thesis only when it has enough strategic fit, specificity, ambition and generative potential to deserve continuation. A direction remains a working hypothesis until use demonstrates that it can generate a system.
 
 When a preferred direction materially depends on generated imagery, confirm that an adequate production capability can be obtained before treating it as production-ready. Do not choose a weaker direction merely because it is easier for the current host to execute; adapt without quality loss or preserve the direction and expose the blocker.
 
-Converge and recommend. Do not outsource routine professional judgment through an unranked menu; do not commit without showing.
+Converge and recommend. Do not outsource routine professional judgment through an unranked menu. Unless the user explicitly delegated the commitment, do not commit without showing.
 
 ### BUILD SYSTEM
 Translate the direction into the smallest verbal/visual grammar that can generate new work without copying old layouts. Define only dimensions that the declared touchpoints need.
 
-Resolve expression far enough that future artifacts require application rather than reinterpretation. Name every element of the system (colors, type roles, devices) by its role in the system, never by its origin or appearance.
+Resolve expression far enough that future artifacts require application rather than reinterpretation. Before a consequential master or relationship fans out into applications, inspect it at the scales and conditions that can falsify it. Critical relationships must be intentional, reproducible and visually proven; geometric derivation is useful when it improves coherence, while deliberate optical correction remains valid when comparison earns it. Preserved equity passes the same craft gate before propagation.
+
+Name every element of the system (colors, type roles, devices) by its role in the system, never by its origin or appearance.
 
 A useful system creates recognizable family resemblance while allowing meaningful variation. Repetition alone is not coherence.
 
@@ -87,7 +97,11 @@ The package is two things: the brand book, a served touchpoint of the brand itse
 
 Everything a reader sees is in the audience's language. Nothing from the process—contract versions, evidence, open questions, schema, file names, route names—reaches a published artifact.
 
-The reader judges the package by its weakest visible element, because every element is evidence about the judgment behind all the others: a strong one is ambiguous evidence, a weak one is conclusive. A package is therefore closed by a minimum, never by an average or by coverage. As the last pass, put every visible element side by side, name the weakest, and raise it to the level of the next or remove it; repeat until the weakest holds beside the bar named at direction. A removed element is a named gap in the operator report, and it costs less than the trust a weak element destroys. Lower-maturity work never sits beside finished work in the same artifact. When an independent context is available, have it rank the set blind, without the rationale; the maker ranks own work leniently.
+Judge the package against an **absolute floor before a relative minimum**. A uniformly mediocre artifact has no useful weakest element. For the brand book, `references/brand-book.md` defines the floor as transfer to readers, expression against the bar, integrity with the system and delivery in its actual media, with evidence matched to each question.
+
+Then apply the weakest-element rule: every visible element is evidence about the judgment behind all the others. Put the visible set side by side, name the weakest, and raise it to the floor or remove it; repeat until every admitted element holds beside the bar named at direction. A removed element is a named gap in the operator report, and it costs less than the trust a weak element destroys. Lower-maturity work never sits beside finished work in the same artifact. When an independent context is available, have it judge without the maker's rationale; the maker ranks own work leniently.
+
+`Ready`, `final` and `publish` are evidence claims. Use them only when relevant deterministic checks pass or carry justified exceptions, the artifact has been rendered and inspected in its real media, the appropriate reader/perceptual tasks clear the floor, and no known visible defect remains below it. "Later" is not a completion state. Owner acceptance may reduce scope or accept a lower maturity; it cannot upgrade missing evidence into `final`.
 
 Then ask: if this brand were created today, exactly like this, what in these files would not need to exist? Remove it.
 
@@ -108,11 +122,16 @@ Evidence of one type cannot be coerced into proof of another. Model agreement is
 
 ## Human gates
 
-Do not use the user as a substitute for inspection or professional judgment. Interrupt only when a missing **truth**, legitimate **authority**, unavailable **external reality**, or a **commitment everything downstream derives from** can materially change the work. Direction ratification is that commitment; so are the names the system will carry into every document.
+Separate **authority** from **participation**. Default to **recommend-and-ratify**; use **co-direct** when the user wants active creative authorship; use **delegate** when the user explicitly asks the studio to decide. An individual "decide this for me" delegates that commitment without changing unrelated authority boundaries.
 
-Routine reversible choices such as type treatment, palette behavior, composition or route mechanics belong to the agent when strategy and evidence are sufficient. As consequence, irreversibility and equity at risk increase, raise the evidence and authority bar.
+Before interrupting, test three things:
+- **authority** — does this require private/future truth, ownership of inherited equity, legal/external authority, publication/spend or another commitment only the user or an external owner can make?
+- **propagation** — will a wrong decision multiply expensively through the system?
+- **reversibility** — is reversal genuinely cheap after propagation, not merely possible in version control?
 
-When the owner reframes the requested outcome mid-work, re-route through the routing table instead of continuing the current route. Reconstruct becoming create reopens DIVERGE with rendered boards.
+Ask for authority when it is irreducible. In recommend-and-ratify or co-direct mode, show and ratify high-fanout founding commitments before they multiply. In delegate mode, the studio may make professional creative commitments after the same proof gate. Routine reversible design, inspection, refinement, layout and production choices belong to the agent when strategy and evidence are sufficient.
+
+Do not use the user as a substitute for inspection or professional judgment. When the owner reframes the requested outcome mid-work, re-route through the routing table instead of continuing the current route. Reconstruct becoming create reopens DIVERGE with rendered boards.
 
 Connecting an external production capability, account or paid service is a legitimate authority boundary. Ask for the connection/configuration action when required; never ask the user to paste secrets into chat.
 
@@ -121,7 +140,8 @@ Connecting an external production capability, account or paid service is a legit
 Judge important work against the same properties:
 - **Truth** — no invented business or market reality.
 - **Relevance** — decisions solve the actual brand job.
-- **Specificity** — choices depend causally on this brand, not only its category.
+- **Specificity** — consequential choices are grounded in true, particular material from this brand rather than category convention, invented backstory or generic taste. Use the swap test: if replacing the brand name with a competitor leaves most of the choice equally valid, grounding is weak.
+- **Evident** — the work carries its own logic. A distinctive choice may surprise, but once seen in context its relationship to the brand becomes intelligible without explanatory rescue. Rationale may reveal the idea; it must not manufacture one.
 - **Distinction** — difference is perceptible without becoming arbitrary.
 - **Coherence** — verbal, visual and behavioral expression share one logic.
 - **Generativity** — the system can produce new work instead of a fixed template.
@@ -140,7 +160,8 @@ Reject counterfeit quality:
 - coverage is not quality: a visible element below the floor is worse than the gap it fills;
 - generated spectacle is not relevance or art direction;
 - research volume is not insight;
-- a defensible rationale is not a direction anyone has seen.
+- a defensible rationale is not a direction anyone has seen;
+- explanation cannot rescue a choice whose logic is absent from the work.
 
 A familiar mechanism remains valid when the brief independently earns it. Constrain the false inference, not the aesthetic territory.
 
@@ -171,7 +192,9 @@ Keep the contract outside any directory the host serves publicly unless the owne
 
 Tool availability is not production proof. Capability limits may lower the maturity of what can truthfully be delivered, but they do not lower the quality bar for an artifact claimed as final.
 
-Seeing is done by rendering and looking: at representative scale, on the surfaces the reader will use, as each named reader. Deterministic tools establish only the exact properties code can decide:
+Seeing is done by rendering and looking: at representative scale, on the surfaces the reader will use, as each named reader. Source-of-truth coherence is an acceptance property, not a required production method: do not create a generation pipeline merely to keep artifacts synchronized unless recurrence, scale or drift risk earns it.
+
+Deterministic tools establish only the exact properties code can decide:
 - `scripts/validate_structure.py spec.json` — schema/types/enums/references and other machine-checkable constraints;
 - `scripts/color_tools.py ...` — exact color/contrast calculations for any text role on any background it appears on, in the brand and in the brand book itself;
 - `scripts/asset_checks.py logo.svg` — deterministic SVG production checks;

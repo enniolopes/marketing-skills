@@ -27,6 +27,37 @@ A landing page is a controlled transition:
 
 The page is not required to follow this sequence literally. It must account for the states that materially separate arrival from the desired action. Evidence is not a separate visitor state; it is a means of producing belief or reducing friction.
 
+## Truthful value perception
+
+Use value perception as a diagnostic of the same page intent, not as a parallel brief framework or a numerical scoring model.
+
+Ask four visitor-side questions:
+
+- **Desired outcome** — what better state does the visitor actually want from this offer?
+- **Confidence of achievement** — why should this visitor believe the offer can produce that state for them? Mechanism, product demonstration, relevant proof, fit, precision, and honest limitations can all increase confidence; social proof is only one possible input.
+- **Time to value** — what real delay, sequence, or time-to-result exists, and how quickly can the page help the visitor understand the value, see credible evidence, and know what happens next?
+- **Effort and sacrifice** — what money, cognitive effort, decision effort, setup, learning, switching, implementation, maintenance, risk, or other sacrifice does the visitor reasonably expect?
+
+The objective is **truthful perceived value**. Do not exaggerate outcomes, probability of success, speed, ease, or risk reduction. If a material delay or sacrifice is real, reduce avoidable burden where possible, explain why the remaining burden is necessary when useful, and represent it clearly rather than hiding it.
+
+The four factors interact. A larger promise can reduce confidence; an implausibly effortless claim can reduce credibility; deliberate effort, waiting, or participation may be part of the value in some categories. Treat them as causal questions, not independent levers that must always be maximized or minimized.
+
+Map the diagnostic onto the existing page-intent model:
+
+- **Proposition** clarifies the desired outcome and credible mechanism.
+- **Proof** increases justified confidence of achievement.
+- **Friction** includes material delay, effort, sacrifice, uncertainty, and risk.
+- **Action** should reduce avoidable uncertainty and effort around the next transition without concealing its real consequence.
+
+Use a visitor-side reverse-read when proposition or conversion logic is weak:
+
+1. What do I think I get?
+2. Do I believe I can get it from this offer?
+3. How long do I think it will take before value appears?
+4. What do I think I must do, risk, pay, learn, change, or give up?
+
+If the answers implied by the rendered page materially differ from truthful page intent, treat that as a marketing/UX defect.
+
 ## Proposition quality
 
 A useful proposition is:
@@ -107,6 +138,7 @@ Prefer:
 - one strong idea per visible block;
 - specific nouns and verbs;
 - concrete mechanisms and outcomes;
+- messages that resolve a material uncertainty about outcome, confidence, time, effort, risk, or next action;
 - short labels and action-oriented CTAs;
 - contrast between current state and better state when true;
 - language that sounds like the product and audience rather than generic startup prose.
@@ -128,7 +160,7 @@ Secondary actions may exist, but they must not create an accidental competing hi
 
 When the visitor has already resolved material information — for example a product, plan, configuration, query, location or other decision-relevant state — preserve that context through the dominant action when the destination can use it. Do not let a generic CTA reset a more informative conversion path merely because both lead to the same destination.
 
-The CTA label should make the consequence of acting reasonably clear. Ensure the destination or interaction exists when the project supplies it.
+The CTA label should make the consequence of acting reasonably clear. When useful and truthful, nearby microcopy may clarify the immediate next step, expected commitment, time, or setup so the visitor does not need to guess the cost of acting. Do not manufacture "no effort", "instant", "risk-free", or similar reassurance when the product cannot support it. Ensure the destination or interaction exists when the project supplies it.
 
 ## Landing-page structure is conditional
 
@@ -151,7 +183,7 @@ When page intent is incomplete:
 
 1. inspect product/category evidence;
 2. infer the smallest truthful audience/arrival model that changes the page;
-3. identify the strongest demonstrable value and proof available;
+3. identify the strongest demonstrable value and proof available, including the visitor's desired outcome, justified confidence, real time-to-value, and material effort/sacrifice when they change the decision;
 4. choose one primary conversion goal from the live product/business path when discoverable;
 5. construct the narrative yourself;
 6. ask only when competing commercial paths are materially different and no evidence establishes priority.

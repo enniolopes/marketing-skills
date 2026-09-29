@@ -215,6 +215,8 @@ Select the strongest direction yourself:
 
 Do not make a non-expert user choose between design jargon. Pause for concept approval only when the user explicitly wants a review step or when the direction encodes a material brand/commercial decision that cannot safely be assumed.
 
+When isolated contexts are available and the creative problem is genuinely open, routes may be generated independently from the same grounded brief before comparison. Do not show one route to the context generating another. The purpose is to reduce anchoring and increase structural divergence, not to multiply agents or output. This is optional; lack of isolated contexts never blocks high-quality work.
+
 When visual concept-generation or design-canvas tools are available, externalize high-value directions or hard sections before implementation. Treat concept output as art-direction evidence and target, not as a source of factual copy or production UI.
 
 ## Visual grammar

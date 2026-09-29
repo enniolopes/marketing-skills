@@ -44,6 +44,15 @@
       ]
     },
     {
+      "id": "rationale-rescues-page",
+      "prompt": "A landing ficou visualmente forte e consigo explicar perfeitamente a lógica na apresentação. Algumas pessoas olhando sem contexto não entendem muito bem por que as seções estão nessa ordem nem por que o CTA é a conclusão natural, mas com meu racional tudo faz sentido. Podemos finalizar?",
+      "setup": "Individual sections are readable and visually polished, but the rendered page does not make the argument progression or conversion logic sufficiently apparent without the maker's explanation.",
+      "judge": [
+        "Judge the rendered page before the maker's rationale and reconstruct its apparent job, argument progression, hierarchy and intended action.",
+        "Treat a material gap between the intended logic and what the page itself communicates as a Meaning defect; do not allow rationale to manufacture coherence."
+      ]
+    },
+    {
       "id": "intent-survives-expression",
       "prompt": "O visitante já escolheu uma configuração específica. O CTA contextual preserva essa escolha, mas existe um CTA global para a mesma conversão. Deixe o global mais dominante para manter consistência visual.",
       "setup": "Losing the selected configuration forces the visitor or business to reconstruct material information even though both actions lead to the same destination.",

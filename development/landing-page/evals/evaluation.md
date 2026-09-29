@@ -104,6 +104,10 @@ with visible evidence for the decision.
 
 Randomize A/B identity when possible. Do not reward complexity, model/tool spend, or technical spectacle by itself.
 
+Keep a small stable smoke set for regressions, but rotate or hold out part of the creative set so the runtime is not optimized against every known brief. A candidate that only improves on rehearsed prompts has not demonstrated generalization.
+
+Maintain a small **human-reviewed gold set** for high-ambition visual comparisons. Use expert human pairwise judgments to calibrate model-based reviewers periodically; model judges may scale review, but they are not the sole author or certifier of the aesthetic bar. When calibrated model judgment and expert review materially disagree, inspect the artifacts and evidence rather than averaging the disagreement away.
+
 ## Creative generalization
 
 Use causally different briefs. Repeated aesthetic solutions are a failure only when they are not earned by the briefs.

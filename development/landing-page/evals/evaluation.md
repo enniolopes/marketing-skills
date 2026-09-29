@@ -19,7 +19,7 @@ For a targeted change, run only regression cases that can distinguish it. For a 
 
 Use five dimensions:
 
-1. **Truth and intent** — factual claims, page job and conversion logic stay grounded, and material truth/intent properties survive downstream hierarchy, interaction and implementation unless deliberately revised with valid evidence or authority.
+1. **Truth and intent** — factual claims, page job and conversion logic stay grounded, material truth/intent properties survive downstream hierarchy, interaction and implementation unless deliberately revised with valid evidence or authority, and the page's job, argument progression and intended action remain recoverable from the artifact before rationale is considered.
 2. **Causal scope** — local defects stay local; upstream failures reopen only what they invalidate.
 3. **Specificity and expression** — the governing idea and composition depend on this product/domain rather than a recurring house style or reflexive anti-default posture.
 4. **Craft and reality** — hierarchy, typography, imagery, motion, responsive behavior and implementation survive rendered inspection where relevant; evidence must observe the state it claims to judge; for generated imagery, judge art direction, product-specific relevance, asset craft, integration, responsive crop, loading behavior and browser composition rather than generator success in isolation.

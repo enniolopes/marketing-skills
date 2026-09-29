@@ -114,10 +114,11 @@ Scroll at normal reading speed. Ask:
 Before consulting the intended rationale, infer from the rendered artifact itself:
 
 - what job the page appears to perform;
+- how the major regions seem to build the argument and what conclusion they lead toward;
 - which action appears primary and what visitor context it preserves or discards;
 - what seems to make the offer specific or credible.
 
-Compare that reconstruction with the page intent and any active invariants from `control.md`. A material mismatch is semantic drift even when each local design decision looks competent.
+Compare that reconstruction with the page intent and any active invariants from `control.md`. A material mismatch is semantic drift even when each local design decision looks competent. If the maker's rationale is required to explain a material relationship that the page itself does not communicate, treat that as an unresolved Meaning defect rather than a documentation gap.
 
 ### Craft sweep
 

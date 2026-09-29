@@ -1,6 +1,6 @@
 # Creative Control — preserve intent without freezing the solution
 
-Read this at DIRECT for CREATE/major REFINE, and again only when materially new evidence or a possible pivot appears.
+Load this for CREATE/major REFINE, long-running work, or when materially new evidence or a possible pivot appears.
 
 The purpose is not to make design procedural. It is to keep the page-level purpose governing local decisions while leaving the solution free to change.
 
@@ -73,7 +73,7 @@ Explorations are outside this chain: they are disposable and may be strange, inc
 
 ## Preserve material intent across layers
 
-After SYNTHESIZE, keep only the few truth/intent properties whose loss would make downstream work materially wrong or weaker. Treat them as active invariants until better evidence, authority or a deliberate intent change invalidates them.
+After grounding truth and intent, keep only the few truth/intent properties whose loss would make downstream work materially wrong or weaker. Treat them as active invariants until better evidence, authority or a deliberate intent change invalidates them.
 
 An active invariant states **what must survive**, not how to implement it. `A resolved product/configuration must remain attached to the conversion path` is an invariant; `use a sticky CTA` is a solution. When the page has a primary visitor task or transition that downstream design could degrade, preserve **task integrity** as an active invariant: from arrival through the intended transition, the path remains discoverable, understandable, and efficient for the page job. A working CTA is not sufficient if navigation, motion, scroll choreography, responsive adaptation, context loss, or another expressive choice adds avoidable effort. Additional effort is justified only when it materially serves the page job.
 

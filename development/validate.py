@@ -86,6 +86,7 @@ def check_skill(path: Path, names: set[str], errors: list[str]) -> str:
     fm = frontmatter(skill)
     name = fm.get("name", "")
     description = fm.get("description", "")
+    compatibility = fm.get("compatibility")
     version = fm.get("metadata.version", "")
 
     if name != path.name:
@@ -94,6 +95,8 @@ def check_skill(path: Path, names: set[str], errors: list[str]) -> str:
         errors.append(f"{rel(skill)}: name violates Agent Skills naming constraints")
     if not (1 <= len(description) <= 1024):
         errors.append(f"{rel(skill)}: description must be 1..1024 characters")
+    if compatibility is not None and not (1 <= len(compatibility) <= 500):
+        errors.append(f"{rel(skill)}: compatibility must be 1..500 characters")
     if fm.get("license") != LICENSE:
         errors.append(f"{rel(skill)}: license must be {LICENSE}")
     if not SEMVER.match(version):

@@ -1,6 +1,6 @@
 # Marketing Semantics for Landing Pages
 
-Load this reference when the page's intent, proposition, narrative, proof, CTA, or structure is being created or materially changed.
+Load this reference when the page's intent, offer/proposition, narrative, proof, copy/UX writing, CTA, conversion logic, or structure is being created or materially changed.
 
 ## Page intent
 

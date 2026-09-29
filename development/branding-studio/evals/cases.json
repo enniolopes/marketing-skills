@@ -8,8 +8,9 @@
       "prompt": "Crie a marca deste produto.",
       "setup": "Product/site evidence is available, but private future strategy is not.",
       "judge": [
-        "Inspect available reality before asking questions or inventing facts.",
-        "Ask only for missing truth or authority that can materially change the work."
+        "Inspect available reality and construct the smallest useful brief before asking the user to restate discoverable information or inventing facts.",
+        "Ask only for missing truth, authority or founder signal that can materially change the work; otherwise make the professional decision according to the collaboration mode.",
+        "An explicit request to decide everything reduces preference gates but never authorizes invented private/future truth or unowned external authority."
       ]
     },
     {
@@ -26,8 +27,9 @@
       "prompt": "Explore direções para a identidade e recomende uma.",
       "setup": "Strategy is established; the category has an obvious competent default.",
       "judge": [
-        "Explore materially different governing ideas rather than cosmetic variants.",
-        "Commit through brief-specific fit and generative potential, neither category autocomplete nor reflexive opposition."
+        "Build a small decision-changing reference field that exposes the category default, a real craft bar and useful outside mechanisms; references are decomposed rather than copied.",
+        "Explore materially different governing lineages rather than cosmetic variants, using independent contexts when available before a separate art-direction comparison.",
+        "Commit through grounding, relevance, evident logic, distinction, generative potential and the named bar, neither category autocomplete nor reflexive opposition."
       ]
     },
     {
@@ -125,8 +127,8 @@
       "prompt": "Crie a marca desta padaria e entregue o manual.",
       "setup": "Render capability exists and the owner is reachable. Nothing prevents building immediately after choosing a direction.",
       "judge": [
-        "Direction candidates reach the owner as rendered, comparable boards with a ranked recommendation before any system is built; a written rationale alone is not a direction.",
-        "Direction ratification is treated as an owner gate, not as a routine agent choice."
+        "In the default recommend-and-ratify mode, direction candidates reach the owner as rendered, comparable boards with a recommendation before the system is built; a written rationale alone is not a direction.",
+        "If the owner explicitly delegates creative commitments, the studio may choose the strongest proven direction and continue without a preference gate, while truth and authority boundaries remain intact."
       ]
     },
     {
@@ -151,8 +153,9 @@
       "prompt": "Entregue o manual da marca.",
       "setup": "strategy.audience.language is pt-BR; readers are a designer, a printer and a kitchen coordinator with no design training. The repository's own conventions are in English.",
       "judge": [
-        "The book is a self-contained HTML touchpoint in the audience's language, with imperative task rules, titles that predict content, terms defined at first use, and no process vocabulary (contract, specification, schema, evidence, open questions).",
-        "The book has been rendered on desktop, phone and print and looked at as each named reader before delivery; every inventory matches the asset folder."
+        "The book is an information product in the audience's language, organized around real reader jobs and supporting both reading and lookup without process vocabulary leaking into the artifact.",
+        "A reader who did not participate can orient, find an exact rule or asset and apply a representative rule without the maker explaining the interface.",
+        "The book has been rendered and inspected in every medium it claims to serve, including representative screen sizes and print."
       ]
     },
     {
@@ -184,12 +187,33 @@
       ]
     },
     {
+      "id": "uniformly-mediocre-book",
+      "prompt": "Finalize o brand book; todas as seções estão consistentes e nenhuma parece pior que as outras.",
+      "setup": "Every section is individually competent and internally consistent, but the whole document is dense, difficult to orient, weak for lookup and visibly below the named craft bar. No local component is conspicuously worse than another.",
+      "judge": [
+        "Evaluate the whole document against the absolute book floor before applying the relative weakest-element rule.",
+        "Treat failed orientation/retrieval and whole-document weakness as architecture or experience defects rather than polishing arbitrary local components.",
+        "Do not call the book final until Transfer, Expression, Integrity and Delivery have evidence appropriate to each property."
+      ]
+    },
+    {
+      "id": "master-before-fanout",
+      "prompt": "A assinatura herdada parece boa; aplique em todos os materiais e finalize a identidade.",
+      "setup": "The inherited lockup is recognizable and technically valid, but its critical spacing and optical balance have not been compared or resolved. Propagating it now would put the same decision into many applications.",
+      "judge": [
+        "Resolve and inspect the critical master before it fans out into applications; preservation and file validity are not craft proof.",
+        "When the optical relationship is ambiguous, compare a small set of credible alternatives at relevant sizes and conditions before choosing.",
+        "Do not impose a universal geometric derivation when deliberate optical correction performs better and remains reproducible."
+      ]
+    },
+    {
       "id": "weakest-element-closes-the-package",
       "prompt": "Feche o manual e entregue.",
       "setup": "Six declared touchpoints have renders. Five are strong. One is compliant (colors within tolerance, mark drawn correctly) but carries a visible generator defect in a hand and a contact shadow that does not match the light; the agent made it and it fills the last slot in the book.",
       "judge": [
-        "The set is ranked side by side, the weak render is identified as the weakest, and it is either raised to the level of the others or removed; it does not ship because it is compliant, because it exists, or because a slot expects it.",
-        "If removed, the book is composed without a placeholder and the operator report names the touchpoint as a gap with its maturity; the render is not shipped smaller, later or labeled instead."
+        "Judge the whole package against the relevant absolute floor before ranking local elements; a uniformly weak set does not pass merely because no single element is worse than the others.",
+        "Once the floor holds, rank the visible set side by side and raise or remove the weakest admitted render rather than shipping it because it exists or fills a slot.",
+        "If removed, the package is composed without a placeholder and the operator report names the gap at its truthful maturity."
       ]
     },
     {
@@ -197,8 +221,9 @@
       "prompt": "Gere o manual da marca.",
       "setup": "The visual system is resolved (grid, type roles, color proportions, image behavior). The host renders HTML; web-default components are the path of least effort.",
       "judge": [
-        "The book's grid, type scale, margins, color fields and image treatment derive from the brand system; no card, shadow, rounded container, generic hero or navigation idiom the system does not define appears.",
-        "Pages are paced as spreads with a display page earning a dense one, and the rendered book is judged for force before completeness."
+        "The book behaves as branded documentation: its information architecture, wayfinding, retrieval and responsive/print behavior serve reader jobs while its visual grammar derives from the brand rather than generic documentation UI.",
+        "Before the full book is scaled, a representative prototype containing the document's real tensions is rendered and repaired across the claimed media.",
+        "Familiar interface patterns are accepted when their function is needed and their form is resolved through the brand system; novelty is not a substitute for usable navigation."
       ]
     },
     {
@@ -228,6 +253,6 @@
       "brief": "Brand a high-fee service coordinating complex elder-care logistics across medical, legal, home and financial providers. It must feel calm, capable and humane without luxury, wellness or hospital-admin clichés."
     }
   ],
-  "transfer_test": "Give a fresh operator only the produced guidelines plus an unseen relevant touchpoint. Judge the new artifact before the guideline: it should preserve the system, serve the new job and avoid copying an example. Separately, give the book to a reader with no design training in the audience's language and ask them to apply one rule; they should manage without asking.",
+  "transfer_test": "Give a fresh operator only the produced guidelines plus an unseen relevant touchpoint. Judge the new artifact before the guideline: it should preserve the system, serve the new job and avoid copying an example. Separately, give the brand book to readers who did not participate: one should acquire the governing logic by reading, and another should locate and apply a known rule or asset by lookup without asking.",
   "ambition_test": "Place the strongest rendered application beside the two or three adjacent-category identities named as the bar at direction. Judge whether it holds; correct-and-competent is a failure."
 }

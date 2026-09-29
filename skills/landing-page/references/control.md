@@ -38,7 +38,9 @@ landing_page_state:
   visual_search:
     status: open # not_needed | open | shortlisted | committed
     unresolved_question:
+    shortlisted_artifacts: []
     selected_artifact:
+    implementation_principles: []
   largest_material_risk:
   largest_creative_upside:
   next_valid_evidence:

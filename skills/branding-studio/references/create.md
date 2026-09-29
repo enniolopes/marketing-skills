@@ -2,9 +2,13 @@
 
 Use CREATE for a genuinely new brand, a material re-foundation, or an existing identity that needs a canonical operating contract. Run the full workflow in `SKILL.md`; this reference holds only what CREATE adds.
 
+## Establish the smallest useful brief
+
+When the request is underspecified, inspect available product, organization, market and artifact evidence before asking for a long briefing. Construct the smallest brief that can govern creative work, and ask only for missing truth, authority or founder signal whose answer can materially change the direction. Where professional judgment can close the gap, recommend and proceed according to the session's collaboration mode.
+
 ## Existing identity: decide what survives first
 
-Absence of a spec does not imply absence of brand equity. Before generating anything, inspect what exists (name, assets, language, recurring behavior, how people already recognize the brand) and classify each important element as **preserve, refine, replace, retire or add**. Do not redesign merely to make the work feel new or to populate a schema. Reconstruction still ends in rendered boards: the owner sees what was recovered and what is proposed to change.
+Absence of a spec does not imply absence of brand equity. Before generating anything, inspect what exists (name, assets, language, recurring behavior, how people already recognize the brand) and classify each important element as **preserve, refine, replace, retire or add**. Do not redesign merely to make the work feel new or to populate a schema. Preservation protects earned equity; it does not certify the craft or production quality of an inherited master. Critical inherited relationships pass the same proof-before-propagation gate before they fan out. Reconstruction still ends in rendered boards that make preservation and proposed change inspectable; ratification follows the collaboration mode in `SKILL.md`.
 
 ## Frameworks earn their place
 

@@ -9,7 +9,7 @@
     {
       "name": "branding-studio",
       "source": "./skills/branding-studio",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "strict": false,
       "description": "Autonomous brand-system steward for creating, applying, auditing, and evolving brands from strategy through identity, touchpoints, and brand books."
     },

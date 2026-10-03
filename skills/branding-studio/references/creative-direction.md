@@ -35,6 +35,10 @@ A route is materially different only when its governing idea or generative gramm
 
 Explore through structurally different sources: tensions, behaviors, histories, materials, product mechanics, language, rituals, spatial logics, systems or other relevant mechanisms. Do not require every sketch to carry a full rationale.
 
+Treat the resulting lineages as a search portfolio, not just individually different routes. Inspect what conceptual territory they still share: category vocabulary, source domains, metaphor families, mechanisms or assumptions. Formally different routes can still be clustered in the same mental neighborhood.
+
+If coverage is materially narrow, deliberately open a search region distant from both the category and the existing routes before convergence. A remote seed may begin without semantic relevance to the brand: first extract the transferable structure, behavior or mechanism that makes it useful, then test whether it can be legitimately bridged back to true, particular brand material. The seed may be arbitrary; the committed direction may not be. Discard associations whose bridge reduces to generic symbolism, superficial resemblance or post-rationalization.
+
 When isolated contexts or subagents are available, use them to generate lineages independently from the same FRAME before synthesis. Each branch should ignore rival solutions while generating. Isolation reduces anchoring; it is an optimization, not a runtime dependency, and the studio must still work without it.
 
 Keep exploration disposable. Do not persist reference fields, rejected routes, branch transcripts or prompts in canonical state.

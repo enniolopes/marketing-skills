@@ -31,6 +31,7 @@ VALID_HIERARCHY = {"modular", "custom", "fluid"}
 VALID_PRODUCTION = {"final", "concept", "external_craft_required"}
 VALID_ARCHITECTURE = {"house-of-brands", "endorsed", "branded-house", "hybrid"}
 SEMVER = re.compile(r"^\d+\.\d+\.\d+$")
+BCP47 = re.compile(r"^[A-Za-z]{2,3}(-[A-Za-z0-9]{2,8})*$")
 HEX = re.compile(r"#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$")
 
 
@@ -308,6 +309,29 @@ def _validate_optional_enums(spec, failures, passed):
                 passed.append(f"naming clearance state declared: {status}")
 
 
+def _validate_book(spec, failures, passed):
+    """book.readers (spec-schema.md): present only when a book is in scope; then two to five readers,
+    each with a role, a BCP 47 language and two to six tasks."""
+    if "book" not in spec:
+        return
+    readers = _get(spec, "book.readers")
+    if not isinstance(readers, list) or not 2 <= len(readers) <= 5:
+        failures.append("book.readers must list two to five readers")
+        return
+    for i, reader in enumerate(readers):
+        if not isinstance(reader, dict):
+            failures.append(f"book.readers[{i}] must be an object")
+            continue
+        if not _nonblank(reader.get("role")):
+            failures.append(f"book.readers[{i}].role is missing")
+        if not (_nonblank(reader.get("language")) and BCP47.match(reader["language"].strip())):
+            failures.append(f"book.readers[{i}].language must be a BCP 47 tag")
+        tasks = reader.get("tasks")
+        if not (isinstance(tasks, list) and 2 <= len(tasks) <= 6 and all(_nonblank(t) for t in tasks)):
+            failures.append(f"book.readers[{i}].tasks must list two to six tasks")
+    passed.append(f"book declares {len(readers)} readers")
+
+
 def _validate_current(spec, failures, warnings, passed):
     tier = str(_get(spec, "meta.tier", "")).strip().lower()
     if tier not in VALID_TIERS:
@@ -359,6 +383,7 @@ def _validate_current(spec, failures, warnings, passed):
             "contract is an instrument, not a ledger; remove top-level record blocks: " + ", ".join(ledger)
         )
 
+    _validate_book(spec, failures, passed)
     _validate_tokens_and_contrast(spec, failures, warnings, passed)
     _validate_typography(spec, failures, passed)
     _validate_logo(spec, tier, failures, warnings, passed)

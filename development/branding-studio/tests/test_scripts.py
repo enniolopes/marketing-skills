@@ -62,6 +62,10 @@ def valid_spec():
         "principles": ["Reveal structure progressively."],
         "signature": "Layered reveal behavior.",
     })
+    spec["book"]["readers"] = [
+        {"role": "Owner", "language": "en", "tasks": ["Approve a new touchpoint", "Brief an agency"]},
+        {"role": "Designer", "language": "en", "tasks": ["Build a landing page", "Export the logo for print"]},
+    ]
     spec["visual"] = {
         "logo": {"production": {"status": "final", "master_format": "svg", "master_path": "assets/logo.svg"}},
         "tokens": {"color": {"ink": {"$type": "color", "$value": "#101010", "name": "Ink"}}},
@@ -102,6 +106,22 @@ class BrandingStudioScriptTests(unittest.TestCase):
         report = validate_structure.validate(spec)
         self.assertEqual(report["verdict"], "STRUCTURALLY_INVALID")
         self.assertTrue(any("full-tier contract field missing: strategy.right_to_win" in f for f in report["failures"]))
+
+    def test_book_readers_are_validated(self):
+        spec = valid_spec()
+        del spec["book"]
+        self.assertEqual(validate_structure.validate(spec)["verdict"], "STRUCTURALLY_VALID")
+
+        spec = valid_spec()
+        del spec["book"]["readers"][1]
+        self.assertIn("book.readers must list two to five readers", validate_structure.validate(spec)["failures"])
+
+        spec = valid_spec()
+        spec["book"]["readers"][0]["tasks"] = ["Approve a new touchpoint"]
+        spec["book"]["readers"][1]["language"] = "english"
+        failures = validate_structure.validate(spec)["failures"]
+        self.assertIn("book.readers[0].tasks must list two to six tasks", failures)
+        self.assertIn("book.readers[1].language must be a BCP 47 tag", failures)
 
     def test_ledger_blocks_are_rejected(self):
         spec = valid_spec()

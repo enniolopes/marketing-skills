@@ -29,6 +29,16 @@
   "creative_direction": {
     "thesis": "",
     "principles": [],
-    "signature": ""
+    "signature": "",
+    "criteria": []
+  },
+  "book": {
+    "readers": [
+      {
+        "role": "",
+        "language": "",
+        "tasks": []
+      }
+    ]
   }
 }

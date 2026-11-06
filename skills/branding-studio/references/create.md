@@ -16,7 +16,7 @@ A framework belongs only when it changes a material decision. Do not manufacture
 
 ## System scope follows the touchpoints
 
-Load `identity-craft.md`; load `verbal-identity.md` only when proposition, messaging, voice or a broader verbal system is materially in scope; `naming.md` when naming is. Define only the dimensions the declared touchpoints need. A grammar that can generate new work is the goal, not a checklist of brand ingredients.
+Load `identity-craft.md`; load `verbal-identity.md` only when proposition, messaging, voice or a broader verbal system is materially in scope; `naming.md` whenever the name is open as `naming.md` §1 defines it, and before the first card. Define only the dimensions the declared touchpoints need. A grammar that can generate new work is the goal, not a checklist of brand ingredients.
 
 Use the trials on the declared touchpoints to expose missing guidance, not just execution defects: when a legitimate application forced a brand-level decision the system did not provide, and the same gap recurs across materially different applications, repair the grammar and re-test. If every application needs the same layout or logo placement to look on-brand, the grammar is under-resolved.
 
@@ -26,4 +26,4 @@ Use the trials on the declared touchpoints to expose missing guidance, not just 
 
 ## Delivery
 
-The package (book and assets, in the audience's language) with the contextual renders of the declared touchpoints; the contract as a separate operating file; rationale, verification performed and unresolved dependencies reported to the operator, never inside the package.
+The package (book and assets, in its readers' language) with the contextual renders of the declared touchpoints; the contract as a separate operating file; rationale, verification performed and unresolved dependencies reported to the operator, never inside the package.

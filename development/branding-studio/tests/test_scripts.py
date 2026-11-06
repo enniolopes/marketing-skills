@@ -41,6 +41,7 @@ def write_package(root: Path, extra: str = "", orphan: bool = False, contract: b
         (root / "foto" / "antiga.jpg").write_bytes(b"\xff\xd8\xff")
     if contract:
         (root / "brand-spec.json").write_text(json.dumps({"meta": {"schema_version": 5}}))
+        (root / "brand-report.md").write_text("# report\n")
 
 
 def valid_spec():
@@ -82,6 +83,25 @@ class BrandingStudioScriptTests(unittest.TestCase):
         spec = valid_spec()
         del spec["strategy"]["audience"]["language"]
         self.assertEqual(validate_structure.validate(spec)["verdict"], "STRUCTURALLY_INVALID")
+
+    def test_provisional_contract_may_omit_strategy_hypotheses(self):
+        spec = valid_spec()
+        spec["meta"]["tier"] = "provisional"
+        spec["visual"]["logo"]["production"]["status"] = "concept"
+        del spec["strategy"]["position"]
+        del spec["strategy"]["right_to_win"]
+        del spec["strategy"]["desired_meaning"]
+        spec["creative_direction"]["criteria"] = ["Reads as a named person answering, not software."]
+        report = validate_structure.validate(spec)
+        self.assertEqual(report["verdict"], "STRUCTURALLY_VALID")
+        self.assertEqual(sum("required before tier full" in w for w in report["warnings"]), 3)
+
+    def test_full_contract_requires_strategy_fields(self):
+        spec = valid_spec()
+        del spec["strategy"]["right_to_win"]
+        report = validate_structure.validate(spec)
+        self.assertEqual(report["verdict"], "STRUCTURALLY_INVALID")
+        self.assertTrue(any("full-tier contract field missing: strategy.right_to_win" in f for f in report["failures"]))
 
     def test_ledger_blocks_are_rejected(self):
         spec = valid_spec()
@@ -128,6 +148,31 @@ class BrandingStudioScriptTests(unittest.TestCase):
             write_package(Path(tmp))
             report = book_checks.inspect_folder(tmp)
         self.assertEqual(report["verdict"], "PACKAGE_VALID", report["failures"])
+        self.assertTrue(any("lang=pt-BR" in p for p in report["passed"]))
+
+    def test_flag_words_warn_only_outside_example_elements(self):
+        extra = ('<p>Nossa marca é única e elegante! Use 24 px de margem.</p>'
+                 '<blockquote>Única no mercado! Elegante como você.</blockquote>'
+                 '<figure><img src="logo/marca.svg" alt="Errado"><figcaption>Errado: logo inovador esticado</figcaption></figure>')
+        with tempfile.TemporaryDirectory() as tmp:
+            write_package(Path(tmp), extra=extra)
+            report = book_checks.inspect_folder(tmp)
+        self.assertEqual(report["verdict"], "PACKAGE_VALID", report["failures"])
+        flagged = [w for w in report["warnings"] if "flag words" in w]
+        self.assertEqual(len(flagged), 1)
+        self.assertIn("única×1", flagged[0])
+        self.assertIn("elegante×1", flagged[0])
+        self.assertNotIn("inovador", flagged[0])
+        self.assertTrue(any("1 exclamation mark" in w for w in report["warnings"]))
+
+    def test_missing_lang_warns_but_does_not_fail(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            write_package(Path(tmp))
+            html = (Path(tmp) / "index.html").read_text().replace('<html lang="pt-BR">', "<html>")
+            (Path(tmp) / "index.html").write_text(html)
+            report = book_checks.inspect_folder(tmp)
+        self.assertEqual(report["verdict"], "PACKAGE_VALID", report["failures"])
+        self.assertTrue(any("no <html lang>" in w for w in report["warnings"]))
         self.assertEqual(report["counts"]["images"], 2)
 
     def test_package_defects_are_each_named(self):
@@ -144,7 +189,7 @@ class BrandingStudioScriptTests(unittest.TestCase):
         joined = "\n".join(report["failures"])
         for expected in ("scripts found", "external requests", "absolute paths",
                          "unresolved references", "without alt", "contract served",
-                         "never reaches"):
+                         "report served", "never reaches"):
             self.assertIn(expected, joined)
         self.assertTrue(any("empty alt" in w for w in report["warnings"]))
 

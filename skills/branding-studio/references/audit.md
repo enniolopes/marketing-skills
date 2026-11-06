@@ -12,7 +12,7 @@ When the target is a served package (a brand book and its assets), the package s
 
 ## 2. Keep findings distinguishable by the evidence that produced them
 
-Exact/source findings, professional judgment, contextual artifact evidence and external reality are separate classes (`SKILL.md`, evidence table). Do not hide judgment behind pseudo-objective decimals: a rubric can structure comparison, it does not convert taste or causal uncertainty into measurement.
+Exact/source findings, professional judgment, contextual artifact evidence and external reality are separate classes (`SKILL.md`, evidence table). Judgment follows `judging.md`: criteria before candidates, pairwise and blind, no scores; a rubric can structure comparison, it does not convert taste or causal uncertainty into measurement.
 
 ## 3. Audit against the quality target
 

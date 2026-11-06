@@ -327,15 +327,27 @@ def _validate_current(spec, failures, warnings, passed):
         "strategy.audience.primary",
         "strategy.audience.language",
         "strategy.offer_truth.statement",
-        "strategy.position.statement",
-        "strategy.right_to_win.statement",
-        "strategy.desired_meaning",
         "creative_direction.thesis",
         "creative_direction.signature",
     )
     for path in required_strings:
         if not _nonblank(_get(spec, path)):
             failures.append(f"required contract field missing: {path}")
+
+    # Strategy fields a provisional brand may still be testing: required only at full tier,
+    # so that the validator never pressures an operator to invent a position or a right to win.
+    full_strings = (
+        "strategy.position.statement",
+        "strategy.right_to_win.statement",
+        "strategy.desired_meaning",
+    )
+    for path in full_strings:
+        if _nonblank(_get(spec, path)):
+            continue
+        if tier == "full":
+            failures.append(f"full-tier contract field missing: {path}")
+        else:
+            warnings.append(f"provisional contract has no {path}; required before tier full")
 
     principles = _get(spec, "creative_direction.principles")
     if not _nonempty_list(principles):

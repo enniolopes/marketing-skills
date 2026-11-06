@@ -1,110 +1,101 @@
-# Brand book — an information product and a branded touchpoint
+# Brand book — a working document for the people who execute
 
-Use when guidelines, a brand book or an equivalent handoff is a deliverable. Build it after the identity has survived the declared touchpoints. It is for people who did not participate in the project, so they can understand the brand, find what they need, make correct new work and recognize drift.
+Use when guidelines, a brand book or an equivalent handoff is a deliverable. Build it after the identity has survived the declared touchpoints.
 
-The brand book is both **interactive documentation** and **an expression of the brand**. It must teach and retrieve well while carrying the same level of craft as the identity it describes. A beautiful book that is hard to use fails; a usable generic manual that suppresses the brand also fails.
+The brand book is a working document, written by the organization for the people who execute, that compiles the brand system as built and tested, so that a person who did not take part in the project makes correct work without asking anyone. It is worth exactly what its worst element is worth.
 
-## 1. Readers and jobs decide the experience
+It is not a touchpoint of the brand, not a presentation and not a landing page. The brand appears in it through the system applied to the document and through the pieces shown, never through the prose.
 
-Name the actual readers from the owner's operation, not from a template, and the jobs that bring each reader to the book. Typical jobs are to understand the brand, apply a rule, verify a decision, retrieve a value or download an asset.
+## 1. Before the book starts
 
-Design for two modes:
-- **reading** — a newcomer can acquire the governing logic without consuming every production detail;
-- **lookup** — an experienced operator can reach a known rule, value or asset without rereading the narrative.
+Do not start the book until all of these exist:
 
-Language is the audience's language (`strategy.audience.language`). Repository or host conventions govern code and commits, never a touchpoint.
+1. the system has survived the declared touchpoints and the admitted renders are listed in the operator report;
+2. the direction criteria, as sharpened in COMMIT DIRECTION;
+3. `book.readers` in the contract (`spec-schema.md`): two to five readers, each with a role, a language and two to six tasks written as verb + object + situation ("send the logo to the printer", "write the late-invoice notice"). The owner is always a reader. When no tasks exist, propose the default readers below to the owner through `client-loop.md` and have them confirm;
+4. the masters, the tokens, the font files and, when verbal identity is in scope, real copy.
 
-The default medium is one self-contained HTML document unless the owner requires another medium that can render the system. Screen and print are different layouts of the same information product, not unrelated artifacts; each preserves the reader's job and hierarchy in its medium.
+Default readers for a small business: the owner; whoever makes pieces (a designer, a freelancer or a tool); whoever produces them (a printer, a developer); whoever writes messages.
 
-## 2. Plan the experience before scaling it
+## 2. Fixed structure
 
-Before laying out the full book, resolve only the decisions that would become expensive after repetition:
-- **information architecture** — how the knowledge is partitioned and ordered around reader jobs;
-- **reading hierarchy** — what must be understood first and what can remain in deeper detail;
-- **wayfinding** — how a reader knows where they are and reaches another relevant region;
-- **retrieval** — how rules, exact values and downloadable assets are found;
-- **responsive roles** — how small screen, large screen and print preserve the same informational priorities without becoming one compressed layout;
-- **brand embodiment** — how grid, typography, color, image, motion if relevant and interaction behavior come from the brand grammar rather than generic documentation UI;
-- **visual material** — which images and applications are strong enough to teach the system at meaningful size.
+The order is fixed. A section exists only when a reader task needs it; no section exists to complete the list.
 
-Do not prescribe a chapter count, component library, grid, breakpoint, target size, reading-level count or page rhythm universally. Those are consequences of the brand, content and reader jobs.
+| # | Section | Content | Mode |
+|---|---|---|---|
+| 0 | Cover | Brand name, "Brand manual", version, date, whom to ask. Nothing else. | — |
+| 1 | Contents | Anchors. Titles are written as tasks ("Use the logo", "Choose the colors"). | lookup |
+| 2 | Start here | The first piece in ten minutes: the most frequent reader task, in steps, with its files and the finished example. No explanation. | do |
+| 3 | The brand on one page | At most 150 words: what the company does, for whom, what the brand must make people perceive (the direction criteria in plain words), the trait that makes it recognizable. | explain |
+| 4 | Elements | One section per element the tasks need, in this order: the name and how to write it; the logo; colors; typography; images and illustration; composition; motion. Each in the unit of §3. | do, lookup |
+| 5 | Voice and messages | Only when verbal identity is in scope: principles written as writing decisions, tone by moment, examples per verbal touchpoint, right and wrong with real copy. | do, lookup |
+| 6 | Applications | One page per declared touchpoint: the admitted render, dimensions, files, production notes, and the mark "Rule" or "Room". | do, lookup |
+| 7 | Files | A table: file, what it is for, format, where it goes. Every file downloadable from the folder. | lookup |
+| 8 | When the rule does not cover it | Whom to ask, how to propose a change, what never to do without asking. | do |
+| 9 | Version | Version, date, what changed in this version in at most five lines. | lookup |
 
-Wayfinding is a required function when the document's complexity needs it; its form still belongs to the brand. Do not ban navigation because generic navigation is off-brand. Build the necessary function from the system's own grammar.
+Forbidden anywhere in the book: a hero, a manifesto, an opening slogan, a list of personality adjectives, an archetype, "our values" without a decision attached, a section without a task, an invented reader, a render below the floor, and process vocabulary (contract, schema, thesis, signature, maturity, route, evidence, open questions, prompts).
 
-This plan is working material, not canonical brand state.
+## 3. The section unit
 
-## 3. Keep three content layers distinct
+Every section in Elements, Voice and Applications has the same parts, in this order:
 
-**Reference** — exact values, inventories, lockup variants, minimum sizes, contrast pairs, downloads. These agree with the contract and assets, but need not be generated from them. Source-of-truth coherence is verified at acceptance; it is not a required production method. A number appears only where reproduction depends on it.
+1. **Title as a task.**
+2. **Mark:** "Rule" (fixed; changes only with a new version) or "Room" (varies within what the section says).
+3. **Why:** one sentence. The only explanation allowed in the section.
+4. **Rules:** one per sentence, imperative, condition before action; "must" for the non-negotiable, "may" for the permitted. Never "avoid", "try to", "ideally", "whenever possible".
+5. **Values:** a table with the numbers reproduction depends on (hex, CMYK, minimum sizes, margins, weights, file names). Where reproduction does not depend on a number, there is no number.
+6. **Right and wrong:** at least one pair. Visual pairs in `figure` with the caption "Right:" or "Wrong:" and the reason in one sentence; verbal pairs in `blockquote` with the same captions.
+7. **Files:** the ones the task uses, linked to the folder.
+8. **When it does not cover:** one sentence, whom to ask.
 
-**How-to** — imperative rules that let an operator do the job. Titles predict content; terms are defined at first use or replaced by plain ones. Element names are the ones fixed by the brand system.
+A section without a right-and-wrong pair is not ready.
 
-**Explanation** — the compact causal chain behind the brand: brand job, position, thesis, principles and behavior. It helps a reader generalize without turning every rule into rationale.
+## 4. Writing rules
 
-Cover only dimensions the system actually has. Process vocabulary never reaches the published artifact: no schema, route names, evidence ledger, open questions, prompts or internal maturity discussion. Pending matters go to the operator report.
+Instructions:
+- Write in the readers' language (`book.readers.language`), in the organization's first person plural ("our logo", "our colors").
+- Use the imperative. One rule per sentence. At most twenty words per sentence.
+- Give values and file names instead of qualifiers: "leave a 24 px margin", not "leave generous breathing room".
+- Define a technical term the first time or replace it with the common word.
+- Titles predict content. No title is a question.
 
-## 4. Prove a representative prototype before fanout
+Forbidden in instructions:
+- adjectives of quality or emotion: unique, innovative, elegant, sophisticated, powerful, human, authentic, modern, premium, inspiring, and their equivalents;
+- metaphor ("the brand breathes"), personification, rhetorical questions, exclamation marks, slogans, "we believe", "our essence", "journey", "DNA";
+- vague permission: "you can", "feel free";
+- explanation outside "Why" and section 3;
+- any sentence that describes the brand instead of saying what to do.
 
-Do not begin by reproducing the full table of contents. First make the smallest real slice capable of exposing the document's hard tensions.
+Examples of brand copy:
+- in the audience's language (`strategy.audience.language`), in the brand's voice, always inside `figure`, `blockquote`, `code`, `pre` or `samp`. This is how a reader and `scripts/book_checks.py` tell an instruction from an example.
 
-The prototype should contain enough real content to test, where relevant:
-- orientation and navigation;
-- a dense reference/rule region;
-- an expressive brand moment;
-- retrieval of an asset or exact value;
-- small-screen and large-screen behavior;
-- print composition.
+## 5. Form and expression
 
-A full chapter is often a useful slice, but it is not a universal requirement. The slice is valid only if it can falsify the intended architecture, hierarchy, density, retrieval and media behavior.
+- One HTML file at the root of the served folder; assets, fonts and downloadable files in the folder; CSS in the file; no scripts; no external requests; `<html lang>` set to the readers' language.
+- A document page: one reading column; contents fixed at the side on wide screens and at the top on narrow ones; disclosure with `details`/`summary`; an anchor on every section; a print stylesheet that starts each section on a new page and shows every value without truncation.
+- The brand enters by three routes and only these: the system's own typography, colors and grid applied to the page; the pieces shown at useful size, with captions; the precision of the document. No full-width marketing block, no scroll effect, no decorative image.
 
-Render it, use it as the named readers, repair the structure, then scale the proven grammar. Do not spend craft effort across a full book whose information architecture or layout logic has not survived this prototype.
+A familiar documentation pattern is accepted when a reader task needs its function; its form comes from the system. Do not ban navigation because generic navigation looks generic.
 
-## 5. The document itself must carry the brand
+## 6. Production
 
-The book's interface grammar is an application of the brand grammar, not of the browser's defaults. Grid, type scale, margins, color fields, imagery and interaction behavior derive from the system where those dimensions exist.
+1. **Sources.** Compile from the built truth: masters, tokens, admitted renders, real copy. The contract checks the book; it does not generate it.
+2. **Prototype.** "Start here", one Elements section, one Applications page and the Files table, with real content. Render on a phone, on a desktop and in print. Give an isolated context only the prototype and have it execute two reader tasks. Repair structure, register and navigation. Only then scale.
+3. **Scale.** The remaining sections in the same unit.
+4. **Judge** (§7). 5. **Deliver** (§8).
 
-A familiar web pattern is not forbidden merely because it is familiar; it fails when its form arrives from medium autocomplete instead of a reader need and the brand's governing logic.
+## 7. Judging, in this order
 
-Use visual material selectively. A render from TEST IN USE enters the book only when it is strong enough to function as evidence that the system produces good work. Layout follows admitted material; there is no slot per touchpoint waiting to be filled. Fewer strong examples beat complete weak coverage.
+1. `scripts/book_checks.py <folder>` passes or carries a justified exception. It decides package shape only: no scripts or external requests, self-containment, resolvable relative references, alt text, orphan files, print stylesheet, contract and report kept out of the folder; it warns on a missing `lang` and on flag words or exclamation marks outside example elements. It says nothing about transfer or expression.
+2. **Integrity.** Every value appears once and equals its source; every render is the admitted one; every file in the table exists and opens.
+3. **Transfer.** An isolated context receives only the book and each reader's tasks and executes them; each task comes back as done or blocked, with the sentence or the absence that blocked it. Without an isolated context, the maker executes them in a cold pass and the report says so.
+4. **Worst element**, searched in this order of severity: a rule that leads a reader to do wrong work; a value, a file or a section a task needs and that is missing; a render below the bar; a sentence that breaks §4. Raise it to the floor or remove it; repeat until none remains. A removal becomes a named gap in the report. The floor has two sides: nothing below it is shown, and nothing a task needs is missing.
+5. **Expression.** The craft of the document, judged by `judging.md` against the bar, as a document, not as a campaign.
+6. **Owner.** At delivery the owner executes one reader task using only the book (`client-loop.md`).
 
-Do not sacrifice clarity to expression. Do not sacrifice expression to generic documentation convenience.
+The book's maturity is the lowest of the six. `final` requires all six.
 
-## 6. Judge an absolute floor before the weakest element
+## 8. Delivery
 
-A uniformly mediocre book may have no conspicuously weak component. Judge the whole product against four orthogonal properties before ranking local elements:
-
-- **Transfer** — a reader who did not participate can orient, find, understand and apply what their job requires. Evidence: perform the relevant reader tasks without the maker explaining the interface.
-- **Expression** — the document has the force, rhythm and craft expected from the creative direction and holds beside the named bar. Evidence: judge rendered views without the author's rationale.
-- **Integrity** — the book faithfully represents the current system, masters, assets and exact rules. Evidence: inspect against the sources and use deterministic checks only for properties code can actually decide.
-- **Delivery** — the artifact works in the media it claims to serve: representative screen extremes, print, keyboard/accessibility behavior when applicable, relative asset paths and offline/self-contained packaging. Evidence: execute and render those media.
-
-Start review at the largest scale: **whole experience → reader task/flow → weak region → component → detail**. Do not polish local components while the architecture itself fails.
-
-Only after the absolute floor holds, apply the package's weakest-element rule and raise or remove the weakest admitted visible element.
-
-## 7. Package and readiness
-
-Use one folder the host already serves statically when possible:
-- book at the folder root;
-- fonts and assets needed by the book inside the folder, with downloads where the reader job requires them;
-- relative references so the package survives offline use and a host change;
-- print styles implementing a deliberately composed print layout;
-- contract outside the served folder unless the owner explicitly chooses to publish it.
-
-The current package contract uses no client-side scripts and no external requests; solve navigation and disclosure with semantic HTML and CSS. If a future reader job genuinely requires runtime behavior, change the package contract and its checker together rather than bypassing either.
-
-`scripts/book_checks.py <folder>` decides only the existing mechanical package properties: no scripts or external requests, self-containment, resolvable relative references, alt text, orphan files, print stylesheet and contract separation. It establishes nothing about transfer, expression or overall UX.
-
-Before calling the book **ready**, **final** or **publishable**:
-1. relevant deterministic checks pass or carry an explicit justified exception;
-2. the book has been rendered and inspected in each claimed medium;
-3. representative reading and lookup tasks clear Transfer;
-4. rendered views clear Expression against the named bar;
-5. Integrity has been checked against the actual sources;
-6. no known visible element remains below the floor.
-
-"Later" is not a state. A real external blocker names exactly what unavailable reality or capability prevents completion. Owner acceptance can reduce scope or accept a lower maturity, but it cannot convert missing evidence into a final artifact.
-
-## Delivery
-
-Deliver the book and the assets its readers need. Deliver the contract separately as an operating file. Report unresolved truth, authority, capability and lower-maturity gaps to the operator, never inside the book.
+Deliver the book and the folder. Deliver the contract separately as an operating file. In the operator report: the readers and their tasks; the result of each task in the transfer test; the worst element found in each round and what was done; the sections left out and why; who judged; the maturity. None of this inside the book.

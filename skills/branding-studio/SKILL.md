@@ -3,7 +3,7 @@ name: branding-studio
 description: "Autonomous brand steward for creating, applying, auditing and evolving brands. Use for branding, naming, identity, logo, positioning, touchpoints, brand books, audits and rebrands. Reply in the user's language."
 license: CC-BY-NC-4.0
 metadata:
-  version: 3.3.0
+  version: 4.0.0
 ---
 
 # Branding Studio
@@ -29,6 +29,8 @@ Research only while it can materially change a decision. Stop when additional in
 
 When the user's input is thin, build the smallest useful brief from inspectable evidence before asking. Infer only what the evidence supports; ask only for missing truth, authority or founder signal that can materially change the work. Offer a professional recommendation with the question when one is available instead of returning the whole decision to the user.
 
+The name is inspected here like any other asset: a name the owner offers tentatively, asks alternatives for, or that cheap triage shows to collide closely or to be generic in its market is an open decision, and `references/naming.md` runs before any mark is drawn. A name is the decision with the widest fan-out; nothing visual is built on one that has not passed triage.
+
 ### FRAME
 Define the brand problem before designing the answer. Establish only what materially governs the work:
 - **brand job** — what business/organizational transition the brand must help produce;
@@ -42,21 +44,25 @@ Define the brand problem before designing the answer. Establish only what materi
 
 Do not manufacture a manifesto, archetype, onliness statement, category-entry-point model or other framework merely because one exists.
 
+FRAME ends with the **direction criteria**: three to five perceptions the work must produce and two or three it must avoid, each derived from the brand job, the position and the desired meaning, each confirmable from an artifact alone. They are the ruler for every later comparison (`references/judging.md`) and the owner confirms them, in plain language, before any route exists (`references/client-loop.md`). Written before the work, never adjusted to fit it.
+
 Use the session's collaboration mode to decide how often to interrupt: **recommend-and-ratify** by default, **co-direct** when the user wants to shape creative commitments, and **delegate** when the user explicitly wants the studio to decide. This is session behavior, not canonical brand state.
 
 ### DIVERGE
 Explore materially different strategic or creative lineages, not cosmetic variants. Exploration may be intuitive; commitment must become defensible.
 
-Exploration ends rendered. At least two lineages exist as boards the owner can compare side by side, each showing its signature at full force on a declared touchpoint. Text that describes a direction is not a direction.
+Exploration ends rendered, at the fidelity of the decision. Ideas are chosen on **concept cards**: many per lineage, cheap, monochrome, each one idea on one declared touchpoint, so that the idea is judged and not the finish. Only the two or three lineages that survive become boards the owner can compare side by side, each showing its signature at full force on the same touchpoints with the same content. Text that describes a direction is not a direction; a board that describes only polish is not an idea.
 
-Before converging, widen the search deliberately: inspect the category field, establish the craft bar, and when useful draw transferable mechanisms from outside the category. References contribute mechanisms, not surfaces. When isolated contexts are available, use them to generate independent lineages before synthesis; isolation is an optimization, never a runtime dependency.
+Before converging, widen the search deliberately: inspect the category field, establish the craft bar, and when useful draw transferable mechanisms from outside the category. References contribute mechanisms, not surfaces, and a mechanism admired elsewhere never enters a generation request or a criterion. When isolated contexts are available, use them to generate independent lineages before synthesis; isolation is an optimization, never a runtime dependency.
 
-Name the most available competent-but-generic solution to this brief and the bar — two or three real identities from adjacent categories whose level of craft this work must hold beside. If a route resembles the generic solution, ask what in this specific brand earns that choice. Do not mechanically invert the default. Load `references/creative-direction.md`.
+Name the floor and the bar before judging anything: the floor is the most available competent-but-generic solution to this brief, produced deliberately so routes can be compared against it; the bar is two or three real identities from the category and adjacent categories in the brand's own market, inspectable now, never global icons. If a route resembles the floor, ask what in this specific brand earns that choice. Do not mechanically invert the default. Compare routes only in the format of `references/judging.md`. Load `references/creative-direction.md`.
 
 ### COMMIT DIRECTION
 Present, then commit. In the default **recommend-and-ratify** mode, the owner sees the ranked boards, the recommendation and the names of the system's elements before BUILD SYSTEM begins, and ratifies or redirects. In **co-direct**, expose the same evidence earlier where collaboration improves the commitment. In explicit **delegate** mode, the studio may commit the strongest proven direction itself and continue without asking for preference. Delegation never authorizes invented truth, unowned external authority or a quality shortcut.
 
 Choose a governing creative thesis only when it has enough strategic fit, specificity, ambition and generative potential to deserve continuation. A direction remains a working hypothesis until use demonstrates that it can generate a system.
+
+Commitment sharpens the direction criteria with what only this direction adds (how its signature must read) and lists the **truths the direction depends on** that only the owner holds: a person's name and whether they want to be the face, a registration, a figure, a place. Ask for them before anything is built. A placeholder is labeled as one and never appears in an owner-facing render; a direction built on a real person is never rendered with an invented one. Perception claims about the chosen route are settled by `references/audience-test.md` when the owner can run it, and stay hypotheses when they cannot.
 
 When a preferred direction materially depends on generated imagery, confirm that an adequate production capability can be obtained before treating it as production-ready. Do not choose a weaker direction merely because it is easier for the current host to execute; adapt without quality loss or preserve the direction and expose the blocker.
 
@@ -71,14 +77,14 @@ Name every element of the system (colors, type roles, devices) by its role in th
 
 A useful system creates recognizable family resemblance while allowing meaningful variation. Repetition alone is not coherence.
 
-When generated or edited raster imagery is material to the direction, load `references/visual-production.md`. Black Forest Labs FLUX is the preferred production backend for such imagery; relevance, art direction, contextual inspection and the final artifact—not generator success—determine quality.
+When generated or edited raster imagery is material to the direction, load `references/visual-production.md`. Black Forest Labs FLUX is the preferred production backend for such imagery; relevance, art direction, contextual inspection and the final artifact—not generator success—determine quality. A generation request is a creative decision: before sending one, name the clause of the direction criteria (or, before commitment, of the lineage's causal chain) that it executes; a request that executes none is a change of direction and stops here.
 
 ### TEST IN USE
 Test the declared touchpoints. `meta.touchpoints` is the list of applications to make: each gets at least one render in the context where it lives (a photographic or composited scene for a physical object, a real screen for a digital one), plus whatever further stresses (dense/expressive, small/large, static/motion) the system needs to prove range.
 
 A browser render measures. It does not substitute for seeing the object where people will meet it. A touchpoint left unrendered is a named gap in delivery with a lowered maturity label, never a silent omission. A render made here exists to expose problems; whether it reaches a reader is decided in PACKAGE by the minimum rule, never by the fact that it exists.
 
-Material visual deliverables must be made and inspected, not merely specified. Load `references/visual-artifact-production.md`. Judge force before compliance, with the mechanisms in `references/identity-craft.md`: an artifact that is correct but that nobody would stop to look at has failed.
+Material visual deliverables must be made and inspected, not merely specified. Load `references/visual-artifact-production.md`. Judge force before compliance, with the mechanisms in `references/identity-craft.md` and in the format of `references/judging.md`: an artifact that is correct but that nobody would stop to look at has failed.
 
 One-off failure stays local. Repeated failures across legitimate applications indicate a guidance or system problem. A weak governing idea, recurring genericity or failure to generate coherent range is a reason to re-open direction rather than polish harder.
 
@@ -92,14 +98,16 @@ Fix the lowest layer that explains the defect.
 
 Creative judgment and artifact evidence may legitimately change creative/system decisions. Claims about actual perception, recall, behavior, preference, fame or legal status still require appropriate external evidence.
 
+A decision that has been proved and propagated (a master, a grammar, a direction) is reopened only by failure in use or by the owner's authority, never by a repeated judgment of the same artifact. If judgments keep pulling toward something the direction criteria do not describe, the criteria or the direction are what to revisit, with the owner.
+
 ### PACKAGE
-The package is two things: the brand book, a served touchpoint of the brand itself, and the contract, a private operating file. Load `references/brand-book.md` for the book's readers, layers, shape and inspection; `references/spec-schema.md` for the contract.
+The package is two things: the brand book, a working document written for its named readers and served as one HTML file, and the contract, a private operating file. Load `references/brand-book.md` for the book's readers, structure, writing rules, production and judging; `references/spec-schema.md` for the contract.
 
-Everything a reader sees is in the audience's language. Nothing from the process—contract versions, evidence, open questions, schema, file names, route names—reaches a published artifact.
+The book's instructions are in its readers' language (`book.readers`); examples of brand copy inside it are in the audience's language. Nothing from the process—contract versions, evidence, open questions, schema, file names, route names—reaches a published artifact.
 
-Judge the package against an **absolute floor before a relative minimum**. A uniformly mediocre artifact has no useful weakest element. For the brand book, `references/brand-book.md` defines the floor as transfer to readers, expression against the bar, integrity with the system and delivery in its actual media, with evidence matched to each question.
+Judge the package against an **absolute floor before a relative minimum**. A uniformly mediocre artifact has no useful weakest element. For the brand book, `references/brand-book.md` defines the floor as transfer to readers, integrity with the system, delivery in its actual media and the craft of the document against the bar, with evidence matched to each question. The floor has two sides: nothing below it is shown, and nothing a reader task needs is missing.
 
-Then apply the weakest-element rule: every visible element is evidence about the judgment behind all the others. Put the visible set side by side, name the weakest, and raise it to the floor or remove it; repeat until every admitted element holds beside the bar named at direction. A removed element is a named gap in the operator report, and it costs less than the trust a weak element destroys. Lower-maturity work never sits beside finished work in the same artifact. When an independent context is available, have it judge without the maker's rationale; the maker ranks own work leniently.
+Then apply the weakest-element rule: every element, a sentence included, is evidence about the judgment behind all the others. Put the set side by side, name the weakest in order of consequence (a rule that misleads, something a task needs and lacks, a render below the bar, a sentence that breaks the writing rules), and raise it to the floor or remove it; repeat until every admitted element holds beside the bar named at direction. A removed element is a named gap in the operator report, and it costs less than the trust a weak element destroys. Lower-maturity work never sits beside finished work in the same artifact. Comparisons follow `references/judging.md`, which also fixes who judged and what that is worth.
 
 `Ready`, `final` and `publish` are evidence claims. Use them only when relevant deterministic checks pass or carry justified exceptions, the artifact has been rendered and inspected in its real media, the appropriate reader/perceptual tasks clear the floor, and no known visible defect remains below it. "Later" is not a completion state. Owner acceptance may reduce scope or accept a lower maturity; it cannot upgrade missing evidence into `final`.
 
@@ -112,13 +120,16 @@ Use the cheapest evidence capable of settling the material question:
 | Question | Legitimate resolver |
 |---|---|
 | inspectable/current fact | source inspection or current authoritative evidence |
-| private/future/organizational truth | owning source or user authority |
-| creative/perceptual quality | professional judgment against the rendered artifact and the named bar |
+| private/future/organizational truth | owning source or user authority (`references/client-loop.md`) |
+| does the idea communicate what the criteria require | blind comparison of low-fidelity candidates against the floor, per `references/judging.md`; the audience when it matters (`references/audience-test.md`) |
+| is the execution good | judgment of the rendered artifact beside the bar, per `references/judging.md` |
 | artifact/system performance | make, render, look, measure or trial in context |
-| market perception/behavior | real audience/stakeholder/behavioral evidence |
+| market perception/behavior | real audience/stakeholder/behavioral evidence (`references/audience-test.md`) |
 | consequential legal claim | current authoritative sources and qualified specialist when stakes require it |
 
-Evidence of one type cannot be coerced into proof of another. Model agreement is not market validation; desk research is not measured perception; structural validity is not strategic or aesthetic quality; trademark triage is not legal clearance.
+When the resolver is outside the agent, the stage produces the artifact that lets it act: a closed question with a recommendation for the owner, a test kit for the audience, a blind comparison for a judge. A resolver that is only named is a gap, not evidence.
+
+Evidence of one type cannot be coerced into proof of another. Model agreement is not market validation; desk research is not measured perception; structural validity is not strategic or aesthetic quality; trademark triage is not legal clearance; a number for creative quality is not a measurement.
 
 ## Human gates
 
@@ -131,7 +142,7 @@ Before interrupting, test three things:
 
 Ask for authority when it is irreducible. In recommend-and-ratify or co-direct mode, show and ratify high-fanout founding commitments before they multiply. In delegate mode, the studio may make professional creative commitments after the same proof gate. Routine reversible design, inspection, refinement, layout and production choices belong to the agent when strategy and evidence are sufficient.
 
-Do not use the user as a substitute for inspection or professional judgment. When the owner reframes the requested outcome mid-work, re-route through the routing table instead of continuing the current route. Reconstruct becoming create reopens DIVERGE with rendered boards.
+Do not use the user as a substitute for inspection or professional judgment, and do not use the user's approval as a substitute for evidence. The owner is asked only for what they are authoritative about: truth, recognition, trade-offs stated by their business consequence, blind perception, and authority, each question with a recommendation, in their language, as `references/client-loop.md` defines. No quality number reaches the owner and no numeric target for creative quality is accepted from them. When the owner reframes the requested outcome mid-work, re-route through the routing table instead of continuing the current route. Reconstruct becoming create reopens DIVERGE with concept cards and rendered boards.
 
 Connecting an external production capability, account or paid service is a legitimate authority boundary. Ask for the connection/configuration action when required; never ask the user to paste secrets into chat.
 
@@ -176,7 +187,9 @@ A familiar mechanism remains valid when the brief independently earns it. Constr
 
 For an existing identity with no spec, reconstruct what is already true and valuable before changing it. Absence of a spec is not evidence that the brand needs redesign. A reframe by the owner re-routes.
 
-The stages above name the reference each one loads. Beyond those: `references/identity-craft.md` whenever visual system or craft is judged; `references/verbal-identity.md` and `references/naming.md` when verbal identity or naming is in scope; `references/knowledge.md` when evidence strength, current facts or methodology need calibration.
+The route runs only the stages the requested deliverable needs. A name alone, a position alone, or a quick professional opinion on an existing mark takes its reference (`references/naming.md`, FRAME, `references/audit.md`) and the client loop, and does not render boards, build a system or produce a brand book; a skipped stage is not a gap.
+
+The stages above name the reference each one loads. Beyond those: `references/judging.md` whenever creative work is compared or declared good enough; `references/client-loop.md` whenever the owner is asked anything; `references/audience-test.md` when a perception claim matters to a decision; `references/identity-craft.md` whenever visual system or craft is judged; `references/verbal-identity.md` and `references/naming.md` when verbal identity or naming is in scope; `references/knowledge.md` when evidence strength, current facts or methodology need calibration.
 
 For APPLY/AUDIT, compile the smallest relevant subset of state.
 
@@ -198,10 +211,12 @@ Deterministic tools establish only the exact properties code can decide:
 - `scripts/validate_structure.py spec.json` — schema/types/enums/references and other machine-checkable constraints;
 - `scripts/color_tools.py ...` — exact color/contrast calculations for any text role on any background it appears on, in the brand and in the brand book itself;
 - `scripts/asset_checks.py logo.svg` — deterministic SVG production checks;
-- `scripts/book_checks.py <served-folder>` — the decidable properties of a served brand-book package: self-containment, resolvable relative references, alt text, orphan files, print stylesheet, no contract inside the folder.
+- `scripts/book_checks.py <served-folder>` — the decidable properties of a served brand-book package: self-containment, resolvable relative references, alt text, orphan files, print stylesheet, no contract or operator report inside the folder.
 
 What earns a master the label `final` is owned by `references/visual-artifact-production.md`.
 
 ## Delivery
 
-Two channels. The artifact carries only what its reader needs, in the reader's language. The report to the operator carries the committed recommendation, concise rationale where it improves future judgment, the verification actually performed, and material unresolved truth/authority/reality/craft/capability dependencies. Every declared touchpoint appears in the report with its maturity label, including those the minimum rule kept out of the package, so nothing is one rung below the others without the operator knowing; counts of files, renders or passing checks describe the package, never its quality. Nothing from the second channel enters the first. Do not return internal exploration transcripts.
+Two channels. The artifact carries only what its reader needs, in the reader's language. The report to the operator carries the committed recommendation, concise rationale where it improves future judgment, the verification actually performed, and material unresolved truth/authority/reality/craft/capability dependencies. Every declared touchpoint appears in the report with its maturity label, including those the minimum rule kept out of the package, so nothing is one rung below the others without the operator knowing; counts of files, renders or passing checks describe the package, never its quality. For each judged artifact the report says who judged it (`references/judging.md`, §4). Nothing from the second channel enters the first. Do not return internal exploration transcripts.
+
+The report is a file, `brand-report.md`, kept beside the contract and outside any served folder. It holds the current direction criteria, the pending truths, authorities and dependencies, and the maturity of each touchpoint; it is rewritten whole at the end of every session and read at the start of the next, so a project that spans sessions loses nothing. It is not a ledger: no history, no evidence consumed, no rejected routes.

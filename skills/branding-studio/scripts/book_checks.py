@@ -5,7 +5,9 @@ book_checks.py — deterministic checks for a served brand-book package.
 Decides only the mechanical part of the package shape: the book is self-contained
 (no scripts, no external requests), every relative reference resolves inside the
 folder, every image carries alt text, no file in the folder is unreachable from the
-book, a print stylesheet exists, and no brand contract is served from the folder.
+book, a print stylesheet exists, and neither the brand contract nor the operator report is served from the folder.
+Warnings only, never failures: a missing <html lang>, and flag words or exclamation marks in instruction text
+(text outside figure/blockquote/code/pre/samp), because presence is decidable and appropriateness is not.
 It establishes nothing about what the pages teach or how they look.
 
 Usage:
@@ -30,6 +32,33 @@ PRINT_MEDIA = re.compile(r"@media[^{]*\bprint\b", re.IGNORECASE)
 REF_ATTRS = {"src", "href", "data", "poster", "xlink:href"}
 HOST_FILES = {"_redirects", "_headers", ".htaccess"}
 CONTRACT_KEYS = {"creative_direction", "strategy"}
+
+# Instruction text is everything outside these elements; brand copy shown as an example lives inside them
+# (brand-book.md, §4), so a flag word there is the brand's voice, not the manual's.
+EXAMPLE_TAGS = {"figure", "blockquote", "code", "pre", "samp", "script", "style"}
+
+# Words that describe a brand instead of telling a reader what to do. Presence is decidable; whether a given
+# use is wrong is not, so these only ever produce warnings. Keyed by the primary subtag of <html lang>.
+FLAG_WORDS = {
+    "en": ("unique", "innovative", "elegant", "sophisticated", "powerful", "authentic", "premium", "inspiring",
+           "timeless", "iconic", "bold", "vibrant", "breathes", "essence", "journey", "dna", "we believe"),
+    "pt": ("único", "única", "inovador", "inovadora", "elegante", "sofisticado", "sofisticada", "poderoso", "poderosa",
+           "autêntico", "autêntica", "premium", "inspirador", "inspiradora", "atemporal", "icônico", "icônica",
+           "vibrante", "respira", "essência", "jornada", "dna", "acreditamos"),
+}
+
+
+def _flag_words(text: str, lang: str) -> list[str]:
+    """Flag words present in instruction text, as 'word×count', for the language family of `lang`."""
+    family = (lang or "en").split("-")[0].lower()
+    words = FLAG_WORDS.get(family, FLAG_WORDS["en"])
+    lowered = text.lower()
+    found = []
+    for word in words:
+        count = len(re.findall(r"(?<!\w)" + re.escape(word) + r"(?!\w)", lowered))
+        if count:
+            found.append(f"{word}×{count}")
+    return found
 
 
 def _classify(ref: str) -> str:
@@ -58,10 +87,15 @@ class _BookParser(HTMLParser):
         self.images_missing_alt = 0
         self.images_empty_alt = 0
         self.images = 0
+        self.lang = ""
+        self.instruction_text: list[str] = []
         self._in_style = False
+        self._skip_depth = 0  # inside figure/blockquote/code/pre/samp/script/style
 
     def _tag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         a = {k.lower(): (v or "") for k, v in attrs}
+        if tag == "html" and a.get("lang", "").strip():
+            self.lang = a["lang"].strip()
         if tag == "script":
             self.scripts += 1
         if tag == "img":
@@ -82,20 +116,28 @@ class _BookParser(HTMLParser):
                         self.refs.append(("srcset", token[0], tag))
 
     def handle_starttag(self, tag, attrs):
-        self._tag(tag.lower(), attrs)
-        if tag.lower() == "style":
+        tag = tag.lower()
+        self._tag(tag, attrs)
+        if tag == "style":
             self._in_style = True
+        if tag in EXAMPLE_TAGS:
+            self._skip_depth += 1
 
     def handle_startendtag(self, tag, attrs):
         self._tag(tag.lower(), attrs)
 
     def handle_endtag(self, tag):
-        if tag.lower() == "style":
+        tag = tag.lower()
+        if tag == "style":
             self._in_style = False
+        if tag in EXAMPLE_TAGS and self._skip_depth:
+            self._skip_depth -= 1
 
     def handle_data(self, data):
         if self._in_style:
             self.css.append(data)
+        elif not self._skip_depth and data.strip():
+            self.instruction_text.append(data)
 
 
 def _css_refs(text: str) -> list[str]:
@@ -154,6 +196,9 @@ def inspect_folder(folder: str | Path) -> dict:
         if target not in seen and target.suffix.lower() in {".html", ".htm", ".css", ".svg"}:
             queue.append(target)
 
+    lang = ""
+    instruction_chunks: list[str] = []
+
     while queue:
         source = queue.pop()
         if source in seen:
@@ -170,6 +215,9 @@ def inspect_folder(folder: str | Path) -> dict:
             empty_alt += parser.images_empty_alt
             css_text = "\n".join(parser.css)
             print_css = print_css or bool(PRINT_MEDIA.search(css_text))
+            if source in books:
+                lang = lang or parser.lang
+                instruction_chunks.extend(parser.instruction_text)
             for ref in _css_refs(css_text):
                 resolve(ref, source, "css")
             for attr, value, tag in parser.refs:
@@ -230,6 +278,27 @@ def inspect_folder(folder: str | Path) -> dict:
         failures.append(f"brand contract served publicly: {contracts}")
     else:
         passed.append("no contract inside the served folder")
+
+    # The operator report (brand-report.md) carries pending truths and maturities; it is as private as the contract.
+    reports = sorted(str(p.relative_to(root)) for p in files if p.name.lower() == "brand-report.md")
+    if reports:
+        failures.append(f"operator report served publicly: {reports}")
+    else:
+        passed.append("no operator report inside the served folder")
+
+    if books:
+        if lang:
+            passed.append(f"book declares lang={lang}")
+        else:
+            warnings.append("book has no <html lang>; readers and screen readers need it")
+        instruction = " ".join(instruction_chunks)
+        flagged = _flag_words(instruction, lang)
+        if flagged:
+            warnings.append(
+                f"flag words in instruction text (brand-book.md §4; examples belong in figure/blockquote): {flagged}")
+        exclamations = instruction.count("!")
+        if exclamations:
+            warnings.append(f"{exclamations} exclamation mark(s) in instruction text (brand-book.md §4)")
 
     orphans = sorted(
         str(p.relative_to(root)) for p in files

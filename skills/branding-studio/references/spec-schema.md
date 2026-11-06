@@ -17,9 +17,10 @@ Legacy specs (schema 4, v3 or earlier) remain operable and are interpreted using
 ## Core contract
 
 A schema-5 contract keeps only the always-useful decision core:
-- `meta` — schema version, brand-contract version, brand identity, maturity and declared touchpoints;
+- `meta` — schema version, brand-contract version, brand identity, `tier` (the contract's maturity: `provisional` or `full`) and declared touchpoints;
 - `strategy` — brand job, audience (with the language the brand speaks to it), offer truth, alternatives, position, right to win and desired meaning;
-- `creative_direction` — thesis, principles and signature.
+- `creative_direction` — thesis, principles, signature and criteria;
+- `book` — the readers the brand book is written for, when a book is in scope.
 
 Add expression/domain blocks only when they are materially active: `verbal`, `visual`, `naming`, `architecture`, or other medium-specific rules future operators genuinely need.
 
@@ -64,7 +65,11 @@ For anything the brand produces repeatedly (a contextual render, a lockup export
 - `position` — the intended meaning relative to those alternatives; a slogan only when the slogan itself is the durable decision.
 - `right_to_win` — the credible basis that makes the position defensible.
 - `desired_meaning` — what the system intends to make associable; achieved perception remains an external claim.
-- `creative_direction.thesis`, `principles` (only rules that materially change choices), `signature` (the characteristic cue that makes the system cohere), and `excludes` only when likely false routes need preventing.
+- `creative_direction.thesis`, `principles` (only rules that materially change choices), `signature` (the characteristic cue that makes the system cohere), `criteria` (the direction criteria in force: the perceptions the work must produce and avoid, confirmable from an artifact alone, which future work is judged against) and `excludes` only when likely false routes need preventing.
+
+- `book.readers` — two to five readers of the brand book, each with `role`, `language` (BCP 47 tag) and `tasks`, two to six strings written as verb + object + situation. The owner is always one. Present only when a book is in scope; it is durable because who executes the brand changes less than the brand does. Nothing else about the book is persisted: its structure and rules live in `brand-book.md`, its pending matters in the report.
+
+In a `provisional` contract, `position`, `right_to_win` and `desired_meaning` may be absent or carry a `basis` that says they are hypotheses; a `full` contract requires them. The validator warns in the first case and fails in the second: a required field invites an invented one, and an invented strategy is worse than a missing one.
 
 ## Verbal and visual blocks
 
@@ -74,7 +79,7 @@ Examples of legitimate keys when needed:
 - `verbal.principles`, `verbal.tone_by_moment`, `verbal.message_behavior`, `verbal.excludes`;
 - `visual.identity_grammar`, `visual.typography`, `visual.palette`, `visual.logo`, `visual.imagery`, `visual.iconography`, `visual.composition`, `visual.motion`, `visual.tokens`, `visual.contrast_pairs`.
 
-A token or palette entry carries its role (`identity-craft.md`, naming of elements) as its key and the reader-facing name, in the audience's language, in `name`; renaming is then one edit.
+A token or palette entry carries its role (`identity-craft.md`, naming of elements) as its key and the reader-facing name, in the book readers' language (the audience's language when `book.readers` is absent), in `name`; renaming is then one edit.
 
 ```json
 "green": { "$type": "color", "$value": "#1F6E43", "name": "Verde Rede" }

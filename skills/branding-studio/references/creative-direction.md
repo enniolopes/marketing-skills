@@ -25,9 +25,9 @@ Only references that can be inspected now qualify. Decompose each useful referen
 
 ## 3. Name the floor and the bar
 
-The **floor** is the most available competent-but-generic answer to this brief or category. Ask what a capable designer would produce from category autocomplete alone, which parts of a proposed direction would survive if the company name were swapped for a competitor's, and what in this brief earns any familiar device in use. Do not invert the default mechanically; familiar forms remain valid when causally justified.
+The **floor** is the most available competent-but-generic answer to this brief or category. Produce it deliberately, as a card of its own, so every route can be compared against it: ask what a capable designer would produce from category autocomplete alone, which parts of a proposed direction would survive if the company name were swapped for a competitor's, and what in this brief earns any familiar device in use. Do not invert the default mechanically; familiar forms remain valid when causally justified.
 
-The **bar** is the strongest inspectable work named in the reference field. If no real identity can be inspected, state the bar as observable properties instead of names. Decompose what makes the bar strong with the force mechanisms in `identity-craft.md` so comparison is about mechanism, not taste. Boards are judged against the bar, not against the brief alone; a board that only clears the floor has not cleared anything.
+The **bar** is two or three real identities from the brand's category and adjacent categories in the brand's own market, the strongest the reference field can inspect now, that the brand's audience actually meets. Never global icons or canonical logos: a new mark beside them measures familiarity, and admiring one of them lets its idea into the criteria. If no real identity can be inspected, state the bar as observable properties instead of names. Decompose what makes the bar strong with the force mechanisms in `identity-craft.md` so comparison is about mechanism, not taste. Holding beside the bar is a pairwise comparison with no target to reach (`judging.md`); a route that only clears the floor has not cleared anything.
 
 ## 4. Diverge by independent lineage, not cosmetics
 
@@ -53,9 +53,11 @@ Do not let the generator grade its own first idea into permanence. After diverge
 - **generativity** — can the mechanism create coherent range rather than one image?
 - **craft potential** — can the route plausibly hold beside the bar in the required media?
 
-Novelty does not compensate for weak grounding. Polish does not compensate for a generic idea. A persuasive rationale does not compensate for a route whose logic is absent from the artifact.
+Novelty does not compensate for weak grounding. Polish does not compensate for a generic idea. A persuasive rationale does not compensate for a route whose logic is absent from the artifact. The comparison itself, blind, pairwise, against the floor and the direction criteria, follows `judging.md`.
 
-## 6. End exploration rendered
+## 6. End exploration rendered, at the fidelity of the decision
+
+Ideas are found and chosen on **concept cards** before any board exists: one idea per card, monochrome, on one declared touchpoint, with the typographic voice on a few real words and no finish. Cards are cheap, so each lineage gets many, drawn from distinct source domains; a card is judged for the idea it carries and discarded without regret. Cards are built on the surfaces the studio controls (vector, code) or, when a generator is used, under the rules of `visual-production.md`: a card is exploration, never a master.
 
 Each lineage that survives art direction becomes a board: a composed visual argument, not a list of adjectives. A board shows the signature at full force in one hero moment on a declared touchpoint, the typographic voice on real words, the color relationship at scale, and one dense application next to one expressive one. Generated imagery may be used here as exploration, whether or not final assets will be generated; load `visual-production.md` when it is.
 
@@ -74,7 +76,7 @@ Avoid empty destinations such as `modern`, `premium`, `innovative`, `trustworthy
 
 ## 8. Present, then earn commitment
 
-Present the strongest boards with a recommendation and the reasons, plus the names the system's elements will carry.
+Present the strongest boards with a recommendation and the reasons, the evidence against the direction criteria, the truths the direction depends on (`SKILL.md`, COMMIT DIRECTION), plus the names the system's elements will carry. The owner sees the cards before the boards and judges only what `client-loop.md` lets them judge.
 
 In **recommend-and-ratify**, the owner ratifies or redirects before BUILD SYSTEM. In **co-direct**, expose the same evidence early enough for collaboration to change the commitment rather than decorate it afterward. In explicit **delegate** mode, the studio may choose the strongest proven route and continue without asking for preference.
 
@@ -89,7 +91,7 @@ Commit a working direction when it demonstrates:
 - enough range to survive the declared touchpoints;
 - plausible production feasibility.
 
-At commitment time, compress the durable direction to **thesis**, **principles**, **signature** and, when needed, **excludes**. Preserve the mechanism, not the exploration transcript.
+At commitment time, compress the durable direction to **thesis**, **principles**, **signature**, the sharpened **criteria** and, when needed, **excludes**. Preserve the mechanism, not the exploration transcript.
 
 ## 9. Know when to abandon the direction
 

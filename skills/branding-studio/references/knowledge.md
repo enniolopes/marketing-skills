@@ -11,7 +11,7 @@ Do not present as law:
 - fixed formulas for concept count, font count, color count or grid units;
 - "minimal geometric sans = modern/professional", "serif = premium/trustworthy";
 - novelty, complexity or unusual layout as proof of creativity or sophistication;
-- precise numerical creative-quality scores without validated measurement;
+- numerical creative-quality scores of any kind (`judging.md` owns how creative work is compared);
 - sound symbolism/phonosemantics beyond a modest secondary signal that never overrides meaning, language reality or legal risk.
 
 A distinctive asset is one that is actually recognized; do not assume a cue is distinctive because it was intentionally designed that way. Mental-availability and category-entry-point frameworks are useful where the market and research model fit, not mandatory strategy fields.

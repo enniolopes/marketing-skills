@@ -152,9 +152,9 @@
     {
       "id": "book-written-for-its-readers",
       "prompt": "Entregue o manual da marca.",
-      "setup": "strategy.audience.language is pt-BR; readers are a designer, a printer and a kitchen coordinator with no design training. The repository's own conventions are in English.",
+      "setup": "strategy.audience.language is pt-BR; book.readers are a designer, a printer and a kitchen coordinator with no design training, all reading pt-BR, each with two to six tasks. The repository's own conventions are in English.",
       "judge": [
-        "The book is an information product in the audience's language, organized around real reader jobs and supporting both reading and lookup without process vocabulary leaking into the artifact.",
+        "The book is a working document in its readers' language, organized around the readers' tasks, in the fixed structure and section unit of brand-book.md, with brand copy examples in the audience's language inside example elements, and without process vocabulary leaking into the artifact.",
         "A reader who did not participate can orient, find an exact rule or asset and apply a representative rule without the maker explaining the interface.",
         "The book has been rendered and inspected in every medium it claims to serve, including representative screen sizes and print."
       ]
@@ -233,6 +233,155 @@
       "judge": [
         "Keep proposition and claims bounded by truth/proof while adapting message and expression to each context.",
         "Judge the actual copy: principles should generate specific new language, not merely generic voice adjectives or repeated slogans."
+      ]
+    },
+    {
+      "id": "criteria-before-candidates",
+      "prompt": "Explore três caminhos para a identidade e recomende um.",
+      "setup": "Strategy is established. No direction criteria have been written yet; the first instinct is to generate routes and then explain why the preferred one is best.",
+      "judge": [
+        "Direction criteria (perceptions to produce and avoid, confirmable from an artifact) are written in FRAME, before any route exists, and confirmed with the owner in plain language.",
+        "Routes are compared against those criteria and against a deliberately produced generic floor; no criterion is added or adjusted after the candidates exist."
+      ]
+    },
+    {
+      "id": "no-score-no-target",
+      "prompt": "Monte um painel de juízes, dê notas de 1 a 5 ao logo contra Amazon, FedEx e Nike, e continue até chegar a 4,5.",
+      "setup": "An isolated judging context is available. The owner is lay and has asked for a numeric target.",
+      "judge": [
+        "No numeric score, average or ranking-as-measurement is produced or shown; the studio says creative quality cannot be measured this way and names what can (criteria, blind pairwise comparison, audience test).",
+        "Global icons are rejected as a bar; the comparison set is the generic floor and two or three in-market identities, judged pairwise, blind, in both orders.",
+        "The owner is not asked which one they like and receives a recommendation."
+      ]
+    },
+    {
+      "id": "prompt-is-a-creative-decision",
+      "prompt": "Gere folhas de exploração de símbolos para o logo com o gerador disponível.",
+      "setup": "The direction is committed with a typographic signature as its signature. The easiest prompts would ask for 'clever symbols with a hidden second reading, award-winning, in the style of Paul Rand'.",
+      "judge": [
+        "Every generation request names the clause of the direction criteria (or the lineage's causal chain) it executes; requests that execute none are not sent.",
+        "No quality incantations, designer or studio names, or other brands' devices appear in any request.",
+        "Generated sheets are exploration only; nothing generated or 'redrawn as vector' by the generator is treated as a master."
+      ]
+    },
+    {
+      "id": "direction-truth-is-asked",
+      "prompt": "A direção escolhida coloca a contadora responsável, com nome e registro, como assinatura da marca. Construa o sistema.",
+      "setup": "The owner's documents describe a founder-accountant but never give the name, the registration number, or whether the founder wants to be the face of the brand.",
+      "judge": [
+        "Before anything is built, the studio lists the truths the direction depends on and asks the owner for them with a recommendation.",
+        "No invented person, name, registration or portrait appears in any owner-facing render; a placeholder, if used internally, is labeled as one."
+      ]
+    },
+    {
+      "id": "judgment-does-not-reopen-propagated-master",
+      "prompt": "Os juízes acham que o logo ainda pode melhorar. Reabra a exploração do símbolo.",
+      "setup": "The master was proved at critical scales, ratified by the owner and propagated into six applications and contextual scenes. No application has failed in use.",
+      "judge": [
+        "A repeated judgment of the same artifact does not reopen a proved and propagated master; the studio names what would (failure in use, the owner's authority) and refines the judged artifact at most.",
+        "If judgments keep pulling toward something the criteria do not describe, the studio raises the criteria or the direction with the owner instead of re-exploring the symbol."
+      ]
+    },
+    {
+      "id": "lay-owner-approval-is-not-evidence",
+      "prompt": "Gostei muito do azul, pode seguir com esse.",
+      "setup": "The owner is lay. The blue route conflicts with an agreed criterion ('does not read as a digital bank'). No audience evidence exists.",
+      "judge": [
+        "The studio asks one question about what makes the owner feel that, classifies the answer (truth, recognition or taste) and, when it is taste, states the trade-off in business terms with a recommendation.",
+        "If the owner still chooses the blue route, the decision is recorded in the report as accepted by the owner, not as proved; the owner's approval does not become evidence about the audience."
+      ]
+    },
+    {
+      "id": "proportional-route",
+      "prompt": "Preciso só de opções de nome para a empresa, nada de identidade visual por enquanto.",
+      "setup": "No contract exists. The full CREATE route would render boards and build a system.",
+      "judge": [
+        "Only the naming subgraph runs, with the client loop; no boards, system, brand book or contextual renders are produced.",
+        "The skipped stages are not reported as gaps."
+      ]
+    },
+    {
+      "id": "report-survives-sessions",
+      "prompt": "Retome o projeto de onde paramos.",
+      "setup": "A previous session wrote brand-report.md beside the contract with the direction criteria, three pending truths and touchpoint maturities. Nothing else of the conversation survives.",
+      "judge": [
+        "The studio reads the report before asking the owner anything and states in one line where the project is and what is pending.",
+        "The owner is not asked to repeat information the report already holds."
+      ]
+    },
+    {
+      "id": "tentative-name-is-a-candidate",
+      "prompt": "Pensei em chamar de Quadra ou algo assim; se precisar mudar, pode mudar. Crie o branding.",
+      "setup": "No contract exists. The owner's name is tentative. Cheap triage would find a near-homophone accounting firm in the same city and distribution channel, and the word is a common address term in the market.",
+      "judge": [
+        "The tentative name is treated as a candidate: the naming funnel runs before any card or mark, and the owner's name passes the same filters as the others.",
+        "Cheap triage runs on the full shortlist before cards, reports collisions by proximity, and the close collision reaches the owner with a recommendation before anything visual exists.",
+        "The owner is told once, with the recommendation, that attachment before triage is the classic failure, and keeps the decision."
+      ]
+    },
+    {
+      "id": "name-generation-is-wide-and-bare",
+      "prompt": "Gere opções de nome para a empresa.",
+      "setup": "Criteria and the market map exist. The easiest output is twenty names clustered around the category vocabulary and the current suffix fads.",
+      "judge": [
+        "The floor is generated first and excluded; candidates come by lineage with a quota per lineage and distinct source domains, including the name of a person or place; the count is of the order of a hundred before filtering.",
+        "The generation request is short and unformatted and contains no example names, designers or brands to sound like.",
+        "Convergence is countered structurally, not with an instruction to be creative."
+      ]
+    },
+    {
+      "id": "triage-is-staged-not-final",
+      "prompt": "Já escolhemos o nome; agora faça a checagem legal e siga para o logo.",
+      "setup": "The name was chosen from a shortlist that never had cheap triage. Deep triage on the single survivor finds an apparent collision.",
+      "judge": [
+        "The studio does not treat deep triage on one survivor as the first filter; it reopens the shortlist stage with cheap triage on all candidates and reports what the missed stage cost.",
+        "No mark is drawn on a name with a close, unresolved collision; the brand stays provisional until the owner resolves it."
+      ]
+    },
+    {
+      "id": "owner-rounds-reopen-generation",
+      "prompt": "Desses seis nomes, nenhum soa como a gente. O que soa mais perto é o terceiro, por causa do som curto.",
+      "setup": "Round one with the owner. The owner's reaction names a property (short sound), not a favorite.",
+      "judge": [
+        "The reaction is read as evidence about the criteria and reopens generation from the recognized property, within the funnel, rather than being treated as rejection of the shortlist or as a vote.",
+        "The owner is not asked which one they prefer; the next round asks again which sound like them and why."
+      ]
+    },
+    {
+      "id": "book-is-not-a-campaign",
+      "prompt": "Gere o manual da marca.",
+      "setup": "The system is resolved and the admitted renders exist. The path of least effort is a single-page site: a hero with the logo and a slogan, a manifesto paragraph, adjectives for the brand personality, and rules written in the brand's own voice.",
+      "judge": [
+        "The book opens with a cover (name, 'Brand manual', version, date, whom to ask), contents written as tasks and 'Start here'; it has no hero, manifesto, slogan or personality-adjective list.",
+        "Instructions are imperative, one rule per sentence, with exact values, in the organization's first person plural; no sentence describes the brand instead of saying what to do; book_checks.py raises no flag-word warning without a justified exception.",
+        "The brand appears through the system applied to the page and the pieces shown, not through the prose."
+      ]
+    },
+    {
+      "id": "book-transfer-blocked-task",
+      "prompt": "O manual está pronto; finalize.",
+      "setup": "book.readers include a printer whose task is 'print the business card'. The book shows the card render and the colors but no file name, no dimensions and no bleed value.",
+      "judge": [
+        "The transfer test (an isolated context, or a cold pass that the report declares) executes each reader task and returns 'print the business card' as blocked, naming the missing values and file.",
+        "The missing values and file are treated as an element below the floor (something a task needs and lacks), the section is completed or the task is reported as a named gap, and the book is not called final while the task is blocked."
+      ]
+    },
+    {
+      "id": "book-language-follows-readers",
+      "prompt": "Entregue o manual.",
+      "setup": "strategy.audience.language is en (the brand sells abroad); book.readers are a Brazilian owner and a Brazilian designer whose language is pt-BR.",
+      "judge": [
+        "Instructions, titles, captions and the <html lang> are in pt-BR; the brand copy examples inside figure/blockquote stay in English.",
+        "Token names shown in the book are in the readers' language."
+      ]
+    },
+    {
+      "id": "section-without-right-and-wrong",
+      "prompt": "Escreva a seção de cores do manual.",
+      "setup": "Color roles, values and contrast pairs are resolved. The easiest section lists the values and a paragraph about what the colors mean.",
+      "judge": [
+        "The section follows the unit: a task title, the Rule/Room mark, one 'Why' sentence, imperative rules, a values table, at least one right-and-wrong pair in a figure with the reason, the files, and whom to ask when the rule does not cover.",
+        "A paragraph about what the colors mean does not appear; meaning that matters becomes a rule or the single 'Why' sentence."
       ]
     }
   ],

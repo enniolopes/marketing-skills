@@ -18,7 +18,7 @@ This reference owns the production loop. `identity-craft.md` owns the visual sys
 - **Logo, wordmark, symbol or lockup:** construct final geometry in a controlled vector path, refine optically, test scale, monochrome and reversal behavior, and keep only variants real use requires. This is the one owner of the master boundary: a generated or traced raster concept is never a final master, however polished, and `final` is earned only when the available production path reproduces the master and the result has been looked at.
 - **Board:** compose a visual argument, not an image dump: signature at full force on a declared touchpoint, type on real words, color at scale, one dense and one expressive application. Boards for different lineages use the same touchpoints and content so they can be compared.
 - **Brand application:** real or representative content, dimensions and constraints. Build the application, then see it where it lives (`SKILL.md`, TEST IN USE); a physical touchpoint's scene follows `visual-production.md`, contextual scenes.
-- **Brand book:** `brand-book.md` for what it must teach and how it is shaped; then design the actual pages with deliberate hierarchy, pacing and sequencing. Content completeness is not visual completion.
+- **Brand book:** `brand-book.md` for its readers, structure, section unit and writing rules; then design the document pages with the system's own typography, colors and grid. Content completeness is not visual completion, and a page that reads as a campaign has failed as a document.
 - **Motion:** an inspectable time-based path; judge timing, transition, hierarchy and reduced-motion behavior. A storyboard is a concept unless it is the requested deliverable.
 
 ## Work in slices, and look
@@ -37,4 +37,4 @@ Judge in comparison rather than in the absolute whenever a set exists. Judge for
 
 Do not claim a material visual deliverable final while it is only described, prompted or represented by a mockup; while the claimed master cannot be reproduced through the available path; while a central asset remains placeholder-quality; while nobody has looked at the rendered result or looking exposed a known material defect; while the relevant whole-artifact floor has not been cleared; while the work does not hold beside the bar named at direction; or while it depends on an unavailable capability with no equal-quality alternative.
 
-Deliver the artifact at the highest truthful maturity that clears the floor, plus only the source, exports and contextual views future use genuinely needs.
+Deliver the artifact at the highest truthful maturity that clears the floor, plus only the source, exports and contextual views future use genuinely needs, and say in the operator report who judged it (`judging.md`, §4): a floor cleared only in the maker's own judgment is reported as such.

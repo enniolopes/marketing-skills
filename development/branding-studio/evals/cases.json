@@ -259,7 +259,7 @@
       "prompt": "Gere folhas de exploração de símbolos para o logo com o gerador disponível.",
       "setup": "The direction is committed with a typographic signature as its signature. The easiest prompts would ask for 'clever symbols with a hidden second reading, award-winning, in the style of Paul Rand'.",
       "judge": [
-        "Every generation request names the clause of the direction criteria (or the lineage's causal chain) it executes; requests that execute none are not sent.",
+        "Exploration batches state the question they explore (a territory, a lineage, a symbol family) and are made in volume; production requests name the criteria clause they execute.",
         "No quality incantations, designer or studio names, or other brands' devices appear in any request.",
         "Generated sheets are exploration only; nothing generated or 'redrawn as vector' by the generator is treated as a master."
       ]
@@ -352,9 +352,9 @@
       "prompt": "Gere o manual da marca.",
       "setup": "The system is resolved and the admitted renders exist. The path of least effort is a single-page site: a hero with the logo and a slogan, a manifesto paragraph, adjectives for the brand personality, and rules written in the brand's own voice.",
       "judge": [
-        "The book opens with a cover (name, 'Brand manual', version, date, whom to ask), contents written as tasks and 'Start here'; it has no hero, manifesto, slogan or personality-adjective list.",
+        "The book opens with a cover (name, 'Brand manual', version, date, whom to ask), contents written as tasks and 'Start here'; it has no marketing hero, manifesto, slogan or personality-adjective list.",
         "Instructions are imperative, one rule per sentence, with exact values, in the organization's first person plural; no sentence describes the brand instead of saying what to do; book_checks.py raises no flag-word warning without a justified exception.",
-        "The brand appears through the system applied to the page and the pieces shown, not through the prose."
+        "The brand appears through the system applied to the page and the pieces shown, not through the prose; each Elements section opens with a plate of the element itself."
       ]
     },
     {
@@ -382,6 +382,83 @@
       "judge": [
         "The section follows the unit: a task title, the Rule/Room mark, one 'Why' sentence, imperative rules, a values table, at least one right-and-wrong pair in a figure with the reason, the files, and whom to ask when the rule does not cover.",
         "A paragraph about what the colors mean does not appear; meaning that matters becomes a rule or the single 'Why' sentence."
+      ]
+    },
+    {
+      "id": "exploration-is-wide",
+      "prompt": "Explore caminhos para a identidade.",
+      "setup": "An image generator is available; the owner is lay and reachable; the direction criteria are confirmed.",
+      "judge": [
+        "Concept cards and symbol sketches are made in volume in the generator's exploration regime and reach the owner as sheets that include the floor card.",
+        "Nothing from exploration is persisted in the project or labelled as an asset; what survives is rebuilt on a controlled path before craft is judged."
+      ]
+    },
+    {
+      "id": "owner-cannot-say-it",
+      "prompt": "Não sei explicar o que quero, só sei que quero parecer grande.",
+      "setup": "FRAME is open; an image generator is available; no route exists yet.",
+      "judge": [
+        "Territory boards with no mark, no name and no governing idea are shown, and the owner marks which read as them and which do not.",
+        "Direction criteria are written from those reactions and confirmed before any route exists."
+      ]
+    },
+    {
+      "id": "converged-without-passing",
+      "prompt": "Gera mais umas opções, nenhuma ficou boa.",
+      "setup": "The last DIVERGE round produced only font, colour and layout variations of the same ideas; the owner still marks every card as 'could be anyone'.",
+      "judge": [
+        "The stage is declared converged because the round changed nothing observable; the work returns to FRAME with the reason in one line instead of generating again."
+      ]
+    },
+    {
+      "id": "resume-mid-graph",
+      "prompt": "Mudamos o posicionamento; retome.",
+      "setup": "brand-report.md shows BUILD SYSTEM satisfied and TEST IN USE in progress; the owner has just changed the brand job.",
+      "judge": [
+        "FRAME reopens; the report marks criteria, direction and downstream stages obsolete with the reason in one line.",
+        "Outputs that do not depend on the changed decision are kept and named rather than redone."
+      ]
+    },
+    {
+      "id": "blank-surface",
+      "prompt": "A landing com a marca ficou pobre.",
+      "setup": "Logo, palette, type and product UI exist; the declared touchpoints include a landing page and social posts; nothing makes a surface read as the brand without the logo, copy or photography.",
+      "judge": [
+        "The defect is traced to a missing surface asset at system level and resolved there, not patched inside the page.",
+        "The surface asset is not assumed to be the logo; its kind follows the direction."
+      ]
+    },
+    {
+      "id": "book-correct-but-flat",
+      "prompt": "O manual passou nas checagens; está pronto?",
+      "setup": "Transfer and book_checks pass; the document is one reading column with thumbnails and no element appears at full force.",
+      "judge": [
+        "The book is not declared ready: the prototype is judged for force beside the bar.",
+        "Plates of the elements and a cover that applies the brand are introduced without slogans, manifesto or decoration, and transfer is re-checked."
+      ]
+    },
+    {
+      "id": "strongest-judge",
+      "prompt": "Feche a direção.",
+      "setup": "Subagents are available; only the maker has judged the boards.",
+      "judge": [
+        "An isolated judge receives only the renders and the criteria before the direction is committed; the report names who judged."
+      ]
+    },
+    {
+      "id": "mark-on-host-surfaces",
+      "prompt": "Finalize o avatar do WhatsApp e o favicon.",
+      "setup": "Both marks have only been checked on a white background.",
+      "judge": [
+        "Both are rendered on the platform's light and dark surfaces at real size and crop before any of them is labelled final."
+      ]
+    },
+    {
+      "id": "brand-level-not-launch-cut",
+      "prompt": "Nosso público são agências no Simples sem CLT.",
+      "setup": "The owner's material mixes the brand's vision with an MVP launch segment.",
+      "judge": [
+        "Brand, current offer and launch cut are separated; audience and position are written at brand level and the launch segment stays out of the brand book."
       ]
     }
   ],

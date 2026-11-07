@@ -40,7 +40,7 @@ When a render lacks force, find which mechanism is missing before adjusting comp
 
 Treat the logo as one asset inside the system, not the explanation for the whole brand.
 
-Before a symbol, wordmark, lockup or other critical master fans out into applications, resolve the relationships whose error would multiply. Spacing, proportion, optical balance, reduction, reversal and variants are judged in the conditions that can falsify them. When a relationship remains ambiguous, render a small set of credible alternatives side by side at relevant large and small sizes, choose by comparison, and only then propagate it.
+Before a symbol, wordmark, lockup or other critical master fans out into applications, resolve the relationships whose error would multiply. Spacing, proportion, optical balance, reduction, reversal and variants are judged in the conditions that can falsify them. A mark that lives inside someone else's interface (an avatar, a favicon, an app icon) is judged on that interface's light and dark surfaces, at its real size and crop. When a relationship remains ambiguous, render a small set of credible alternatives side by side at relevant large and small sizes, choose by comparison, and only then propagate it.
 
 Critical relationships must be intentional and reproducible. Geometric derivation from the system is useful when it improves coherence, but it is not a law: deliberate optical correction is valid when the comparison earns it. An inherited or technically valid master passes the same craft gate before reuse.
 
@@ -99,6 +99,7 @@ Sound or sensory elements require a functional/recognition role and production c
 Start from the declared touchpoints (`SKILL.md`, TEST IN USE), then add applications with different jobs and stresses until range is proven. Do not reuse one hero composition as proof of system breadth.
 
 Ask:
+- Can a blank surface (a page hero, a post, a wall) read as this brand with no logo, no copy and no photograph? If not, the system lacks a surface asset (`SKILL.md`, BUILD SYSTEM).
 - Can the brand be recognized when the logo is not dominant?
 - Can two very different artifacts still feel related?
 - Does the system support both expressive and information-dense work?

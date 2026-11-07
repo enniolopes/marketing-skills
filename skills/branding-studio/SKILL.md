@@ -3,7 +3,7 @@ name: branding-studio
 description: "Autonomous brand steward for creating, applying, auditing and evolving brands. Use for branding, naming, identity, logo, positioning, touchpoints, brand books, audits and rebrands. Reply in the user's language."
 license: CC-BY-NC-4.0
 metadata:
-  version: 4.0.0
+  version: 4.1.0
 ---
 
 # Branding Studio
@@ -22,6 +22,23 @@ One invariant governs fanout: **prove before propagation**. Before a consequenti
 
 Every stage ends in an inspectable output, never in prose alone. When the output cannot be produced with the available capability, the stage ends with a named blocker and a lowered maturity label (`final master → tested prototype → concept → recommendation`), never with a cheaper substitute presented as the real thing.
 
+### Stage exits
+A stage is left only through its exit. Work inside a stage is free; what is controlled is what leaves it. Owner evidence follows the collaboration mode: in delegate mode the report replaces the Routes and Direction answers (`references/client-loop.md`).
+
+| Stage | Leaves with | Exit evidence | Compared with |
+|---|---|---|---|
+| GROUND | what is true about the business, each statement marked as sourced or inferred; for an existing brand, what to preserve, refine, replace or retire | the owner corrected the truth | — |
+| FRAME | direction criteria (paired), floor and bar named and captured | the owner confirmed the criteria, from territory reactions when words were not enough | territories |
+| DIVERGE | surviving lineages on concept-card sheets, the floor card included | the creative-direction gates; the owner marked what reads as them and what could be anyone's | floor |
+| COMMIT DIRECTION | boards, thesis, principles, signature, surface asset, element names, a short direction story | the strongest available judge, blind; the owner ratified and supplied the truths | floor and bar |
+| BUILD SYSTEM | masters with status, contract, one dense and one expressive application | deterministic checks; craft beside the bar; the blank-surface test passes | bar |
+| TEST IN USE | one in-context render per declared touchpoint | the strongest available judge per render; each defect classified by layer | bar |
+| PACKAGE | the book and the contract | `references/brand-book.md` §7; nothing labelled above its evidence | bar |
+
+**Stopping.** A stage keeps working while a round changes something observable: a new recognition from the owner, a changed verdict from the judge, a lineage structurally different from the earlier ones. Variation of font, colour or layout inside the same idea is not change. When a round changes nothing, the stage has converged: it exits, or, if the exit evidence is not met, the work returns to the previous stage with the reason in one line. Generating more inside a converged stage is not allowed.
+
+**Returning.** Reopening a stage makes every later output that depends on its decision obsolete and keeps the rest: a changed colour token does not redraw the symbol; a changed direction redraws masters, system, applications and book. A stage is reopened only by failure in use or by the owner's authority (REFINE OR RE-DIVERGE).
+
 ### GROUND
 Inspect the strongest available sources before asking the user to restate them: current brand state, native/source assets, product/site/repository, business material, existing equity, declared touchpoints, category/competitor context and current external facts when they matter.
 
@@ -33,6 +50,7 @@ The name is inspected here like any other asset: a name the owner offers tentati
 
 ### FRAME
 Define the brand problem before designing the answer. Establish only what materially governs the work:
+- **level** — separate what the brand is from what the company sells today and from the launch cut; audience and position are written at brand level, and a launch segment never becomes the brand's audience;
 - **brand job** — what business/organizational transition the brand must help produce;
 - audience (including the language the brand speaks to it) and relevant stakeholders;
 - offer/product/service truth;
@@ -44,7 +62,9 @@ Define the brand problem before designing the answer. Establish only what materi
 
 Do not manufacture a manifesto, archetype, onliness statement, category-entry-point model or other framework merely because one exists.
 
-FRAME ends with the **direction criteria**: three to five perceptions the work must produce and two or three it must avoid, each derived from the brand job, the position and the desired meaning, each confirmable from an artifact alone. They are the ruler for every later comparison (`references/judging.md`) and the owner confirms them, in plain language, before any route exists (`references/client-loop.md`). Written before the work, never adjusted to fit it.
+FRAME ends with the **direction criteria**: three to five perceptions the work must produce, each written with the overdose that would betray it ("close, but not casual"; "precise, but not cold"), plus two or three misreadings it must avoid (a category it must not resemble), each derived from the brand job, the position and the desired meaning, each confirmable from an artifact alone. They are the ruler for every later comparison (`references/judging.md`) and the owner confirms them, in plain language, before any route exists (`references/client-loop.md`). Written before the work, never adjusted to fit it.
+
+When the owner cannot state these perceptions in words, show before asking: render four to six **territory boards** (mood, colour climate, material, typographic attitude, image behaviour; no mark, no name, no governing idea) and ask which read as "us" and which do not (`references/client-loop.md`). Criteria are written from those reactions and confirmed; territories are not candidates, so criteria still precede every route.
 
 Use the session's collaboration mode to decide how often to interrupt: **recommend-and-ratify** by default, **co-direct** when the user wants to shape creative commitments, and **delegate** when the user explicitly wants the studio to decide. This is session behavior, not canonical brand state.
 
@@ -52,6 +72,8 @@ Use the session's collaboration mode to decide how often to interrupt: **recomme
 Explore materially different strategic or creative lineages, not cosmetic variants. Exploration may be intuitive; commitment must become defensible.
 
 Exploration ends rendered, at the fidelity of the decision. Ideas are chosen on **concept cards**: many per lineage, cheap, monochrome, each one idea on one declared touchpoint, so that the idea is judged and not the finish. Only the two or three lineages that survive become boards the owner can compare side by side, each showing its signature at full force on the same touchpoints with the same content. Text that describes a direction is not a direction; a board that describes only polish is not an idea.
+
+Exploration is cheap for the studio and costly only for the owner's attention: generate concept cards and symbol sketches in volume, through the image generator when one is available (`references/visual-production.md`, exploration regime), keep them in the session scratch space, and show the owner sheets, not single picks.
 
 Before converging, widen the search deliberately: inspect the category field, establish the craft bar, and when useful draw transferable mechanisms from outside the category. References contribute mechanisms, not surfaces, and a mechanism admired elsewhere never enters a generation request or a criterion. When isolated contexts are available, use them to generate independent lineages before synthesis; isolation is an optimization, never a runtime dependency.
 
@@ -77,7 +99,9 @@ Name every element of the system (colors, type roles, devices) by its role in th
 
 A useful system creates recognizable family resemblance while allowing meaningful variation. Repetition alone is not coherence.
 
-When generated or edited raster imagery is material to the direction, load `references/visual-production.md`. Black Forest Labs FLUX is the preferred production backend for such imagery; relevance, art direction, contextual inspection and the final artifact—not generator success—determine quality. A generation request is a creative decision: before sending one, name the clause of the direction criteria (or, before commitment, of the lineage's causal chain) that it executes; a request that executes none is a change of direction and stops here.
+When the declared touchpoints include surfaces to fill (screens, social posts, print, packaging, environments), the system needs a **surface asset**: an element that makes a blank surface read as this brand with no logo, no copy and no photograph. It may be a pattern, a supergraphic, a crop behaviour, an image treatment or a typographic rhythm; it is not the logo by default. The blank-surface test is in `references/identity-craft.md` §9.
+
+When generated or edited raster imagery is material to the direction, load `references/visual-production.md`. Black Forest Labs FLUX is the preferred production backend for such imagery; relevance, art direction, contextual inspection and the final artifact—not generator success—determine quality. In the production regime a generation request is a creative decision: before sending one, name the clause of the direction criteria it executes; a request that executes none is a change of direction and stops here. Exploration before commitment follows the lighter exploration regime in `references/visual-production.md`.
 
 ### TEST IN USE
 Test the declared touchpoints. `meta.touchpoints` is the list of applications to make: each gets at least one render in the context where it lives (a photographic or composited scene for a physical object, a real screen for a digital one), plus whatever further stresses (dense/expressive, small/large, static/motion) the system needs to prove range.
@@ -187,6 +211,8 @@ A familiar mechanism remains valid when the brief independently earns it. Constr
 
 For an existing identity with no spec, reconstruct what is already true and valuable before changing it. Absence of a spec is not evidence that the brand needs redesign. A reframe by the owner re-routes.
 
+Every route enters the same stages at the first one not yet satisfied. GROUND inventories what exists and gives each stage a status in the report: **satisfied** (artifact and evidence exist), **provisional** (artifact without evidence) or **absent**. Satisfied stages are read, not redone; a mature identity without a contract starts with its system provisional and is tested in use before anything changes.
+
 The route runs only the stages the requested deliverable needs. A name alone, a position alone, or a quick professional opinion on an existing mark takes its reference (`references/naming.md`, FRAME, `references/audit.md`) and the client loop, and does not render boards, build a system or produce a brand book; a skipped stage is not a gap.
 
 The stages above name the reference each one loads. Beyond those: `references/judging.md` whenever creative work is compared or declared good enough; `references/client-loop.md` whenever the owner is asked anything; `references/audience-test.md` when a perception claim matters to a decision; `references/identity-craft.md` whenever visual system or craft is judged; `references/verbal-identity.md` and `references/naming.md` when verbal identity or naming is in scope; `references/knowledge.md` when evidence strength, current facts or methodology need calibration.
@@ -219,4 +245,4 @@ What earns a master the label `final` is owned by `references/visual-artifact-pr
 
 Two channels. The artifact carries only what its reader needs, in the reader's language. The report to the operator carries the committed recommendation, concise rationale where it improves future judgment, the verification actually performed, and material unresolved truth/authority/reality/craft/capability dependencies. Every declared touchpoint appears in the report with its maturity label, including those the minimum rule kept out of the package, so nothing is one rung below the others without the operator knowing; counts of files, renders or passing checks describe the package, never its quality. For each judged artifact the report says who judged it (`references/judging.md`, §4). Nothing from the second channel enters the first. Do not return internal exploration transcripts.
 
-The report is a file, `brand-report.md`, kept beside the contract and outside any served folder. It holds the current direction criteria, the pending truths, authorities and dependencies, and the maturity of each touchpoint; it is rewritten whole at the end of every session and read at the start of the next, so a project that spans sessions loses nothing. It is not a ledger: no history, no evidence consumed, no rejected routes.
+The report is a file, `brand-report.md`, kept beside the contract and outside any served folder. It holds the current stage and each stage's status (satisfied, provisional, absent), what a return made obsolete and why in one line, the current direction criteria, the pending truths, authorities and dependencies, and the maturity of each touchpoint; it is rewritten whole at the end of every session and read at the start of the next, so a project that spans sessions loses nothing. It is not a ledger: no history, no evidence consumed, no rejected routes.

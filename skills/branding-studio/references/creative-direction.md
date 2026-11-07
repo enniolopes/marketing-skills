@@ -33,7 +33,7 @@ The **bar** is two or three real identities from the brand's category and adjace
 
 A route is materially different only when its governing idea or generative grammar changes. Font, color, logo-shape or layout swaps inside the same idea are variations, not new routes.
 
-Explore through structurally different sources: tensions, behaviors, histories, materials, product mechanics, language, rituals, spatial logics, systems or other relevant mechanisms. Do not require every sketch to carry a full rationale.
+Explore through structurally different sources: tensions, behaviors, histories, materials, product mechanics, language, rituals, spatial logics, systems, an object from the world that shares a property with both the name and the brand job (it passes the swap test by construction, but survives only if it generates form: symbol, surface asset or imagery, not a story), or other relevant mechanisms. Do not require every sketch to carry a full rationale.
 
 Treat the resulting lineages as a search portfolio, not just individually different routes. Inspect what conceptual territory they still share: category vocabulary, source domains, metaphor families, mechanisms or assumptions. Formally different routes can still be clustered in the same mental neighborhood.
 
@@ -57,7 +57,7 @@ Novelty does not compensate for weak grounding. Polish does not compensate for a
 
 ## 6. End exploration rendered, at the fidelity of the decision
 
-Ideas are found and chosen on **concept cards** before any board exists: one idea per card, monochrome, on one declared touchpoint, with the typographic voice on a few real words and no finish. Cards are cheap, so each lineage gets many, drawn from distinct source domains; a card is judged for the idea it carries and discarded without regret. Cards are built on the surfaces the studio controls (vector, code) or, when a generator is used, under the rules of `visual-production.md`: a card is exploration, never a master.
+Ideas are found and chosen on **concept cards** before any board exists: one idea per card, monochrome, on one declared touchpoint, with the typographic voice on a few real words and no finish. Cards are cheap, so each lineage gets many, drawn from distinct source domains; a card is judged for the idea it carries and discarded without regret. Cards and symbol sketches are made in volume, in the generator's exploration regime when one is available (`visual-production.md`) and otherwise on the surfaces the studio controls; a card is exploration, never a master, and what survives is rebuilt on a controlled path before it is judged for craft.
 
 Each lineage that survives art direction becomes a board: a composed visual argument, not a list of adjectives. A board shows the signature at full force in one hero moment on a declared touchpoint, the typographic voice on real words, the color relationship at scale, and one dense application next to one expressive one. Generated imagery may be used here as exploration, whether or not final assets will be generated; load `visual-production.md` when it is.
 
@@ -76,7 +76,7 @@ Avoid empty destinations such as `modern`, `premium`, `innovative`, `trustworthy
 
 ## 8. Present, then earn commitment
 
-Present the strongest boards with a recommendation and the reasons, the evidence against the direction criteria, the truths the direction depends on (`SKILL.md`, COMMIT DIRECTION), plus the names the system's elements will carry. The owner sees the cards before the boards and judges only what `client-loop.md` lets them judge.
+Present the strongest boards with a recommendation and the reasons, the evidence against the direction criteria, the truths the direction depends on (`SKILL.md`, COMMIT DIRECTION), plus the names the system's elements will carry. Close with a short direction story: the idea in one sentence, the form it produces, and the applications at full force; the story reveals a logic the boards already carry and never supplies one they lack. The owner sees the cards before the boards and judges only what `client-loop.md` lets them judge.
 
 In **recommend-and-ratify**, the owner ratifies or redirects before BUILD SYSTEM. In **co-direct**, expose the same evidence early enough for collaboration to change the commitment rather than decorate it afterward. In explicit **delegate** mode, the studio may choose the strongest proven route and continue without asking for preference.
 

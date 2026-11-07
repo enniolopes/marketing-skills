@@ -4,7 +4,7 @@ Use when guidelines, a brand book or an equivalent handoff is a deliverable. Bui
 
 The brand book is a working document, written by the organization for the people who execute, that compiles the brand system as built and tested, so that a person who did not take part in the project makes correct work without asking anyone. It is worth exactly what its worst element is worth.
 
-It is not a touchpoint of the brand, not a presentation and not a landing page. The brand appears in it through the system applied to the document and through the pieces shown, never through the prose.
+It is not a sales piece, not a presentation and not a landing page; it is still an application of the brand, seen by whoever executes and by whoever decides. The brand appears in it through the system applied to the document and through the pieces shown, never through the prose.
 
 ## 1. Before the book starts
 
@@ -34,7 +34,7 @@ The order is fixed. A section exists only when a reader task needs it; no sectio
 | 8 | When the rule does not cover it | Whom to ask, how to propose a change, what never to do without asking. | do |
 | 9 | Version | Version, date, what changed in this version in at most five lines. | lookup |
 
-Forbidden anywhere in the book: a hero, a manifesto, an opening slogan, a list of personality adjectives, an archetype, "our values" without a decision attached, a section without a task, an invented reader, a render below the floor, and process vocabulary (contract, schema, thesis, signature, maturity, route, evidence, open questions, prompts).
+Forbidden anywhere in the book: a marketing hero (a claim, slogan or campaign image), a manifesto, an opening slogan, a list of personality adjectives, an archetype, "our values" without a decision attached, a section without a task, an invented reader, a render below the floor, and process vocabulary (contract, schema, thesis, signature, maturity, route, evidence, open questions, prompts).
 
 ## 3. The section unit
 
@@ -73,15 +73,15 @@ Examples of brand copy:
 ## 5. Form and expression
 
 - One HTML file at the root of the served folder; assets, fonts and downloadable files in the folder; CSS in the file; no scripts; no external requests; `<html lang>` set to the readers' language.
-- A document page: one reading column; contents fixed at the side on wide screens and at the top on narrow ones; disclosure with `details`/`summary`; an anchor on every section; a print stylesheet that starts each section on a new page and shows every value without truncation.
-- The brand enters by three routes and only these: the system's own typography, colors and grid applied to the page; the pieces shown at useful size, with captions; the precision of the document. No full-width marketing block, no scroll effect, no decorative image.
+- A document page: one reading column for instructions, with plates free to span the page; contents fixed at the side on wide screens and at the top on narrow ones; disclosure with `details`/`summary`; an anchor on every section; a print stylesheet that starts each section on a new page and shows every value without truncation.
+- The brand enters through the system applied to the page, the pieces shown at useful size, and the precision of the document. Forbidden is function, not form: no slogan, no manifesto, no scroll effect, no image or block that neither shows an element of the system nor serves a task. Each Elements section opens with a **plate**: the element itself at full force (the symbol at scale, colour in its proportions, type as image), full width when the element needs it. The cover is an application of the brand carrying the cover content of §2.
 
 A familiar documentation pattern is accepted when a reader task needs its function; its form comes from the system. Do not ban navigation because generic navigation looks generic.
 
 ## 6. Production
 
 1. **Sources.** Compile from the built truth: masters, tokens, admitted renders, real copy. The contract checks the book; it does not generate it.
-2. **Prototype.** "Start here", one Elements section, one Applications page and the Files table, with real content. Render on a phone, on a desktop and in print. Give an isolated context only the prototype and have it execute two reader tasks. Repair structure, register and navigation. Only then scale.
+2. **Prototype.** "Start here", one Elements section, one Applications page and the Files table, with real content. Render on a phone, on a desktop and in print. Judge the prototype for force beside the bar before transfer (`identity-craft.md` §2); a prototype that transfers but does not hold beside the bar is not scaled. When the document's expression is open, explore it in the generator's exploration regime first. Give an isolated context only the prototype and have it execute two reader tasks. Repair structure, register and navigation. Only then scale.
 3. **Scale.** The remaining sections in the same unit.
 4. **Judge** (§7). 5. **Deliver** (§8).
 
@@ -91,7 +91,7 @@ A familiar documentation pattern is accepted when a reader task needs its functi
 2. **Integrity.** Every value appears once and equals its source; every render is the admitted one; every file in the table exists and opens.
 3. **Transfer.** An isolated context receives only the book and each reader's tasks and executes them; each task comes back as done or blocked, with the sentence or the absence that blocked it. Without an isolated context, the maker executes them in a cold pass and the report says so.
 4. **Worst element**, searched in this order of severity: a rule that leads a reader to do wrong work; a value, a file or a section a task needs and that is missing; a render below the bar; a sentence that breaks §4. Raise it to the floor or remove it; repeat until none remains. A removal becomes a named gap in the report. The floor has two sides: nothing below it is shown, and nothing a task needs is missing.
-5. **Expression.** The craft of the document, judged by `judging.md` against the bar, as a document, not as a campaign.
+5. **Expression.** The craft of the document, judged by `judging.md` against the bar, as a document, not as a campaign, by the strongest available judge (`judging.md` §4).
 6. **Owner.** At delivery the owner executes one reader task using only the book (`client-loop.md`).
 
 The book's maturity is the lowest of the six. `final` requires all six.

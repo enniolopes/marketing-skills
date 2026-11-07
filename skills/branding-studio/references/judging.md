@@ -25,7 +25,7 @@ A candidate that does not beat the floor has failed, however polished. Beating t
 - **Both orders.** Each pair is judged twice with the order swapped; a verdict that flips with the order is not a verdict.
 - **Criterion by criterion.** For each criterion: which candidate produces it more clearly, and what in the artifact shows it. Then the weakest visible element of the preferred candidate and the defects, each located (a crop, a letter, an edge, a shadow).
 - **No numbers.** No scores, no decimals, no averages, no rankings presented as measurement. Order is allowed; magnitude is not.
-- **Stop on information, not on count.** Judge again only after a change that could alter the verdict; a round that changes nothing means the criteria or the direction are the problem (`SKILL.md`, Stage exits).
+- **Stop on information, not on count.** Judge again only after a change that could alter the verdict; a round that changes nothing ends judging: the artifact stands if it passed; if it failed, the criteria or the direction are the problem (`SKILL.md`, Stage exits).
 
 ## 4. Who judges, and what that is worth
 

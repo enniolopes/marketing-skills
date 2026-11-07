@@ -73,7 +73,7 @@ Examples of brand copy:
 ## 5. Form and expression
 
 - One HTML file at the root of the served folder; assets, fonts and downloadable files in the folder; CSS in the file; no scripts; no external requests; `<html lang>` set to the readers' language.
-- A document page: one reading column; contents fixed at the side on wide screens and at the top on narrow ones; disclosure with `details`/`summary`; an anchor on every section; a print stylesheet that starts each section on a new page and shows every value without truncation.
+- A document page: one reading column for instructions, with plates free to span the page; contents fixed at the side on wide screens and at the top on narrow ones; disclosure with `details`/`summary`; an anchor on every section; a print stylesheet that starts each section on a new page and shows every value without truncation.
 - The brand enters through the system applied to the page, the pieces shown at useful size, and the precision of the document. Forbidden is function, not form: no slogan, no manifesto, no scroll effect, no image or block that neither shows an element of the system nor serves a task. Each Elements section opens with a **plate**: the element itself at full force (the symbol at scale, colour in its proportions, type as image), full width when the element needs it. The cover is an application of the brand carrying the cover content of §2.
 
 A familiar documentation pattern is accepted when a reader task needs its function; its form comes from the system. Do not ban navigation because generic navigation looks generic.

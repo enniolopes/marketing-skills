@@ -23,7 +23,7 @@ One invariant governs fanout: **prove before propagation**. Before a consequenti
 Every stage ends in an inspectable output, never in prose alone. When the output cannot be produced with the available capability, the stage ends with a named blocker and a lowered maturity label (`final master → tested prototype → concept → recommendation`), never with a cheaper substitute presented as the real thing.
 
 ### Stage exits
-A stage is left only through its exit. Work inside a stage is free; what is controlled is what leaves it.
+A stage is left only through its exit. Work inside a stage is free; what is controlled is what leaves it. Owner evidence follows the collaboration mode: in delegate mode the report replaces the Routes and Direction answers (`references/client-loop.md`).
 
 | Stage | Leaves with | Exit evidence | Compared with |
 |---|---|---|---|

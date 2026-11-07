@@ -25,7 +25,7 @@ A candidate that does not beat the floor has failed, however polished. Beating t
 - **Both orders.** Each pair is judged twice with the order swapped; a verdict that flips with the order is not a verdict.
 - **Criterion by criterion.** For each criterion: which candidate produces it more clearly, and what in the artifact shows it. Then the weakest visible element of the preferred candidate and the defects, each located (a crop, a letter, an edge, a shadow).
 - **No numbers.** No scores, no decimals, no averages, no rankings presented as measurement. Order is allowed; magnitude is not.
-- **Two rounds per artifact.** A third round means the criteria or the direction are the problem (`SKILL.md`, REFINE OR RE-DIVERGE).
+- **Stop on information, not on count.** Judge again only after a change that could alter the verdict; a round that changes nothing means the criteria or the direction are the problem (`SKILL.md`, Stage exits).
 
 ## 4. Who judges, and what that is worth
 
@@ -35,6 +35,8 @@ In decreasing order of strength:
 2. **The brand's audience**, through `audience-test.md`, for perception criteria only.
 3. **The owner**, blind between candidate and floor, for perception and recognition criteria only ("which of these could belong to any company in your sector?", "is this you?"); never for craft, never asked which one they like.
 4. **The maker**, in a cold pass: new message, renders and criteria only, defects named before merits. The maker ranks its own work leniently and prefers what resembles its own output, so a verdict reached this way is reported as the maker's, and the delivery says so.
+
+Use the strongest judge available. When an isolated context can be started, the maker's cold pass is not used for a direction commitment or a package close.
 
 Judging that two artifacts agree with each other, or that several same-model judges agree, is not evidence about an audience.
 

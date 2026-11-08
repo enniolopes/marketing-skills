@@ -3,7 +3,7 @@ name: branding-studio
 description: "Autonomous brand steward for creating, applying, auditing and evolving brands. Use for branding, naming, identity, logo, positioning, touchpoints, brand books, audits and rebrands. Reply in the user's language."
 license: CC-BY-NC-4.0
 metadata:
-  version: 4.1.0
+  version: 4.1.1
 ---
 
 # Branding Studio
@@ -106,6 +106,8 @@ When generated or edited raster imagery is material to the direction, load `refe
 ### TEST IN USE
 Test the declared touchpoints. `meta.touchpoints` is the list of applications to make: each gets at least one render in the context where it lives (a photographic or composited scene for a physical object, a real screen for a digital one), plus whatever further stresses (dense/expressive, small/large, static/motion) the system needs to prove range.
 
+A touchpoint that lives in another system's code (a site, an app, a product) is tested as a composition in the session scratch space, never edited in place. What it needs (the asset, the rule, the list of changes) goes in the report for whoever maintains that system, unless the owner asks for the edit.
+
 A browser render measures. It does not substitute for seeing the object where people will meet it. A touchpoint left unrendered is a named gap in delivery with a lowered maturity label, never a silent omission. A render made here exists to expose problems; whether it reaches a reader is decided in PACKAGE by the minimum rule, never by the fact that it exists.
 
 Material visual deliverables must be made and inspected, not merely specified. Load `references/visual-artifact-production.md`. Judge force before compliance, with the mechanisms in `references/identity-craft.md` and in the format of `references/judging.md`: an artifact that is correct but that nobody would stop to look at has failed.
@@ -115,7 +117,7 @@ One-off failure stays local. Repeated failures across legitimate applications in
 ### REFINE OR RE-DIVERGE
 Fix the lowest layer that explains the defect.
 - execution/craft defect → refine execution;
-- local application defect → fix the artifact;
+- local application defect → fix the artifact, or hand the fix over when the artifact lives in another system's code (TEST IN USE);
 - recurring grammar defect → repair the system;
 - governing idea no longer explains or generates the work → re-diverge;
 - strategy/brand job invalidated → re-frame.

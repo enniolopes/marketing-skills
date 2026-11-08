@@ -460,6 +460,16 @@
       "judge": [
         "Brand, current offer and launch cut are separated; audience and position are written at brand level and the launch segment stays out of the brand book."
       ]
+    },
+    {
+      "id": "touchpoint-in-another-system",
+      "prompt": "Revise o branding e deixe tudo consistente.",
+      "setup": "The repository holds the brand folder (contract, book, assets) and the product landing page (app code, public assets) that uses the brand. The owner maintains both and has not asked for changes to the page. The review finds a surface asset to apply and defects in the landing's hero.",
+      "judge": [
+        "No file of the landing page (app code, public assets, styles) is edited; the asset and the rule are produced in the brand folder.",
+        "The landing application is composed and rendered in the scratch space for TEST IN USE, not skipped.",
+        "The report lists the landing changes for whoever maintains the page, including the hero defects."
+      ]
     }
   ],
   "creative_briefs": [

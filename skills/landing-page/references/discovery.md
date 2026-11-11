@@ -6,11 +6,11 @@ The purpose of research is **not** to make the user act as creative director. Re
 
 ## Decision order
 
-Always prefer:
+For required clarification, prefer:
 
 `discover → infer safely → choose as expert → ask only if blocking`
 
-A good run should usually reduce the number of questions the user has to answer.
+A good run reduces questions the user must answer to unblock the work. Optional visual calibration belongs to `visual-explore.md` and can improve collaboration without transferring professional decisions or requiring a choice.
 
 ## Decision authority
 
@@ -35,7 +35,7 @@ Stop a lane when more information is unlikely to change the decision it was open
 
 ### CREATE
 
-Default to meaningful discovery unless the user has already supplied a strong, evidence-rich brief and reference set.
+Recover minimum safe context: page job, known offer/audience, available material and consequential constraints or unknowns. With visual direction open, begin the generative exploration in `visual-explore.md` while research and the intent model continue to develop. Final copy, structure, signature and a completed reference study are not prerequisites to the first round.
 
 ### REFINE
 
@@ -234,13 +234,13 @@ Do not write `make it look like [reference]` as the design strategy.
 
 ## Visual-world synthesis
 
-Real/domain references establish repertoire; synthetic images explore possibilities. Do not reverse that dependency.
+Real/domain references and synthetic exploration have different evidentiary roles, not a mandatory completion order. Use available truthful context to start exploring; research can feed or challenge the studies alongside the process. Synthetic images can inspire new ideas, but cannot independently validate facts, market patterns, provenance or originality.
 
 If image search, screenshots, a design canvas, or image generation is available, externalize the visual world when doing so can change a material creative decision. A useful synthesis may include emotional anchors; material/texture vocabulary; typography character; composition/density principles; imagery/crop/lighting behavior; color relationships; motion/interaction character when relevant; domain-specific motifs; anti-references; and signature territory.
 
 Generated moodboards are synthetic explorations, not source evidence. They must not become a closed loop in which the model invents its own repertoire and then treats that invention as external validation.
 
-When the direction is materially open, hand the grounded reference territory to `visual-explore.md` for visual-world studies, direction frames, section studies, or macro composition. Do not let any moodboard become a contract to copy. Its job is to establish a **world of possibilities**.
+When the direction is materially open, use `visual-explore.md` early for page/section studies and expand reference territory as it becomes decision-relevant. Do not let any moodboard become a contract to copy. Its job is to establish a **world of possibilities**.
 
 ## Preserve independent ideation
 
@@ -298,11 +298,11 @@ For any **truth-bearing** item, use exactly one epistemic status:
 
 Creative choices are not a fourth evidence status. They are professional decisions and may be explored freely; any factual implication they introduce must still be `KNOWN`, safely `INFERRED`, or remain `UNKNOWN`.
 
-Resolve discoverable facts, safe reversible inferences and professional creative decisions yourself. Only an `UNKNOWN` that blocks truth, authority, or a material irreversible fork may become a question. If a reversible default exists, take it and continue.
+Resolve discoverable facts, safe reversible inferences and professional creative decisions yourself. Required clarification is reserved for an `UNKNOWN` that blocks truth, authority, or a material irreversible fork. If a reversible default exists, take it and continue. Optional reactions to visible creative alternatives are calibration, not missing factual authority or mandatory user design choices.
 
 ## Question protocol
 
-After discovery/synthesis, ask only if all are true:
+For a clarification that would block proceeding, ask only if all are true:
 
 1. the answer is not reasonably discoverable;
 2. a safe reversible assumption is not available;

@@ -184,7 +184,7 @@ For each active medium, decide its role, relationship to the governing idea, and
 
 Before coding, challenge governing expressive choices that could have been made for an unrelated page. Strengthen weak brief-dependence while preserving useful conventions and governed identity; do not force difference in every component.
 
-For HIGH-END/FRONTIER CREATE or materially open visual REFINE, do not let the decisive art direction remain prose-only. Use `visual-explore.md` to externalize the highest-risk visual hypothesis before substantial visual implementation. Compare representative artifacts before reading the builder's rationale, then commit temporarily to the strongest direction.
+For CREATE or REFINE with materially open visual direction, use `visual-explore.md` early to discover possibilities through generated page/section compositions before coded visual prototypes. A complete governing hypothesis is not needed to begin. Compare representative artifacts before reading the builder's rationale, then commit temporarily to the strongest defensible direction.
 
 Bad: `modern, premium, dark, gradients`.
 
@@ -215,13 +215,13 @@ Do not invert the attractor mechanically. Avoiding a default is not a creative t
 
 Do not code the first plausible concept merely because it is polished. For a new or major redesign where no direction clearly dominates, explore 2–3 **structurally different** directions: change the governing idea, not only palette or radius. Example territories: editorial authority; product-as-instrument; cinematic transformation; data-as-proof; tactile object/material world.
 
-Select the strongest direction yourself:
+Recommend and synthesize the strongest direction, incorporating available visual feedback without making the user solve the design:
 
 `brief fit × specificity × communication power × evidence/assets × distinctiveness × implementation feasibility × technical integrity`
 
 Judge expressive strength and synthesis alongside factual fit. Extra explanation cannot compensate for lost elegance, aesthetic ambition or craft. Use marketing.md to choose the strongest medium; beauty, atmosphere and silence can carry meaning without adding facts or explanatory text. Do not turn grounding into a more literal direction, a word quota or mandatory minimalism.
 
-Do not make a non-expert user choose between design jargon. Pause for concept approval only when the user explicitly wants a review step or when the direction encodes a material brand/commercial decision that cannot safely be assumed.
+Use `visual-explore.md` for early visual calibration, including brief explanations and recommendations. Do not make a non-expert user choose between design jargon. Pause dependent implementation only when the user explicitly requires approval or the direction encodes a material brand/commercial decision that cannot safely be assumed.
 
 When isolated contexts are available and the creative problem is genuinely open, routes may be generated independently from the same grounded brief before comparison. Do not show one route to the context generating another. The purpose is to reduce anchoring and increase structural divergence, not to multiply agents or output. This is optional; lack of isolated contexts never blocks high-quality work.
 
@@ -382,8 +382,8 @@ Do not add delight as confetti after the page works. Decide what the visitor sho
 
 ## The expert judgment test
 
-When several solutions are all technically valid, do not ask the user to resolve a design tradeoff they hired the skill to solve. Choose the option that best preserves:
+When several solutions are all technically valid, own the professional synthesis rather than requiring the user to resolve a design tradeoff. Use visual reactions as input and recommend the option that best preserves:
 
 `purpose → specificity → hierarchy → coherence → emotional fit → technical integrity`
 
-Explain the decision only when it affects a material business/brand choice or the user asks for rationale.
+Explain decisions briefly when useful for visual calibration, when they affect a material business/brand choice, or when the user asks for rationale. Keep maker reasoning out of public page copy.

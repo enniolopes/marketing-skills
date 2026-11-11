@@ -1,0 +1,3 @@
+# Verdade do produto fictício
+Limiar importa registros CSV, sobrepõe duas séries datadas de temperatura no navegador e exporta os dados comparados em CSV. A temperatura é em grausCelsius; o eixo de tempo usa hora do dia, de08h a20h. O exemplo reúne04/11 e11/11, com leituras fictícias indicadas em samples.csv. O SVG é uma visualização ilustrativa desses dados.
+Não se conecta a sensores ao vivo, não controla equipamento, não detecta falhas automaticamente e não faz previsão ou certificação. Diferença de temperatura sozinha não é diagnóstico. Não há preço, clientes, métricas de eficiência, certificações ou resultados comerciais fornecidos. A ação da página é uma simulação local de configuração, sem solicitação real.

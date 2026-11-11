@@ -3,7 +3,7 @@ name: landing-page
 description: Research, design, build, redesign, or refine high-end marketing landing pages and homepages where conversion, creative direction, visual distinction, and production-grade web craft matter.
 license: CC-BY-NC-4.0
 metadata:
-  version: 4.1.0
+  version: 4.2.0
 ---
 
 # Landing Page
@@ -26,11 +26,13 @@ Do not make a non-expert user perform marketing, art-direction, UX, visual-desig
 
 User/evidence owns truth, commitments, and irreversible business or governed-brand authority. The agent owns professional, reversible creative and implementation decisions.
 
-Default to:
+For required clarification, default to:
 
 DISCOVER → INFER SAFELY → DECIDE AS EXPERT → ASK ONLY IF BLOCKING
 
 Never ask the user to choose fonts, colors, page patterns, section counts, animation styles, or aesthetic labels merely because the brief is incomplete.
+
+Optional visual calibration follows `visual-explore.md`; it does not make the user responsible for solving the design or create a required approval step.
 
 **Decision inertia**
 
@@ -52,7 +54,7 @@ When two actions have comparable expected value, prefer the simpler/cheaper one.
 
 **Visual rule**
 
-For HIGH-END or FRONTIER CREATE, and for major visual REFINE with materially open direction, do not commit substantial visual implementation while the decisive creative hypothesis exists only as prose. Externalize and compare it in a medium capable of judging it. Use references, FLUX or another strong visual surface, browser prototypes, or a combination as appropriate.
+For CREATE or REFINE with materially open visual direction, use minimum safe context to begin generated page/section studies before the first coded visual prototype. The images may discover the direction, not only test a thesis already written. `visual-explore.md` owns the round, comparison, optional user calibration, stopping rule and scoped capability exceptions.
 
 Generated exploration is a hypothesis, not production truth and not an implementation specification.
 
@@ -172,17 +174,15 @@ Truth-bearing items are KNOWN, safely INFERRED, or UNKNOWN. Creative choices are
 
 ### Search creatively before expensive commitment
 
-For HIGH-END/FRONTIER CREATE or materially open visual REFINE:
+For CREATE or REFINE with materially open visual direction:
 
-1. inspect relevant primary material and establish real/domain reference territory using discovery.md;
-2. identify the contextual generic attractor;
-3. externalize materially different creative hypotheses using visual-explore.md;
-4. compare artifacts before rationale;
-5. select a direction with a governing idea, signature, and falsifier;
-6. test critical sections or macro composition when they still carry material uncertainty;
-7. then reconstruct the selected principles natively for the web.
+1. recover minimum truthful context and inspect available relevant material using discovery.md;
+2. generate early page and/or section compositions using visual-explore.md, without waiting for final research, copy, structure or thesis;
+3. compare artifacts before rationale, widen repertoire alongside exploration, and calibrate visually with the user when appropriate;
+4. synthesize a provisional direction with a governing idea, signature and falsifier, challenging the contextual generic attractor;
+5. deepen promising routes or unresolved regions, then reconstruct the selected principles natively for the web.
 
-Do not force visual generation when a browser prototype, typography study, real UI, SVG, diagram, or other medium is the higher-fidelity experiment.
+Browser, real UI, SVG and typography studies remain valid oracles for functional or implementation questions and honest capability fallbacks. They do not replace the early generative round for open visual ideation when a suitable image generator is usable. Preserve already-resolved direction and bounded REPAIR scope.
 
 ### Compose from visitor state
 

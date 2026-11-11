@@ -32,7 +32,7 @@ Avoid both under-triggering and turning the skill into a universal web-design po
 Inspect the decision/tool trace where available.
 
 Judge whether the agent:
-- grounded truth and intent before material invention;
+- recovered minimum safe truth/intent context before material invention, without requiring a completed direction, research or copy before early exploration;
 - loaded references just in time rather than all at once;
 - stopped research when more evidence stopped changing decisions;
 - externalized material visual uncertainty before substantial HIGH-END/FRONTIER implementation;
@@ -42,7 +42,7 @@ Judge whether the agent:
 - exercised states before treating them as evidence;
 - diagnosed the lowest causal layer before changing work;
 - re-diverged only when direction was actually falsified;
-- avoided asking the user for reversible professional design choices;
+- retained responsibility for reversible professional design choices while allowing optional visual calibration without mandatory user selection or an invented approval gate;
 - avoided repeated tool/generation calls that produced no new decision value.
 
 Efficiency is diagnostic, not the objective. A deliberately expensive visual study is valid when it materially protects the quality ceiling or avoids likely late rework.
@@ -184,3 +184,23 @@ Advance from C01/C02 only if at least one brief has aesthetic/expressive W/W and
 Conclusions use one candidate hash and its accumulated corpus, never only the last stage or the best runs across versions. All required cells of reached stages must be evaluable. All accumulated pairs T with no material directed gain permits scoped NO_RUNTIME_CHANGE. Mixed W/L, weak W/T, missing cells, invalid reservation or disagreement remains NOT_VERIFIED if it fails the frozen gates. Unopened conditional stages are not missing cells. C01/C02 aesthetic W/W followed by reserve T/T can satisfy the creative criterion; missing calibration still prevents PROMOTABLE. Do not change these criteria after exposure.
 
 Before each campaign, record concrete inputs, required facts/tasks, resource envelope, sampling, bounded attempts and interpretation limits outside runtime. New fixtures or rubric changes after seeing results are development changes, not independent confirmation. Do not infer attention, memory, trust, admiration, AI recognition or conversion from this artifact evaluation.
+
+## LP-EARLY-VISUAL-01 — early generation and visual calibration
+
+Compare an immutable 4.1.0 package with a 4.2.0 candidate. This is a user-requested workflow preference; it does not certify or replace the historical v4 or LP-EXPRESSION-01 gates, nor presume aesthetic superiority. Keep truth, task, native implementation, creative ceiling, synthesis, weakest-region and appropriate human-calibration requirements.
+
+The changed `visual-direction-cannot-stay-prose-only` oracle observes actual generated page/section studies before the first coded visual prototype on open direction with a usable generator. `real-repertoire-before-synthetic-loop` now permits first ideation before completed reference research, retaining the prohibition on synthetic self-validation. These are explicit normative changes, not post-result relaxations. Reuse capability/fallback, quality-first, mockup-firewall, local-repair, task and concept-retention cases. Add only the distinct `visual-feedback-without-approval-gate` mechanism.
+
+Portable packets are in `fixtures/early-visual/cultural/` and `technical/`. They are original fictional primary material, reusable for evaluation, not real-client proof. Inspect the actual supplied assets. Freeze prompts, inputs, rubrics, interaction branches and the common resource envelope before running; do not add image-first instructions only to the candidate prompt.
+
+Use two briefs × two configured repetitions × baseline/candidate: eight short complete pages, at most twelve if one corrective candidate A2 is justified. Separate contexts and assigned package snapshots; record unexposed model parameters as unknown. Retain output/package/input hashes, actual tool outcomes and relevant ordered actions without requesting chain-of-thought. Context separation is procedural, not filesystem isolation. A first baseline probe must precede runtime editing; preserve passes and failures rather than manufacturing a red check. Do not impose a runtime image quota or treat call count/provider identity as creativity.
+
+Repetition1 includes an explicit initial review checkpoint. After real curation, inject the same labeled simulated reply in both conditions: “Explore mais uma alternativa com mais respiro e menos densidade de texto, preservando o que a oferta faz e a ação principal. Recomende um caminho; não preciso escolher uma imagem inteira.” Repetition2 has optional participation, no approval pause and no injected reply; observe recommendation/continuation without fabricated user input. If actual no-reply behavior cannot be represented, mark it NOT_VERIFIED and distinguish an explicit-autonomy control. This is not human calibration or measured preference.
+
+Run at most eight scenario controls/package for repair, resolved/governed direction, absent generator, adequate alternative, inadequate production alternative, explicit approval pause, invented mockup facts and task context. Capability fixtures are labeled simulations, not proof of real provider access. Preserve the originals on operational failures; at most one diagnosed non-quality replacement/cell. No design-quality retries, best-run selection or extra sampling to find a win.
+
+Judge actual generated studies and final browser desktop/mobile/task states before maker rationale, hiding conditions on the first reading. Conformance requires real inspectable generation and timing, useful comparison, accessible curation, professional synthesis and faithful feedback/absence handling; promises, prompt lists and screenshots alone do not prove the whole workflow. A successful call alone does not prove a useful study.
+
+Classify material gains, ties, regressions or uncertainty per existing W/T/L/? semantics. Every required candidate trajectory/control must be accounted for; missing evidence is NOT_VERIFIED. No material aesthetic, truth, task or craft loss may be offset by more process, facts or explanation. Copy count is diagnostic, not a quality score; retain essential terms and accessible alternatives. Preserve the approved visual principles through real content and native implementation.
+
+Report conformance separately from aesthetic preservation and superiority. A requested sequence can be observed without proving that it raises creativity. Four evaluable pairs with no L or material ? support only scoped AI-observed preservation; uncalibrated AI review does not justify PROMOTABLE or human/causal claims. Mixed results or missing required cells remain NOT_VERIFIED; correct within the frozen budget or withdraw the causal delta. If both versions already comply and added wording changes nothing useful, remove redundant instructions rather than adding context for its own sake.

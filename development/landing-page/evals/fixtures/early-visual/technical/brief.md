@@ -1,0 +1,4 @@
+# Limiar — fixture técnica fictícia
+Crie uma landing page curta e high-end em português para Limiar, software de navegador para consultorias técnicas compararem séries de temperatura registradas. A direção visual está aberta. Fontes autorizadas: product.md, samples.csv e record-view.svg. As fontes são originais fictícias reutilizáveis na avaliação, não evidência de cliente ou resultado real.
+
+Ação: configurar uma demonstração com nome da consultoria, uma das datas04/11 ou11/11 e interesse “Comparar séries” ou “Exportar CSV”. Mostrar um resumo local exato dessas três escolhas; nenhum pedido real é enviado. Identificar simulação perto do formulário e resultado. Entregue uma página completa curta que permita entender o produto, examinar o material relevante e fazer a tarefa, sem estilo ou lista de seções prescritos. HTML/CSS/JS nativos. Você decide a direção de arte e implementação profissional. Outras capacidades expostas são permitidas quando úteis.

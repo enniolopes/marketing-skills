@@ -3,7 +3,7 @@ name: landing-page
 description: Research, design, build, redesign, or refine high-end marketing landing pages and homepages where conversion, creative direction, visual distinction, and production-grade web craft matter.
 license: CC-BY-NC-4.0
 metadata:
-  version: 4.0.0
+  version: 4.1.0
 ---
 
 # Landing Page
@@ -174,7 +174,7 @@ Truth-bearing items are KNOWN, safely INFERRED, or UNKNOWN. Creative choices are
 
 For HIGH-END/FRONTIER CREATE or materially open visual REFINE:
 
-1. establish real/domain reference territory;
+1. inspect relevant primary material and establish real/domain reference territory using discovery.md;
 2. identify the contextual generic attractor;
 3. externalize materially different creative hypotheses using visual-explore.md;
 4. compare artifacts before rationale;

@@ -1,40 +1,32 @@
-# Visual exploration — externalize the creative hypothesis before code hardens it
+# Visual exploration — discover and test direction before visual code
 
-Load this reference for HIGH-END/FRONTIER CREATE, major visual REFINE, or any case where visual direction materially determines the result and is still open.
+Load this reference for CREATE or REFINE when material visual direction is open. Keep already-resolved direction and bounded REPAIR local.
 
-The purpose is not to generate more images. It is to make important creative decisions observable before substantial implementation narrows the search space.
+Use generated page and section studies early as a thinking surface: discover possibilities, questions and relationships as well as test ideas. Quality and learning matter; image count is not the objective.
 
 ## Core principle
 
-When visual quality materially determines the outcome, externalize the highest-risk creative hypothesis in the medium capable of judging it **before expensive commitment**.
+After the minimum safe context in `discovery.md`, begin a small, comparable round of generated page and/or section compositions **before the first coded visual prototype**. A written thesis does not close a direction that was open in the request. Reading existing UI/materials, checking capability and necessary nonvisual setup may precede the round; building the hero to ideate may not.
 
-For visually ambitious work, FLUX is a preferred thinking surface when available and appropriate. Browser prototypes, Figma/design canvas, SVG/CSS, typography studies, real UI, photography, diagrams, or other media may be better for some questions.
+Use an appropriate available image generator following `environment.md`: prefer supported FLUX, with a suitable native/model generator as a valid alternative when FLUX cannot be used. Do not wait for a complete thesis, signature, copy, section structure or finished research. A photo or moodboard alone does not substitute for a representative compositional study.
 
-Quality-first means spending more time or generation quality when that can materially improve the chosen direction or prevent later rework. It does not mean generating without a decision purpose.
+Browser prototypes, real UI, SVG/CSS, typography studies and other media remain appropriate for functional/implementation questions or honest capability fallback. If no generator is usable, report that limit and use the strongest feasible medium without claiming generation. Do not lower the quality of committed production assets for convenience. Explicit user constraints and authority take precedence.
 
-## Keep three knowledge layers separate
+Discovering possibilities is a legitimate early purpose; a finished hypothesis is not required. Quality-first means spending more time or generation quality when it can materially improve direction or prevent rework, then stopping when further artifacts stop teaching.
 
-REAL REFERENCES
-→ external repertoire and evidence
+## Keep three knowledge roles separate
 
-SYNTHETIC EXPLORATIONS
-→ new combinations, mutations, provocations
+REAL REFERENCES — external repertoire and evidence
 
-DESIGN PROTOTYPES
-→ hypotheses for this actual page
+SYNTHETIC EXPLORATIONS — new combinations, mutations, provocations
+
+DESIGN PROTOTYPES — hypotheses for this actual page
 
 Synthetic moodboards do not replace real repertoire. Avoid the closed loop:
 
 model prior → generated moodboard → model studies its own prior → generated design
 
-Prefer:
-
-product truth + real visual culture + non-adjacent references
-→ agent synthesis
-→ synthetic exploration
-→ artifact comparison
-
-FLUX is a creative synthesizer, not the source of repertoire.
+These are evidence roles, not serial prerequisites. Available product/domain truth can start exploration while real visual culture and non-adjacent research broaden or challenge it. Generated studies can inspire further ideas; they cannot independently validate their own factual, market, provenance or originality claims. Check authoritative material before committing factual implications.
 
 ## Reference grounding
 
@@ -47,6 +39,8 @@ Use discovery.md's three pools before or alongside synthetic exploration:
 For each reference, know what property is transferable and what must not be copied.
 
 ## Exploration levels
+
+These are lenses, not sequential stages. Whole-page or section studies can open the search before a direction or final structure exists; use the scale that reveals the creative opportunity.
 
 ### 1. Visual-world studies
 
@@ -87,7 +81,7 @@ Compare the artifacts before reading the rationale.
 
 ### 3. Critical-section studies
 
-Use these when the selected direction is strong but a material region remains unresolved: hero, proof, product explanation, key transition, conversion block, interaction, or imagery relationship.
+Explore a section early to discover a visual idea, or later to resolve a region within a promising direction: hero, proof, product explanation, key transition, conversion block, interaction, or imagery relationship. A selected whole-page concept is not a prerequisite.
 
 Good premise + weak realization → REFINE.
 
@@ -97,7 +91,7 @@ Do not polish a weak local premise merely because implementation already exists.
 
 ### 4. Whole-page composition studies
 
-Use when macro rhythm, density, signature placement, visual accumulation, or section-to-section massing remains materially uncertain.
+Use whole-page studies early to discover macro rhythm, density, signature placement, accumulation or massing. They can suggest structure rather than waiting for a fixed section list. Use a section study instead when it better reveals the relevant relationship.
 
 For FRONTIER work this evidence is expected. For HIGH-END work use it when the page is substantial enough that first-viewport studies cannot reveal the main compositional risk.
 
@@ -121,7 +115,9 @@ Do not call same-direction generator variations "new concepts."
 
 ## Art-direction packet
 
-Before an important generation, define only what governs the result:
+For the first round, supply only what already governs safe exploration: page job/context, known facts and constraints, available material/reference roles and room for discovery. A direction may emerge from the result.
+
+As a route becomes promising, make its packet more specific using only the elements that change the generation:
 
 - page job and visitor context;
 - governing hypothesis;
@@ -188,6 +184,14 @@ Ask:
 
 If none of the explored directions is strong enough, re-diverge. Do not select a weak winner merely because a batch was generated.
 
+## Visual calibration with the user
+
+When collaboration is appropriate, present a curated selection early with actual visible or accessible images, a brief reading of the meaningful differences and a professional recommendation. If the host already displayed the results, identify them clearly rather than reprinting the whole archive. Prompts, hypothetical descriptions or inaccessible paths are not visual presentation.
+
+Invite reactions to atmosphere, scale, rhythm or other perceptible relationships when useful. Preferences are input, not a requirement to choose fonts/layout or adopt an entire image. Synthesize compatible principles under a coherent direction; do not assemble a collage or infer factual authority from a visual preference.
+
+Keep professional responsibility. Without a reply, recommend and continue reversible work without inventing approval or feedback. Pause only a dependent slice when the user explicitly requires approval or true authority is blocking. Follow the host's interaction contract and keep independent work moving. A brief collaborative explanation does not belong in the landing page's marketing copy.
+
 ## Stopping rule
 
 Continue visual exploration while a material creative uncertainty remains and another artifact has a plausible chance to change the commitment.
@@ -249,8 +253,9 @@ The browser remains sovereign.
 ## Anti-ritual
 
 Do not:
-- generate moodboards because HIGH-END is selected when supplied evidence already resolves the visual world;
-- create full-page comps for a tiny page whose real-browser prototype is the better oracle;
+- generate new directions for a resolved design or bounded REPAIR merely because tools are available;
+- require a new moodboard when supplied material resolves the visual world; that does not automatically resolve page composition;
+- require full-page comps when a section better reveals the creative relationship;
 - count color/font variants as conceptual divergence;
 - keep generating after the decision has stopped changing;
 - favor a weaker direction because it is easier for the current generator;

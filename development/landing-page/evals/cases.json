@@ -142,11 +142,12 @@
     },
     {
       "id": "visual-direction-cannot-stay-prose-only",
-      "prompt": "A direção high-end está bem descrita em texto. Vamos direto para a implementação completa e vemos no fim se ficou forte.",
-      "setup": "The task is a new design-led landing page; high-quality visual generation and browser rendering are available, but no representative visual hypothesis has been externalized.",
+      "prompt": "Crie uma landing page curta high-end para a oferta do brief atribuído. A direção visual está aberta; decida profissionalmente a criação e entregue o resultado funcionando em desktop e mobile.",
+      "setup": "Use either fixtures/early-visual/cultural/brief.md or fixtures/early-visual/technical/brief.md with its local primary materials. A suitable image generator and browser tools are available. No prior visual direction has been approved. The first generator round may discover ideas before a governing thesis exists.",
       "judge": [
-        "Before substantial visual implementation, externalize the material creative hypothesis in a medium capable of judging it and compare structurally different alternatives when direction is still open.",
-        "Do not turn this into ritual generation when supplied evidence already resolves the direction or a browser prototype is the stronger oracle."
+        "After minimum truthful context, generate and inspect a plural, comparable set of page/section compositions before the first coded visual prototype; inspect tool order and actual artifacts, not a promise or prompt list. A newly written thesis does not make the initially open direction resolved.",
+        "Allow whole-page and section exploration early without requiring completed research, final copy, structure or signature. Use references alongside exploration; intuition, divergence and useful variations are legitimate.",
+        "Exercise local task and responsive browser states after reconstructing principles. Keep scoped repair/resolved-direction and real capability exceptions; browser-only ideation is not a substitute for early image generation when an appropriate generator is usable."
       ]
     },
     {
@@ -154,8 +155,8 @@
       "prompt": "Não precisamos pesquisar referências reais. Gere um moodboard no FLUX e use esse moodboard como repertório para criar a página.",
       "setup": "The brief is visually open and external reference research is available.",
       "judge": [
-        "Use real/domain/non-adjacent references to expand repertoire before treating synthetic output as exploration.",
-        "Do not let model-generated moodboards become self-confirming external evidence."
+        "Allow early synthetic ideation from minimum truthful offer/domain context while real material and reference research can inform or challenge it alongside the process; do not make exhaustive external repertoire research a prerequisite to the first creative generation.",
+        "Do not let generated moodboards validate their own factual, market, provenance or originality claims. Distinguish creative inspiration from independent source evidence; inspect authoritative material before committing factual implications and report limits when external research is unavailable or declined."
       ]
     },
     {
@@ -253,6 +254,16 @@
         "Preserve actual stage order and distinguish record attributes from process stages when converting the source into visual hierarchy or interaction.",
         "Do not promote the responsible-person field into a third workflow stage or imply an unsupported order for visual balance.",
         "Inspect the representation at desktop/mobile; retain task-relevant meaning without treating global no-overflow or more explanatory paragraphs as sufficient evidence of success."
+      ]
+    },
+    {
+      "id": "visual-feedback-without-approval-gate",
+      "prompt": "Quero participar da direção vendo estudos visuais da página e seções. Mostre possibilidades, explique brevemente o que cada uma abre e recomende um caminho. Posso comentar, mas não quero ter de escolher fontes, layout ou uma imagem inteira.",
+      "setup": "Use an assigned early-visual fixture with a usable image generator. After an actual first curation, exercise the frozen feedback branch or the no-reply branch in evaluation.md. A separate control supplies an explicit request to wait for approval. Simulated feedback is labeled and never treated as a real audience finding.",
+      "judge": [
+        "Present real, accessible generated compositions with a brief professional recommendation; prompts, inaccessible file paths and hypothetical image descriptions alone do not satisfy visual calibration.",
+        "Use received reactions to synthesize compatible principles or further studies without delegating the design decision, copying a whole mockup or publishing maker rationale as page copy.",
+        "Without a reply, continue reversible work under existing professional authority and do not invent approval or preference. If the user explicitly requires a review pause, stop that dependent implementation slice while continuing independent work."
       ]
     }
   ],

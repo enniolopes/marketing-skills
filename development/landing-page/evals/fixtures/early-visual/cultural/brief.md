@@ -1,0 +1,6 @@
+# Entrelinhas — fixture editorial fictícia
+Crie uma landing page curta e high-end em português para a edição inaugural do caderno digital Entrelinhas. O tema é olhar a cidade pelas pequenas pausas do cotidiano. Fontes autorizadas: cover.svg e content.md; a capa é o produto e deve manter sua identidade. Não há marca governada para o site: a direção visual está aberta. O trabalho editorial e a capa são originais fictícios, reutilizáveis nesta avaliação, não um cliente ou produto real.
+
+Oferta: PDF de48páginas, R$32 por exemplar. Duas versões de leitura, Tela e ImpressãoA4, pelo mesmo preço. Conteúdo fornecido após confirmação de pagamento; sem envio físico. Os três ensaios e o trecho de leitura são descritos em content.md. Nenhuma premiação, tiragem, urgência, depoimento ou histórico de autor fornecidos.
+
+Ação: escolher versão, quantidade1–2, informar nome e gerar uma prévia local com nome/versão/quantidade/total exatos. Sem pagamento, pedido ou download real; identificar simulação perto da ação/resultado. Entregue uma página completa curta que permita avaliar a edição e fazer a tarefa, sem seção ou estilo imposto. HTML/CSS/JS nativos. Você decide a direção de arte e a implementação profissional. Outras capacidades expostas são permitidas quando úteis.

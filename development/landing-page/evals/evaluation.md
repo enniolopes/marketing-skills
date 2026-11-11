@@ -4,7 +4,7 @@ Evaluate the skill as an **agent system**, not as a prompt that happens to produ
 
 Keep the suite small and causal: one case per distinct recurring failure mechanism, plus a diverse creative set that can expose aesthetic regression, house-style convergence, and first-idea lock-in.
 
-The v3.10 behavior remains the baseline for this milestone.
+The v3.10 behavior remains the baseline for the historical v4 milestone below. Its evidence and status are not inferred or retroactively approved by the later LP-EXPRESSION-01 protocol.
 
 ## Evidence levels
 
@@ -120,7 +120,7 @@ Watch two distinct regressions:
 
 A strong v4 should escape the first plausible high-probability solution more often without becoming arbitrary.
 
-## Promotion gate
+## Historical v4 promotion gate
 
 Promote only when all are true:
 
@@ -138,3 +138,49 @@ If v4 is faster, smaller, more obedient, or more reliable but visually less extr
 If baseline and candidate behave materially the same, do not add runtime context.
 
 If an eval rewards exact wording, a fixed layout, a specific provider, or one historical implementation rather than the underlying mechanism, fix the eval instead of the skill.
+
+
+## LP-EXPRESSION-01 — primary material, expression, and synthesis
+
+This change compares an immutable 4.0.0 package with a candidate 4.1.0 package. It does not replace or certify the historical v3.10→v4 result. Keep the substantive quality gates above: truth/authority/task integrity, repeated artifact comparison, creative ceiling, no systematic aesthetic loss, no unjustified recurring house style, weakest-region quality, and appropriate human calibration.
+
+### Mechanical integrity
+
+From the repository root run:
+
+```bash
+python -m unittest discover -s development/landing-page/tests -v
+python development/validate.py
+```
+
+The new unittest module validates the actual schema-v2 eval JSON and rejects malformed/duplicate/missing data in memory. The repository validator discovers this suite; green checks establish mechanical integrity, not creativity or behavioral improvement. Inspect changed local reference paths separately; the validator's reference check reads direct paths in SKILL.md, not every reference file.
+
+### Directed cases and source material
+
+Use `primary-material-changes-direction`, `sparse-material-without-fabricated-identity`, and `representation-preserves-domain-relations`. Reuse existing relevant regressions rather than adding one case per instruction. The primary-material fixture is in `fixtures/primary-material/`: one shared brief and two originally authored SVG artworks. Both are fictional primary material, freely reusable for evaluation; they are not reproductions or real-client proof. Assign exactly one variant to a builder; run both variants under both packages. Do not put development paths in runtime instructions.
+
+Freeze case rubrics before generation. Baseline sensitivity to supplied material, sparse-brief autonomy and preserved domain relations must be observed rather than inferred from matching skill vocabulary. If the baseline already satisfies the proposed change and no material weakness justifies additional runtime, record NO_RUNTIME_CHANGE in this scope. Insufficient evidence is NOT_VERIFIED, not no effect.
+
+### Runs and exposure
+
+- Use separate builder contexts, assigned source snapshots, identical task/asset packets, stack, capabilities and configured resource envelope. Record unexposed model parameters as unknown. No treatment instructions added only to the candidate task prompt.
+- E01: two material variants × two repetitions per package. Four baseline studies and four per candidate, at most 12 with two candidate versions. E02/E03: two repetitions each per package, at most 12 probes. Record the affected regression subset separately.
+- Development corpus: C01 technical product with primary UI/documents; C02 authorial work with supplied assets. Two repetitions per package per brief. At most two candidate versions (A1 and one correction A2).
+- Reserve C03 (sparse new offer) and C04 (governed familiar brand) with a separate curator. Exact inputs/rubrics remain unavailable to candidate adjustment; freeze final package before opening them. Two repetitions for baseline and final candidate only. Main corpus: 16 pages with one candidate, at most 20 with two.
+- Once reserved outputs inform a runtime revision, those inputs are spent for independent confirmation of that revision. They may become regressions. Reopening confirmation requires a new recorded campaign with fresh inputs, not retries until success.
+- A run can be replaced once only for a diagnosed non-quality operational failure, preserving the aborted record, package and inputs. Refining a page during its run is allowed; replacing a delivered/reviewed artifact under the same run ID is not.
+- Record run/package/input hashes, condition, repetition, capabilities, restrictions, outputs, checks, interruptions and actual consumption. Keep generated outputs outside source control. This is procedural context separation, not a claim of filesystem isolation.
+
+### Artifact judgment and decision
+
+Present opaque labels in randomized order; hide condition and maker rationale for the first reading. Review desktop, mobile, full-page rhythm and exercised task states. Separate factual/task integrity, aesthetics/expression/craft, and cross-brief recurrence. Review visual/sensory strength before reading copy in context. More correct facts or explanatory volume cannot compensate for lost elegance, expressive creativity or synthesis. Beauty, atmosphere and nonverbal meaning are legitimate; no literalism, word quota or universal minimalism.
+
+For each repetition pair use W (candidate materially better with no material loss), T (no material difference in inspected criteria), L (material regression), or ? (insufficient/disputed evidence). Perceptible but sub-material polish is T. Identify gain dimensions. An informative W alone is not an aesthetic gain. No score may offset a truth/task failure or an aesthetic regression.
+
+Inspect copy for repeated visual explanations, maker rationale published as marketing, and sections without a distinct purpose. Added text must resolve a material visitor uncertainty with appropriate visual quality; no shrinking fonts, hiding essential terms or removing accessible alternatives to look concise. Word counts are diagnostic only.
+
+Advance from C01/C02 only if at least one brief has aesthetic/expressive W/W and no pair is L or ?. G4 eligibility requires directed cases passing, aesthetic/expressive W/W in at least two causally different briefs, all remaining pairs W/T, no material loss or unjustified house-style recurrence, valid reserved exposure and the existing human calibration requirement. An AI-only judgment can identify a positive proxy signal, not certify aesthetic superiority or human effects.
+
+Conclusions use one candidate hash and its accumulated corpus, never only the last stage or the best runs across versions. All required cells of reached stages must be evaluable. All accumulated pairs T with no material directed gain permits scoped NO_RUNTIME_CHANGE. Mixed W/L, weak W/T, missing cells, invalid reservation or disagreement remains NOT_VERIFIED if it fails the frozen gates. Unopened conditional stages are not missing cells. C01/C02 aesthetic W/W followed by reserve T/T can satisfy the creative criterion; missing calibration still prevents PROMOTABLE. Do not change these criteria after exposure.
+
+Before each campaign, record concrete inputs, required facts/tasks, resource envelope, sampling, bounded attempts and interpretation limits outside runtime. New fixtures or rubric changes after seeing results are development changes, not independent confirmation. Do not infer attention, memory, trust, admiration, AI recognition or conversion from this artifact evaluation.

@@ -87,6 +87,8 @@ Do not test mobile only by narrowing until the page technically fits. Look for i
 - no meaningful interaction relies only on hover;
 - dense desktop compositions simplify or resequence appropriately.
 
+Inspect the decision-relevant detail in dense diagrams, tables and embedded media: labels, units, relationships and access must remain usable. Global no-overflow is not sufficient; exercise any expansion, scroll or alternate view that carries essential meaning.
+
 ## Primary-task integrity
 
 When the page has a primary visitor task or conversion transition, exercise that path end to end in every relevant representative state instead of validating only the CTA or isolated controls. Judge the task-integrity invariant from `control.md`: the visitor should be able to discover what to do, understand the consequence, and complete the intended transition without avoidable effort introduced by direction, navigation, motion, scroll choreography, responsive adaptation, or context loss.
@@ -127,9 +129,12 @@ Before consulting the intended rationale, infer from the rendered artifact itsel
 - what job the page appears to perform;
 - how the major regions seem to build the argument and what conclusion they lead toward;
 - which action appears primary and what visitor context it preserves or discards;
-- what seems to make the offer specific or credible.
+- what seems to make the offer specific or credible;
+- which properties of the supplied material visibly inform the interpretation.
 
 Compare that reconstruction with the page intent and any active invariants from `control.md`. A material mismatch is semantic drift even when each local design decision looks competent. If the maker's rationale is required to explain a material relationship that the page itself does not communicate, treat that as an unresolved Meaning defect rather than a documentation gap.
+
+Check relationships, not just individual facts: attributes must not become process stages, illustrations must not become measured outcomes, and visual balance must not invent an order or dependency. A strong nonverbal interpretation does not need to explain its thesis in copy.
 
 ### Craft sweep
 
@@ -151,6 +156,10 @@ Ask:
 - Is there one memorable idea or many weak attempts at interest?
 
 When a false proxy appears, repair the **underlying quality** rather than banning the surface form or adding another decorative layer. Keep any form that the brief genuinely earns. If genericity is conceptual, revise the governing decision rather than ornamenting it.
+
+Distinguish a structural mismatch from contextual recurrence. Internal repetition alone does not establish market saturation, perceived AI authorship or a human response; those claims need appropriate external or behavioral evidence.
+
+Review synthesis through marketing.md: remove maker rationale and redundant explanations, not essential terms or accessible alternatives. Prefer the medium that carries the meaning well. Do not approve more informative work at the expense of composition, expressive creativity, elegance or craft; added copy must resolve a material visitor uncertainty while preserving that quality.
 
 ## Concept retention
 

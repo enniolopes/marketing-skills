@@ -22,7 +22,7 @@ Mine the product/domain for visual material:
 - customer context;
 - existing brand artifacts.
 
-Use these as generative material rather than decorating a generic SaaS composition.
+Interpret consequential properties of inspected material through composition, typography, imagery, rhythm or interaction. Supplying correct facts or placing an asset inside a generic composition does not by itself establish a direction.
 
 **Swap test:** if replacing the name/logo with an unrelated company leaves the concept intact, specificity is weak.
 
@@ -168,6 +168,8 @@ High-end work requires integrity at all three scales.
 
 `control.md` owns the direction contract: governing idea, signature/dominant expression, intended effect, and an observable falsifier. Do not create a parallel mandatory design-plan schema here.
 
+At commitment, connect a relevant property or relationship of the offer/context to the intended effect and perceptible decisions. Explore intuitively before that; metaphor and non-adjacent references remain legitimate. The connection may be nonverbal and need not be unique to the company. Keep this reasoning internal rather than publishing it as marketing copy.
+
 For art direction, add an emotional target when it changes decisions, then express the direction through only the media that materially participate in the experience:
 
 - typography;
@@ -180,7 +182,7 @@ For art direction, add an emotional target when it changes decisions, then expre
 
 For each active medium, decide its role, relationship to the governing idea, and restraint. A medium with no meaningful job does not need a field filled in merely to complete a plan.
 
-Before coding, identify any material decision that could have been made for an unrelated page and make it more specific or remove it.
+Before coding, challenge governing expressive choices that could have been made for an unrelated page. Strengthen weak brief-dependence while preserving useful conventions and governed identity; do not force difference in every component.
 
 For HIGH-END/FRONTIER CREATE or materially open visual REFINE, do not let the decisive art direction remain prose-only. Use `visual-explore.md` to externalize the highest-risk visual hypothesis before substantial visual implementation. Compare representative artifacts before reading the builder's rationale, then commit temporarily to the strongest direction.
 
@@ -216,6 +218,8 @@ Do not code the first plausible concept merely because it is polished. For a new
 Select the strongest direction yourself:
 
 `brief fit × specificity × communication power × evidence/assets × distinctiveness × implementation feasibility × technical integrity`
+
+Judge expressive strength and synthesis alongside factual fit. Extra explanation cannot compensate for lost elegance, aesthetic ambition or craft. Use marketing.md to choose the strongest medium; beauty, atmosphere and silence can carry meaning without adding facts or explanatory text. Do not turn grounding into a more literal direction, a word quota or mandatory minimalism.
 
 Do not make a non-expert user choose between design jargon. Pause for concept approval only when the user explicitly wants a review step or when the direction encodes a material brand/commercial decision that cannot safely be assumed.
 

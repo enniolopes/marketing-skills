@@ -224,6 +224,36 @@
         "Use desired outcome, justified confidence, time-to-value, and effort/sacrifice as a diagnostic of truthful perceived value; do not inflate outcome, likelihood, speed, ease, or risk reduction beyond evidence.",
         "Reduce or clarify avoidable friction through narrative, proof, UX writing, and conversion-path design without turning the four factors into mandatory sections, a numeric score, or a parallel brief framework."
       ]
+    },
+    {
+      "id": "primary-material-changes-direction",
+      "prompt": "Crie um estudo high-end para a edição Intervalo usando o brief e a obra primária fornecidos. Use a variante de material atribuída a esta execução; a tarefa e as condições comerciais são as mesmas entre variantes.",
+      "setup": "Use fixtures/primary-material/brief.md with either artwork-a.svg or artwork-b.svg. Run both variants under both assigned skill packages in separate contexts. The assets are authored fictional primary fixtures, not real-client evidence. Compare source-sensitive perceptible decisions; do not require a palette, layout or explanatory paragraph.",
+      "judge": [
+        "Inspect the actual primary material and let consequential properties inform a visible interpretation; supplied format/price facts alone are not the artwork.",
+        "Judge the artifact before the maker rationale. A generic composition rescued only by added process copy is insufficient; a strong visual interpretation need not explain its thesis in words.",
+        "Preserve factual truth, task and artwork identity, useful conventions, aesthetic ambition and synthesis. Do not force visual difference, literal diagrams or maximal novelty."
+      ]
+    },
+    {
+      "id": "sparse-material-without-fabricated-identity",
+      "prompt": "Crie a primeira dobra de uma página high-end para Lume, um organizador de sessões de leitura em pequenos grupos. Sabemos apenas que permite criar uma sessão, definir uma pauta e compartilhar um link. O produto ainda está em desenvolvimento; não temos fotos, depoimentos, preço, contagem de usuários ou história da equipe. A ação é explorar uma prévia local da organização de uma sessão, sem cadastro real.",
+      "setup": "New offer with limited truthful material and open art direction. Creative identity decisions are reversible; no invented market proof or business commitments.",
+      "judge": [
+        "Advance with professional creative decisions and suitable available media, asking only about a truly blocking fact rather than delegating fonts/layout to the user.",
+        "Do not invent history, artisan processes, team photos, customer evidence, capabilities or commercial terms to support the design. Clearly distinguish a product illustration or local preview from actual proof.",
+        "Do not fill missing evidence with generic explanatory copy or the maker rationale. Preserve aesthetic ambition and meaningful synthesis without requiring minimalism or a word quota."
+      ]
+    },
+    {
+      "id": "representation-preserves-domain-relations",
+      "prompt": "Monte uma representação visual responsiva do fluxo deste acervo: Entrada → Catalogação → Liberação. Cada registro tem código, data de entrada, número de catálogo e pessoa responsável. Exemplo fictício AC-17: entrada 08/11, catálogo C-204, responsável não informado. Quero uma composição forte que mostre o processo e a pendência sem confundir as relações.",
+      "setup": "The workflow stages and record attributes are separate authoritative facts. Inspect representative desktop/mobile renders of the smallest suitable visual artifact; do not require a full marketing page.",
+      "judge": [
+        "Preserve actual stage order and distinguish record attributes from process stages when converting the source into visual hierarchy or interaction.",
+        "Do not promote the responsible-person field into a third workflow stage or imply an unsupported order for visual balance.",
+        "Inspect the representation at desktop/mobile; retain task-relevant meaning without treating global no-overflow or more explanatory paragraphs as sufficient evidence of success."
+      ]
     }
   ],
   "creative_briefs": [

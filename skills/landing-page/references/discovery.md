@@ -75,6 +75,10 @@ Before any external lane, inspect what is already available:
 - supplied customer evidence and claims;
 - existing analytics/research present in the working context.
 
+Inspect the content, not only its inventory or specifications: which properties or relationships could change the direction? Primary material represents the offer; external references broaden repertoire; newly created illustrations explore expression. Do not treat the latter two as evidence of an existing product, history or practice.
+
+Sparse material does not require an invented backstory or a research ritual. Make reversible creative decisions with what is known; seek more material only when it can change a consequential decision, and ask only about a genuinely blocking fact.
+
 ## Desk research lanes
 
 Use only the lanes that answer material questions.
